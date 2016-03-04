@@ -1,5 +1,10 @@
-{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/gpa.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus]
+{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/gpa.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus]<a href="https://codeclimate.com/github/xyixyi/harmony-plus/coverage"><img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/coverage.svg" /></a><a href="https://codeclimate.com/github/xyixyi/harmony-plus"><img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/issue_count.svg" /></a>
 
 pivotal tracker:
-
 https://www.pivotaltracker.com/n/projects/1544921
+
+heroku:
+http://harmony-plus.herokuapp.com/
+
+travis ci:
+https://travis-ci.org/xyixyi/harmony-plus/pull_requests
