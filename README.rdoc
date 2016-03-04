@@ -1,4 +1,6 @@
-{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/gpa.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus]{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/coverage.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus/coverage]{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/issue_count.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus]
+{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/gpa.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus]
+{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/coverage.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus/coverage]
+{<img src="https://codeclimate.com/github/xyixyi/harmony-plus/badges/issue_count.svg" />}[https://codeclimate.com/github/xyixyi/harmony-plus]
 
 pivotal tracker:
 
@@ -10,4 +12,4 @@ http://harmony-plus.herokuapp.com/
 
 travis ci:
 
-https://travis-ci.org/xyixyi/harmony-plus/pull_requests
+https://travis-ci.org/xyixyi/harmony-plus
