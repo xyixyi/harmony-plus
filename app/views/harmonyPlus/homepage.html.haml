@@ -1,0 +1,57 @@
+%html
+  %head
+    %base{:href => "edit latter"}
+  %body
+    .main
+      %nav#transparent-nav.transparent-nav
+        %a{:href => "/"}
+          / [edit later]
+          %svg.logo{:viewBox => "0 0 137 32"}
+            / [edit later]
+            / logo image here
+            %use{"xlink:href" => "image.svg#logo"}
+        .links
+          %a{:href => "fp"} FP
+          %a{:href => "summeracademy"} SummerAcademy
+          %a{:href => "stories"} Stories
+          %a{:href => "stories"} Stories
+          %a{:href => "aboutus"} AboutUs
+          %a{:href => "contact"} Contact
+          %a.apply-button{:href => "summeracademy"}
+            / [edit later: add arrow image later]
+            "Apply
+            "
+            %span.arrow
+              %svg.apply-arrow.icon-xs{:viewBox => "0 0 76 32"}
+                %use{"xlink:href" => "image.svg#arrow"}
+        .header-image
+        .banner
+          %p.text.mb20
+            "
+            we will insert some text here later
+            "
+        .programs-section
+          .content.cf
+          /before might need to delete
+            \::before
+            .b-bay-header
+            /syntax may error here
+              %h1 B-Bay
+            .ideal-header
+              %h1 Ideal
+              %ul.academy.cf
+              /before might need to delete
+                \::before
+                %li.b-bay
+                /text later
+                  %span.text-later.front-small.white text later
+                  %a.learn-more-button{:href => "b-bay-learnmore"} Learn More
+                  %a.apply-b-bay{:href => "b-bay-apply"} Apply
+                %li.ideal
+                /text later
+                  %span.text-later.front-small.white text later
+                  %a.learn-more-button{:href => "ideal-learnmore"} Learn More
+                  %a.apply-ideal{:href => "ideal-apply"} Apply
+        .copy-right
+          %p.text-copy-right.mb30
+            "© 2016 Humoney-Plus. All right reserved. Terms of Use and Privacy Policy"
