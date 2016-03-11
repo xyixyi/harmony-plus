@@ -1,1 +1,4 @@
 language: ruby
+
+after_script:
+- bundle install
