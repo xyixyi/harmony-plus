@@ -7,6 +7,7 @@ HarmonyPlus::Application.routes.draw do
   get 'detail', :to => 'mainframe#detail', :format => false
   get 'summer_academy', :to => 'mainframe#summer_academy', :format => false
   get 'future_planning', :to => 'mainframe#future_planning', :format => false
+  get 'login', :to => 'login#login', :format => false
   root "mainframe#index"
   
   #stories
