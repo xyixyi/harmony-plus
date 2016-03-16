@@ -4,11 +4,10 @@ Feature: Logging into the website works
   So that I can access the database
   I want to administrate and handle the forms and database
 
-Background: movies have been added to database
-
+Background: 
   Given the following user exist:
-  | username                | password |
-  | admin                   | admin    |
+  | username  | password |
+  | admin     | admin    |
 
   And  I am on the HarmonyPlus login page
 
