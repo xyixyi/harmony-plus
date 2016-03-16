@@ -9,7 +9,7 @@ Background:
   | username  | password |
   | admin     | admin    |
 
-  And  I am on the HarmonyPlus login page
+  And I am on the login page
 
 Scenario: Able to log in
   I am logged in as "admin" with password "admin"
