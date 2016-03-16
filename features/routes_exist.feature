@@ -27,7 +27,8 @@ Scenario: I can access the Contacts page
   When I press "contacts"
   Then I should see "U.S"
   And I should see "China"
-  And I should see "(999)999-9999" #Not working phone number yet
+  And I should see "(666)666-6666"
+  #Not working phone number yet
   
 Scenario: I can access the About Us page
   #About Us Page exists

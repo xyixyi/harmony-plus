@@ -5,15 +5,14 @@ Feature: Submitting into the DB works
   I want to submit my information
 
 Background:
-  Given I am on the HarmonyPlus login page
+  Given I am on the Apply Page
 
 Scenario: Able to apply
-  When I am on the apply page
-  Then I fill in name as "Person"
-  And I fill in age as "21"
-  And I fill in email as "a@b.com"
+  When I fill in "name" with "Person"
+  And I fill in "age" with "21"
+  And I fill in "email" with "a@b.com"
   And I check "M"
-  And I fill in city as "Berkeley"
-  And I fill in country as "US"
+  And I fill in "city" with "Berkeley"
+  And I fill in "country" with "US"
   And I press "submit"
   Then I should see "Info Submitted!"
