@@ -12,7 +12,7 @@ Scenario: Able to apply
   Then I fill in name as "Person"
   And I fill in age as "21"
   And I fill in email as "a@b.com"
-  And I press "M"
+  And I check "M"
   And I fill in city as "Berkeley"
   And I fill in country as "US"
   And I press "submit"

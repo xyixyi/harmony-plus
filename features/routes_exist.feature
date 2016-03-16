@@ -8,11 +8,11 @@ Scenario: I can access the BBay Learn More page
   #Home Page exists
   #Information not fully updated/implemented yet
   When I press "b-bay_learn_more"
-  Then I should go to the BbayLearnMore page
+  Then I should be on the BbayLearnMore page
   
 Scenario: I can access the Ideal Learn More page
   When I press "ideal_learn_more"
-  Then I should go to the IdealLearnMore page
+  Then I should be on the IdealLearnMore page
 
 Scenario: I can access the Stories page
   #Stories Page exists

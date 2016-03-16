@@ -12,5 +12,7 @@ Background:
   And  I am on the HarmonyPlus login page
 
 Scenario: Able to log in
-  When I log in with username: admin, password: admin
+  I am logged in as "admin" with password "admin"
   Then I should see "database"
+  
+  

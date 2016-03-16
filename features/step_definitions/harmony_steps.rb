@@ -9,9 +9,12 @@ Given /the following (.*?) exist:$/ do |type, table|
   end
 end
 
-When /^I log in with username: "(.*)", password: "(.*)"$/ do |e1, e2|
-  fill_in(userame, with: e1)
-  fill_in(password, with: e2)
+And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
+  visit '/accounts/login'
+  fill_in 'user_login', :with => u
+  fill_in 'user_password', :with => p
+  click_button 'Login'
+  assert page.has_content? 'Login successful'
 end
 
 When /^I press "([^\"]*)"$/ do |button|
@@ -40,4 +43,8 @@ end
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
   fill_in(field, :with => value)
+end
+
+When /^(?:|I )check "([^"]*)"$/ do |field|
+  check(field)
 end
