@@ -5,7 +5,8 @@ Feature: Submitting into the DB works
   I want to submit my information
 
 Background:
-  Given I am on the apply page
+  Given I have set the DB
+  Given I am on the applypage
 
 Scenario: Able to apply
   When I fill in "name" with "Person"

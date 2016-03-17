@@ -1,4 +1,7 @@
 # Add a declarative step here for populating the DB with movies.
+Given /^(?:|I )am on (.+)$/ do |page_name|
+  visit path_to(page_name)
+end
 
 Given /the following (.*?) exist:$/ do |type, table|
   table.hashes.each do |item|
