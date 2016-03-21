@@ -1,6 +1,6 @@
 HarmonyPlus::Application.routes.draw do
   # mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)]
-  #resources :manager
+  resources :manager
   get 'mainframe', :to => 'mainframe#index', :format => false
   get 'contact', :to => 'mainframe#contact', :format => false
   get 'about_us', :to => 'mainframe#about_us', :format => false

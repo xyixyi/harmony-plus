@@ -5,5 +5,6 @@ class CreateLogins < ActiveRecord::Migration
       t.string :password
       t.timestamps null: false
     end
+    
   end
 end

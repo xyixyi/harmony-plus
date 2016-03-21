@@ -10,6 +10,15 @@ logins = [{:admin => 'username_1', :password => 'password_1'},
          {:admin => 'username_3', :password => 'password_3'},
   	 ]
 
+students = [{:first_name => 'Frank', :last_name => 'Zhao', :email => 'zhaohp123456@hotmail.com', 
+            :gender => 'male', :country => 'China', :country_code => '123456'},
+            {:first_name => 'Mars', :last_name => 'Rao', :email => 'raobalala@hotmail.com', 
+            :gender => 'male', :country => 'China', :country_code => '123456'}]
+
 logins.each do |login|
   Login.create!(login)
+end
+
+students.each do |student|
+    Student.create!(student)
 end
