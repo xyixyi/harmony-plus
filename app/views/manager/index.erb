@@ -6,10 +6,10 @@
         border: 1px solid black;
     }
     </style>
+    <title>Manager Edit</title>
   </head>
-  
+  <h1>All Student Application</h1>
   <body>
-    <h1>All Student Application</h1>
     <table>
       <tr>
         <th>first_name</th>
@@ -23,7 +23,7 @@
       </tr>
        <% @students.each do |student| %>
       <tr>
-        <td><%= student.first_name %></td>
+        <td><%= link_to student.first_name, manager_path(student)%></td>
         <td><%= student.last_name %></td>
         <td><%= student.email %></td>
         <td><%= student.gender %></td>
@@ -35,4 +35,5 @@
       </tr>
     </table>
   </body>
+  <%= link_to "create new application", new_manager_path %>
 </html>
