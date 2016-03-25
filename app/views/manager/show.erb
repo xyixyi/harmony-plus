@@ -35,5 +35,6 @@
         <%= @student.phone_number %>
     </li>
   </body>
-  <%= link_to "edit this application", edit_manager_path(@student)%>
+  <%= button_to "edit this application", edit_manager_path(@student), :method => :get%>
+  <%= button_to "delete this application", manager_path(@student), :confirm => "Are you sure?", :method => :delete%>
 </html>
