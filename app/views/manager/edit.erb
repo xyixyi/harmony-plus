@@ -5,34 +5,38 @@
   </head>
   <h1>Student's Information</h1>
   <body>
-    <ul>
-    <li>
-        First_name:
-        <%= @student.first_name %>
-    </li>
-    <li>
-        Last_name:
-        <%= @student.last_name %>
-    </li>
-    <li>
-        Gender:
-        <%= @student.gender %>
-    </li>
-    <li>
-        Email:
-        <%= @student.email %>
-    </li>
-    <li>
-        Country:
-        <%= @student.country %>
-    </li>
-    <li>
-        Country Code:
-        <%= @student.country_code %>
-    </li>
-    <li>
-        Phone Number:
-        <%= @student.phone_number %>
-    </li>
+    <%= form_for @student, url: {action: "update"}, :method => :PUT do |f|%>
+        <ul>
+        <li>
+            First_name:
+            <%= f.text_field :first_name %>
+        </li>
+        <li>
+            Last_name:
+            <%= f.text_field :last_name %>
+        </li>
+        <li>
+            Gender:
+            <%= f.text_field :gender %>
+        </li>
+        <li>
+            Email:
+            <%= f.email_field :email %>
+        </li>
+        <li>
+            Country:
+            <%= f.text_field :country %>
+        </li>
+        <li>
+            Country Code:
+            <%= f.text_field :country_code %>
+        </li>
+        <li>
+            Phone Number:
+            <%= f.telephone_field :phone_number %>
+        </li>
+        <%= f.submit "Save application" %>
+        <%end%>
+    </form>
   </body>
 </html>

@@ -21,9 +21,8 @@
         <th>gender</th>
         <th>country</th>
         <th>country_code</th>
-        <th>created_at</th>
-        <th>updated_at</th>
-        <th>edit</th>
+        <th>phone_number</th>
+        <th>details</th>
       </tr>
        <% @students.each do |student| %>
       <tr>
@@ -33,9 +32,8 @@
         <td><%= student.gender %></td>
         <td><%= student.country %></td>
         <td><%= student.country_code %></td>
-        <td><%= student.created_at %></td>
-        <td><%= student.updated_at %></td>
-        <td><%= link_to "edit", manager_path(student)%></td>
+        <td><%= student.phone_number %></td>
+        <td><%= link_to "more info", manager_path(student)%></td>
        <%end%>
       </tr>
     </table>
