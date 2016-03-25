@@ -4,7 +4,7 @@ class LoginController < ActionController::Base
   protect_from_forgery with: :exception
   
   def manager_account_params
-    params.require(:account).permit(:admin, :password)
+    params.require(:account).permit(:admin, :password, :email)
   end
   
   def show

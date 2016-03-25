@@ -22,6 +22,7 @@
         <th>country</th>
         <th>country_code</th>
         <th>phone_number</th>
+        <th>program</th>
         <th>details</th>
       </tr>
        <% @students.each do |student| %>
@@ -33,6 +34,7 @@
         <td><%= student.country %></td>
         <td><%= student.country_code %></td>
         <td><%= student.phone_number %></td>
+        <td><%= student.program %></td>
         <td><%= link_to "more info", manager_path(student)%></td>
        <%end%>
       </tr>
