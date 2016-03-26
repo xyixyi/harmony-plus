@@ -5,6 +5,7 @@ ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
+gem 'devise'
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

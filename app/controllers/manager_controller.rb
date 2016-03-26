@@ -42,4 +42,5 @@ class ManagerController < ActionController::Base
     flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully deleted."
     redirect_to manager_index_path
   end
+  
 end
