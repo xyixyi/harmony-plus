@@ -10,14 +10,14 @@ Background:
     |Luke	   |Wang     |zhao@hotmail.com      |male   |China	|123456		    |              |b-bay	|
     |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|123456		    |              |b-bay-2	|
     |Xiaoyi	   |Cheng	 |xycheng0106@gmail.com |female |china	|United States  |4084555317	   |xxx     |
-  And I am on the manager page  # manager_index_path
+#   And I am on the manager page  # manager_index_path
   
-Scenario: able to see all student applications
+# Scenario: able to see all student applications
   
 
-Scenario: able to create new application
+# Scenario: able to create new application
   
   
-Scenario: able to see the new-created application
+# Scenario: able to see the new-created application
   
  
