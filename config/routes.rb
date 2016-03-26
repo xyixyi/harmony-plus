@@ -1,4 +1,5 @@
 HarmonyPlus::Application.routes.draw do
+  resources :posts
   # mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)]
   resources :manager
   get 'mainframe', :to => 'mainframe#index', :format => false
