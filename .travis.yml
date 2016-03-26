@@ -16,6 +16,6 @@ script:
 # - bundle exec rspec spec/
 addons:
   code_climate: # Pulls Code Coverage metrics from Code Climate
-    repo_token: c97988e6ff0969f56fc41dd6ca3c42fe42b0a0ee8ea8a4a96066f3e1c042256b
+    repo_token: c97988e6ff0969f56fc41dd6ca3c42fe42b0a0ee8ea8a4a96066f3e1c042256b bundle exec rake
 notifications:  
   email: false
