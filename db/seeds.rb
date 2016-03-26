@@ -5,6 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+<<<<<<< HEAD
+
+users = [{:username => 'username_1', :password => 'password_1'},
+         {:username => 'username_2', :password => 'password_2'},
+         {:username => 'username_3', :password => 'password_3'},
+  	 ]
+
+logins.each do |login|
+  Login.create!(login)
+end
+=======
 logins = [{:admin => 'username_1', :password => 'password_1'},
          {:admin => 'username_2', :password => 'password_2'},
          {:admin => 'username_3', :password => 'password_3'},
@@ -22,3 +33,4 @@ end
 students.each do |student|
     Student.create!(student)
 end
+>>>>>>> 2c2180b2f7eda4df43236a3ebba3769f264dbe70
