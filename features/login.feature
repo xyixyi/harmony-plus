@@ -4,14 +4,15 @@ Feature: Logging into the website works
   So that I can access the database
   I want to administrate and handle the forms and database
 
-Background: movies have been added to database
-
+Background: 
   Given the following user exist:
-  | username                | password |
-  | admin                   | admin    |
+  | username  | password |
+  | admin     | admin    |
 
-  And  I am on the HarmonyPlus login page
+  And I am on the login page
 
 Scenario: Able to log in
-  When I log in with username: admin, password: admin
-  Then I should see "database"
+  # I am logged in as "admin" with password "admin"
+  # Then I should see "database"
+  
+  

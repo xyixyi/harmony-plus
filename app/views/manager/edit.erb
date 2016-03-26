@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @student.first_name %>'s application</title>
+  </head>
+  <h1>Student's Information</h1>
+  <body>
+    <%= form_for @student, url: {action: "update"}, :method => :PUT do |f|%>
+        <ul>
+        <li>
+            First_name:
+            <%= f.text_field :first_name %>
+        </li>
+        <li>
+            Last_name:
+            <%= f.text_field :last_name %>
+        </li>
+        <li>
+            Gender:
+            <%= f.text_field :gender %>
+        </li>
+        <li>
+            Email:
+            <%= f.email_field :email %>
+        </li>
+        <li>
+            Country:
+            <%= f.text_field :country %>
+        </li>
+        <li>
+            Country Code:
+            <%= f.text_field :country_code %>
+        </li>
+        <li>
+            Phone Number:
+            <%= f.telephone_field :phone_number %>
+        </li>
+        <li>
+            Program:
+            <%= f.text_field :program %>
+        </li>
+        <%= f.submit "Save application" %>
+        <%end%>
+    </form>
+  </body>
+</html>

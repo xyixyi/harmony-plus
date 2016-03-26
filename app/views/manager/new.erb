@@ -1,0 +1,39 @@
+<h1>CREATING AN STUDENT APPLICATION</h1>
+
+<%= form_for @student, url: {action: "create"} do |f|%>
+<ul>
+  <li>
+  <%= f.label :first_name, "First Name:"%>
+  <%= f.text_field :first_name %>
+  </li>
+  <li>
+  <%= f.label :last_name, "Last Name:" %>
+  <%= f.text_field :last_name %>
+  </li>    
+  <li>
+  <%= f.label :email, "Email:" %>
+  <%= f.email_field :email %>
+  </li> 
+  <li>
+  <%= f.label :gender, "Gender:" %>
+  <%= f.text_field :gender %>
+  </li> 
+  <li>  
+  <%= f.label :country, "Country:" %>
+  <%= f.text_field :country %>
+  </li> 
+  <li>      
+  <%= f.label :country_code, "Country code:" %>
+  <%= f.text_field :country_code %>
+  </li> 
+  <li>      
+  <%= f.label :phone_number, "Phone number:" %>
+  <%= f.telephone_field :phone_number %>
+  </li> 
+  <li>      
+  <%= f.label :program, "Program:" %>
+  <%= f.text_field :program %>
+  </li> 
+</ul>
+  <%= f.submit "Create this application" %>
+<% end %>

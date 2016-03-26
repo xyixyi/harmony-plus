@@ -1,10 +1,21 @@
 # Add a declarative step here for populating the DB with movies.
-
-When /I log in with username: "(.*)", password: "(.*)"/ do |e1, e2|
-  fill_in(userame, with: e1)
-  fill_in(password, with: e2)
+Given /^(?:|I )am on (.+)$/ do |page_name|
+  visit path_to(page_name)
 end
 
-When /^I press "([^\"]*)"/ do |button|
-  click_button(button)
+Given /the following (.*?) exist:$/ do |type, table|
+  table.hashes.each do |item|
+    if    type == "users"    then User.create!(item)
+    # elsif type == "articles" then Article.create!(item)
+    # elsif type == "comments" then Comment.create!(item)
+    end
+  end
+end
+
+And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
+  visit '/accounts/login'
+  fill_in 'user_login', :with => u
+  fill_in 'user_password', :with => p
+  click_button 'Login'
+  assert page.has_content? 'Login successful'
 end
