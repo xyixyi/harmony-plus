@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+%h1 Manager:manager
+
 <html>
   <head>
     <style>
@@ -11,6 +13,11 @@
     </style>
     <title>Manager Edit</title>
   </head>
+  
+  <h1><%= @message %></h1>
+  <% if current_user %>
+    <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <% end %>
   
   <h2>All Student Application</h2>
   <body>

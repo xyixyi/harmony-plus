@@ -43,7 +43,6 @@ class ManagerController < ActionController::Base
     redirect_to manager_index_path
   end
   
-<<<<<<< HEAD
   # def manager
   #   if current_user
   #     @message = "Welcome admin!"
@@ -58,6 +57,4 @@ class ManagerController < ActionController::Base
   #   <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
   # <% end %>
   
-=======
->>>>>>> 31727bc1ff3fafaee2f26efdd2751e3febd28590
 end
