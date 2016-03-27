@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(version: 20160322070809) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
+    t.string   "first_name",   limit: 25
+    t.string   "last_name",    limit: 25
+    t.string   "email",        limit: 50, null: false
     t.string   "gender"
     t.string   "country"
     t.string   "country_code"
     t.string   "phone_number"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true

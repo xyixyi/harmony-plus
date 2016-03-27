@@ -19,3 +19,9 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   click_button 'Login'
   assert page.has_content? 'Login successful'
 end
+
+
+Given(/^now I am in b-bay apply$/) do
+  visit 'applys/b_bay_apply'
+end
+
