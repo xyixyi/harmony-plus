@@ -6,7 +6,7 @@ Feature: Submitting into the DB works
 
 Background:
   Given I have set the DB
-  Given I am on the applypage
+  # Given I am on the applypage
 
 Scenario: Able to apply
   When I fill in "name" with "Person"
