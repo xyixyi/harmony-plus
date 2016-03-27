@@ -1,5 +1,13 @@
 <div class = 'b_bay_apply'>
   <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
+  <p></p>
+  <% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <p></p>
   <div class='bot'>
     <%= form_tag :action=> "create" do %>
     <div class='applyform'>

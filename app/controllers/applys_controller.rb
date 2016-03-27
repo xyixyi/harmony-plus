@@ -62,7 +62,7 @@ class ApplysController < ActionController::Base
     @student = Student.new(student_params)
     if check == true and @student.save
       flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully created."
-      redirect_to manager_index_path
+      redirect_to b_bay_apply_path
     else
       redirect_to b_bay_apply_path
     end

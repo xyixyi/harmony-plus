@@ -22,4 +22,5 @@ Scenario: Able to apply
   And I select "U.S." from "Country"
   And I select "+86" from "Country Code"
   And I press "Submit"
+  # And I should see "Kate One's data was successfully created."
   
