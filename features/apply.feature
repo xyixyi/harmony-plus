@@ -23,5 +23,5 @@ Scenario: Able to apply
   And I select "U.S." from "Country"
   And I select "+86" from "Country Code"
   And I press "Submit"
-  # And I should see "You have successfully apply for B-Bay"
   And I should see "homepage"
+   # And I should see "You have successfully apply for B-Bay"
