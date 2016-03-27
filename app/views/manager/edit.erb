@@ -5,9 +5,14 @@
   </head>
   <h1>Student's Information</h1>
   
+  <% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+  <% end %>
+  
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
+  
   
   <body>
     <%= form_for @student, url: {action: "update"} do%>

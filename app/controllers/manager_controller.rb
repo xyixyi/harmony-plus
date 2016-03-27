@@ -15,25 +15,21 @@ class ManagerController < ActionController::Base
     check = true
     firstName = params[:student][:first_name]
     if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      flash.now[:error] = "First name cannot be empty."
+      errormessage = "First name cannot be empty."
       check = false
     end
-    firstName = params[:student][:first_name]
-    if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      flash.now[:error] = "First name cannot be empty."
-      check = false
-    end
-    if not params[:student][:last_name]
-      flash.now[:error] = "Last name cannot be empty."
+    lastname = params[:student][:last_name]
+    if not lastname or lastname[/[a-zA-Z]+/] != lastname
+      errormessage = "Last name cannot be empty or invaild last name."
       check = false
     end
     if not params[:student][:email]
-      flash.now[:error] = "Email address cannot be empty."
+      errormessage = "Email address cannot be empty."
       check = false
     end
     
     if not params[:student][:phone_number]
-      flash.now[:error] = "Phone number cannot be empty."
+      errormessage = "Phone number cannot be empty."
       check = false
     end
     
@@ -42,7 +38,7 @@ class ManagerController < ActionController::Base
     phone_number.delete("-")
     
     if phone_number.to_i.to_s != phone_number
-      flash.now[:error] = "Phone number is not vaild."
+      errormessage = "Phone number is not vaild."
       check = false
     end
     
@@ -57,6 +53,7 @@ class ManagerController < ActionController::Base
       flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully created."
       redirect_to manager_index_path
     else
+      flash[:notice] = errormessage
       redirect_to new_manager_path
     end
   end
