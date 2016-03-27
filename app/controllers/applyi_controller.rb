@@ -1,11 +1,11 @@
-class ApplysController < ActionController::Base
+class ApplyiController < ActionController::Base
   def student_params
-    params.require(:student).permit(:first_name, :last_name, :email, :gender, :country, :country_code, :phone_number)
+    params.require(:student).permit(:first_name, :last_name, :email, :gender, :country, :country_code, :phone_number, :age, :program)
   end
   
   def show
     # @student = Student.find(params[:id])
-    redirect_to b_bay_apply_path
+    redirect_to ideal_apply_path
   end
 
   def index
@@ -21,25 +21,21 @@ class ApplysController < ActionController::Base
     check = true
     firstName = params[:student][:first_name]
     if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      flash.now[:error] = "First name cannot be empty."
+      errormessage = "First name cannot be empty or invaild first name."
       check = false
     end
-    firstName = params[:student][:first_name]
-    if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      flash.now[:error] = "First name cannot be empty."
-      check = false
-    end
-    if not params[:student][:last_name]
-      flash.now[:error] = "Last name cannot be empty."
+    lastname = params[:student][:last_name]
+    if not lastname or lastname[/[a-zA-Z]+/] != lastname
+      errormessage = "Last name cannot be empty or invaild last name."
       check = false
     end
     if not params[:student][:email]
-      flash.now[:error] = "Email address cannot be empty."
+      errormessage = "Email address cannot be empty."
       check = false
     end
     
     if not params[:student][:phone_number]
-      flash.now[:error] = "Phone number cannot be empty."
+      errormessage = "Phone number cannot be empty."
       check = false
     end
     
@@ -48,7 +44,7 @@ class ApplysController < ActionController::Base
     phone_number.delete("-")
     
     if phone_number.to_i.to_s != phone_number
-      flash.now[:error] = "Phone number is not vaild."
+      errormessage = "Phone number is not vaild."
       check = false
     end
     
@@ -61,10 +57,11 @@ class ApplysController < ActionController::Base
     # print "here :"+@old_student.to_s
     @student = Student.new(student_params)
     if check == true and @student.save
-      flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully created."
-      redirect_to b_bay_apply_path
+      @student.update_attribute(:program, "Ideal")
+      redirect_to success_ideal_path
     else
-      redirect_to b_bay_apply_path
+      flash[:error] = errormessage
+      redirect_to ideal_apply_path
     end
   end
 

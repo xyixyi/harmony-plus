@@ -1,5 +1,6 @@
-<div class = 'b_bay_apply'>
-  <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
+<div class = 'apply'>
+  <%= link_to 'homepage', mainframe_path%>
+  <h_bbayapply class= "apply-page-header"> Apply for Ideal </h_bbayapply>
   <p></p>
   <% if flash[:error] %>
     <div class="error"><%= flash[:error] %></div>
@@ -13,17 +14,20 @@
     <div class='applyform'>
       <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
       <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
-      <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "email"})%>
+      <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
+      <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
       <%= label :student, :gender, 'Gender'%>
       <%= select(:student, :gender, ['Male', 'Female'])%>
       <%= label :student, :country, 'Country'%>
       <%= select(:student, :country, ['U.S.', 'CHINA'])%>
       <%= label :student, :country_code, 'Country Code'%>
       <%= select(:student, :country_code, ['+86', '+1'])%>
-      <%= text_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+      <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+      <%= label :student, :program, 'You are applying for Ideal'%>
+      
 
       <!--:student :program 'b-bay'-->
-      <input type="submit" name="program" class="submit_but" value= 'Submit' />
+      <input type="submit" name="submit" class="submit_but" value= 'Submit' />
     </div>
     <% end %>
   </div>

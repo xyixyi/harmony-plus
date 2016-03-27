@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160326013745) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "program"
+    t.integer  "age"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true

@@ -22,6 +22,6 @@ end
 
 
 Given(/^now I am in b-bay apply$/) do
-  visit 'applys/b_bay_apply'
+  visit 'applyb/b_bay_apply'
 end
 

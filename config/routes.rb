@@ -5,7 +5,8 @@ HarmonyPlus::Application.routes.draw do
   devise_for :users
   # mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)]
   resources :manager
-  resources :applys
+  resources :applyb
+  resources :applyi
   get 'mainframe', :to => 'mainframe#index', :format => false
   get 'contact', :to => 'mainframe#contact', :format => false
   get 'about_us', :to => 'mainframe#about_us', :format => false
@@ -13,7 +14,11 @@ HarmonyPlus::Application.routes.draw do
   get 'summer_academy', :to => 'mainframe#summer_academy', :format => false
   get 'future_planning', :to => 'mainframe#future_planning', :format => false
   get 'login', :to => 'manager#index', :format => false
-  get 'b_bay_apply', :to => 'applys#b_bay_apply', :format => false
+  get 'b_bay_apply', :to => 'applyb#b_bay_apply', :format => false
+  get 'ideal_apply', :to => 'applyi#ideal_apply', :format => false
+  get 'success_b_bay', :to => 'applyb#success', :format => false
+  get 'success_ideal', :to => 'applyi#success', :format => false
+  
 
   root "mainframe#index"
   
