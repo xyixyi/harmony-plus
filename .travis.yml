@@ -4,11 +4,18 @@ rvm:
 - ruby-2.2.2
 services:
 - postgresql 
+before_script:
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
 script:
-- RAILS_ENV=test bundle exec rake db:migrate --trace
-- bundle exec rake db:test:prepare
-- bundle exec rspec spec/
-- bundle exec rake cucumber
+  - bundle exec rake cucumber
+  - bundle exec rake spec
+# script:
+# - RAILS_ENV=test bundle exec rake db:migrate --trace
+# - bundle exec rake db:test:prepare
+# - bundle exec rspec spec/
 addons:
   code_climate: # Pulls Code Coverage metrics from Code Climate
-    repo_token: c97988e6ff0969f56fc41dd6ca3c42fe42b0a0ee8ea8a4a96066f3e1c042256b
+    repo_token: c97988e6ff0969f56fc41dd6ca3c42fe42b0a0ee8ea8a4a96066f3e1c042256b bundle exec rake
+notifications:  
+  email: false
