@@ -6,10 +6,7 @@ ruby '2.2.2'
 gem 'rails', '4.2.5'
 
 gem 'devise'
-<<<<<<< HEAD
-# Devise gem
-=======
->>>>>>> 0784bf7b7684f68f8dadc2609532c622e7ffd562
+
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
