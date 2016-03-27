@@ -1,8 +1,4 @@
 class ManagerController < ActionController::Base
-  def student_params
-    params.require(:student).permit(:first_name, :last_name, :email, :gender, :country, :country_code, :phone_number, :program)
-  end
-  
   def show
     @student = Student.find(params[:id])
   end
@@ -56,5 +52,8 @@ class ManagerController < ActionController::Base
   # <% if current_user %>
   #   <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
   # <% end %>
-  
+  private
+    def student_params
+       params.require(:student).permit(:first_name, :last_name, :age, :email, :gender, :country, :country_code, :phone_number, :program)
+    end
 end
