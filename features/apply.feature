@@ -5,13 +5,12 @@ Feature: Submitting into the DB works
   I want to submit my information
 
 Background:
-  # Given I have set the DB
   
   Given the following student exist:
     | first_name | last_name | gender  | country  | email          | country_code  |  phone_number
     | Bob        | Lee       |  Male   | CHINA    | bob@gmail.com  | +86           |  12345678
 
-  
+
 
 Scenario: Able to apply
   Given now I am in b-bay apply

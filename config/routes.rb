@@ -1,4 +1,8 @@
 HarmonyPlus::Application.routes.draw do
+  get 'hello/hello'
+
+  resources :posts
+  devise_for :users
   # mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)]
   resources :manager
   resources :applys
@@ -10,6 +14,7 @@ HarmonyPlus::Application.routes.draw do
   get 'future_planning', :to => 'mainframe#future_planning', :format => false
   get 'login', :to => 'manager#index', :format => false
   get 'b_bay_apply', :to => 'applys#b_bay_apply', :format => false
+
   root "mainframe#index"
   
   #stories

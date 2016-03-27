@@ -10,10 +10,10 @@ logins = [{:admin => 'username_1', :password => 'password_1'},
          {:admin => 'username_3', :password => 'password_3'},
   	 ]
 
-students = [{:first_name => 'Frank', :last_name => 'Zhao', :email => 'zhaohp123456@hotmail.com', 
-            :gender => 'male', :country => 'China', :country_code => '123456'},
-            {:first_name => 'Mars', :last_name => 'Rao', :email => 'raobalala@hotmail.com', 
-            :gender => 'male', :country => 'China', :country_code => '123456'}]
+students = [{:first_name => 'Luke', :last_name => 'Wang', :email => 'zhao@hotmail.com', 
+            :gender => 'male', :country => 'China', :country_code => '123456', :program => 'b-bay'},
+            {:first_name => 'dshdjksa', :last_name => 'hellop', :email => 'dsaf@hotmail.com', 
+            :gender => 'male', :country => 'China', :country_code => '123456', :program => 'b-bay-2'}]
 
 logins.each do |login|
   Login.create!(login)

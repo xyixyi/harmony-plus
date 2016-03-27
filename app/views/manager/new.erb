@@ -1,4 +1,4 @@
-<h1>CREATING AN STUDENT APPLICATION</h1>
+<h1>CREATE A STUDENT APPLICATION</h1>
 
 <%= form_for @student, url: {action: "create"} do |f|%>
 <ul>
@@ -28,7 +28,11 @@
   </li> 
   <li>      
   <%= f.label :phone_number, "Phone number:" %>
-  <%= f.text_field :phone_number %>
+  <%= f.telephone_field :phone_number %>
+  </li> 
+  <li>      
+  <%= f.label :program, "Program:" %>
+  <%= f.text_field :program %>
   </li> 
 </ul>
   <%= f.submit "Create this application" %>
