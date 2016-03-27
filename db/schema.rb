@@ -47,15 +47,15 @@ ActiveRecord::Schema.define(version: 20160326004347) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "first_name",   limit: 25
-    t.string   "last_name",    limit: 25
-    t.string   "email",        limit: 50, null: false
+    t.string   "first_name", default: "", null: false
+    t.string   "last_name", default: "", null: false
+    t.string   "email", null: false
     t.string   "gender"
     t.string   "country"
     t.string   "country_code"
-    t.string   "phone_number"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "phone_number", default: "", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "program"
   end
 
