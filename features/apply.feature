@@ -22,6 +22,5 @@ Scenario: Able to apply
   And I select "Male" from "Gender"
   And I select "U.S." from "Country"
   And I select "+86" from "Country Code"
-  
   And I press "Submit"
   
