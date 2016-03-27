@@ -5,15 +5,22 @@ Feature: Submitting into the DB works
   I want to submit my information
 
 Background:
-  Given I have set the DB
-  # Given I am on the applypage
+  
+  Given the following student exist:
+    | first_name | last_name | gender  | country  | email          | country_code  |  phone_number
+    | Bob        | Lee       |  Male   | CHINA    | bob@gmail.com  | +86           |  12345678
+
+
 
 Scenario: Able to apply
-  When I fill in "name" with "Person"
-  And I fill in "age" with "21"
+  Given now I am in b-bay apply
+  When I fill in "First Name" with "Kate"
+  And I fill in "Last Name" with "One"
   And I fill in "email" with "a@b.com"
-  And I check "M"
-  And I fill in "city" with "Berkeley"
-  And I fill in "country" with "US"
-  And I press "submit"
-  Then I should see "Info Submitted!"
+  And I fill in "Phone Number" with "09876"
+  And I select "Male" from "Gender"
+  And I select "U.S." from "Country"
+  And I select "+86" from "Country Code"
+  And I press "Submit"
+  # And I should see "Kate One's data was successfully created."
+  
