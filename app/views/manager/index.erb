@@ -17,6 +17,14 @@
     <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
   <% end %>
   
+  <% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+  
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  
   <h2>Student Applications</h2>
   <body>
     <table>

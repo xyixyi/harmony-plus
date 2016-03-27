@@ -17,29 +17,28 @@ class ApplysController < ActionController::Base
   end
   
   def create
-    # print "fuck" + params[:student][:email]
     check = true
     firstName = params[:student][:first_name]
     if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      flash.now[:error] = "First name cannot be empty."
+      flash[:error] = "First name cannot be empty."
       check = false
     end
     firstName = params[:student][:first_name]
     if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      flash.now[:error] = "First name cannot be empty."
+      flash[:error] = "First name cannot be empty."
       check = false
     end
     if not params[:student][:last_name]
-      flash.now[:error] = "Last name cannot be empty."
+      flash[:error] = "Last name cannot be empty."
       check = false
     end
     if not params[:student][:email]
-      flash.now[:error] = "Email address cannot be empty."
+      flash[:error] = "Email address cannot be empty."
       check = false
     end
     
     if not params[:student][:phone_number]
-      flash.now[:error] = "Phone number cannot be empty."
+      flash[:error] = "Phone number cannot be empty."
       check = false
     end
     

@@ -1,43 +1,21 @@
 <h1>CREATE A STUDENT APPLICATION</h1>
 
-<%= form_for @student, url: {action: "create"} do |f|%>
-<ul>
-  <li>
-  <%= f.label :first_name, "First Name:"%>
-  <%= f.text_field :first_name %>
-  </li>
-  <li>
-  <%= f.label :last_name, "Last Name:" %>
-  <%= f.text_field :last_name %>
-  </li>    
-  <li>
-  <%= f.label :age, "Age:" %>
-  <%= f.text_field :age %>
-  </li>    
-  <li>
-  <%= f.label :email, "Email:" %>
-  <%= f.email_field :email %>
-  </li> 
-  <li>
-  <%= f.label :gender, "Gender:" %>
-  <%= f.text_field :gender %>
-  </li> 
-  <li>  
-  <%= f.label :country, "Country:" %>
-  <%= f.text_field :country %>
-  </li> 
-  <li>      
-  <%= f.label :country_code, "Country code:" %>
-  <%= f.text_field :country_code %>
-  </li> 
-  <li>      
-  <%= f.label :phone_number, "Phone number:" %>
-  <%= f.telephone_field :phone_number %>
-  </li> 
-  <li>      
-  <%= f.label :program, "Program:" %>
-  <%= f.text_field :program %>
-  </li> 
-</ul>
-  <%= f.submit "Create this application" %>
+<%= form_for @student, url: {action: "create"} do%>
+  <div class='applyform'>
+    <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
+    <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
+    <%= label :student, :age, 'Age'%>
+    <%= select(:student, :age, Array(0..150))%>
+    <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "email"})%>
+    <%= label :student, :gender, 'Gender'%>
+    <%= select(:student, :gender, ['Male', 'Female'])%>
+    <%= label :student, :country, 'Country'%>
+    <%= select(:student, :country, ['U.S.', 'CHINA'])%>
+    <%= label :student, :country_code, 'Country Code'%>
+    <%= select(:student, :country_code, ['+86', '+1'])%>
+    <%= text_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+    <%= label :student, :program, 'Program'%>
+    <%= select(:student, :program, ['b-bay-1', 'b-bay-2'])%>
+    <input type="submit" name="program" class="submit_but" value= 'Submit' />
+  </div>
 <% end %>
