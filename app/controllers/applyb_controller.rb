@@ -17,7 +17,6 @@ class ApplybController < ActionController::Base
   end
   
   def create
-    # print "fuck" + params[:student][:email]
     check = true
     firstName = params[:student][:first_name]
     if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
