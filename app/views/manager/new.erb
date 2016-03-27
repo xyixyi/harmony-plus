@@ -1,5 +1,13 @@
 <h1>CREATE A STUDENT APPLICATION</h1>
 
+<% if flash[:error] %>
+  <div><%= flash[:error] %></div>
+<% end %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+  
 <%= form_for @student, url: {action: "create"} do%>
   <div class='applyform'>
     <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
