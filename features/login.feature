@@ -5,7 +5,7 @@ Feature: Logging into the website works
   I want to administrate and handle the forms and database
 
 Background: 
-  Given the following user exist:
+  Given the following users exist:
   | username  | password |
   | admin     | admin    |
 
