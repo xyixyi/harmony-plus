@@ -5,8 +5,8 @@ end
 
 Given /the following (.*?) exist:$/ do |type, table|
   table.hashes.each do |item|
-    if    type == "users"    then User.create!(item)
-    # elsif type == "articles" then Article.create!(item)
+    if    type == "students" then Article.create!(item)
+    elsif type == "users" then User.create!(item)
     # elsif type == "comments" then Comment.create!(item)
     end
   end

@@ -13,6 +13,7 @@ Background:
   And I am on the manager page
   
 # Scenario: able to see all student applications
+#   And I should see "Luke"
 
 
 Scenario: able to create new application
@@ -34,5 +35,15 @@ Scenario: able to create new application
   
   
 # Scenario: able to see the new-created application
+
+# # Scenario: able to delete application
+#   When I follow "more info"
+#   # And I press "delete this application"
+#   # Then I should be on the manager page
+#   # And I should see "Kate One's data was successfully created."
+  
+# Scenario: able to edit application
+#   When I follow "more info"
+#   And I press "edit this application"
   
  
