@@ -11,3 +11,9 @@ https://www.pivotaltracker.com/n/projects/1544921
 heroku:
 
 http://harmony-plus.herokuapp.com/
+
+
+
+
+Team #37 Harmony plus
+Team members: Henry Gan, Yiran Rao, Hangpeng Zhao, Qianmei Luo, Xiaoyi Cheng, Shrayus Gupta
