@@ -28,7 +28,8 @@ class ApplybController < ActionController::Base
       errormessage = "Last name cannot be empty or invaild last name."
       check = false
     end
-    if not params[:student][:email]
+    
+    if params[:student][:email] == ""
       errormessage = "Email address cannot be empty."
       check = false
     end
@@ -38,10 +39,13 @@ class ApplybController < ActionController::Base
       check = false
     end
     
-    if not params[:student][:age]
+    
+    if params[:student][:age].to_i == 0
         errormessage = "please enter your age."
         check = false
     end
+    
+
     
     phone_number = params[:student][:phone_number]
     
@@ -60,6 +64,7 @@ class ApplybController < ActionController::Base
     
     # print "here :"+@old_student.to_s
     @student = Student.new(student_params)
+    
     if check == true and @student.save
       @student.update_attribute(:program, "B-Bay")
       redirect_to success_b_bay_path

@@ -25,3 +25,6 @@ Given(/^now I am in b-bay apply$/) do
   visit 'applyb/b_bay_apply'
 end
 
+Given(/^now I am in successfully apply b-bay page$/) do
+  visit 'applyb/success_b_bay'
+end
