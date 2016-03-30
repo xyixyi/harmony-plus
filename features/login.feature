@@ -9,10 +9,10 @@ Background:
   | username  | password |
   | admin     | password |
 
-  And I am on the login page
+  # And I am on the login page
 
 Scenario: Able to log in
   When I am logged in as "admin" with password "admin"
-  And I go to the posts page
+  And now I am in the posts page
   Then I should see "Listing posts"
   And I should see "New Post"

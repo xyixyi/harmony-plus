@@ -25,6 +25,6 @@ Given(/^now I am in b-bay apply$/) do
   visit 'applyb/b_bay_apply'
 end
 
-And /I go to the posts page$/ do
+And /now I am in the posts page$/ do
   visit 'posts'
 end
