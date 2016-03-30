@@ -6,13 +6,19 @@ Feature: Logging into the website works
 
 Background: 
   Given the following users exist:
-  | username  | password |
-  | admin     | password |
+  | email           | password |
+  | admin@yahoo.com | password |
 
   # And I am on the login page
 
 Scenario: Able to log in
-  When I am logged in as "admin" with password "admin"
+  When I am logged in as "admin@yahoo.com" with password "password"
   Then I can access the posts page
-  # Then I should see "Title Content"
-  # And I should see "New Post"
+  Then I should see "Title Content"
+  And I should see "New Post"
+  
+  
+Scenario: Non-Admins cannot access posts
+  When I access the posts page
+  Then I should see "Log in"
+  And I should see "Sign up"
