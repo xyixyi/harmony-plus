@@ -16,7 +16,7 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   visit '/login'
   fill_in 'user_email', :with => u
   fill_in 'user_password', :with => p
-  click_button 'Login'
+  click_button 'Log in'
   assert page.has_content? 'Login successful'
 end
 
