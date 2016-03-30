@@ -13,8 +13,8 @@ Given /the following (.*?) exist:$/ do |type, table|
 end
 
 And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
-  visit '/accounts/login'
-  fill_in 'user_login', :with => u
+  visit '/login'
+  fill_in 'user_email', :with => u
   fill_in 'user_password', :with => p
   click_button 'Login'
   assert page.has_content? 'Login successful'
@@ -25,3 +25,6 @@ Given(/^now I am in b-bay apply$/) do
   visit 'applyb/b_bay_apply'
 end
 
+And /I go to the posts page$/ do
+  visit 'posts'
+end
