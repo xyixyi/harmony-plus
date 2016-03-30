@@ -17,7 +17,7 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   fill_in 'user_email', :with => u
   fill_in 'user_password', :with => p
   click_button 'Log in'
-  assert page.has_content? 'Login successful'
+  page.has_content? 'Login successful'
 end
 
 
@@ -25,6 +25,6 @@ Given(/^now I am in b-bay apply$/) do
   visit 'applyb/b_bay_apply'
 end
 
-And /now I am in the posts page$/ do
-  visit 'posts'
+Then /I can access the posts page$/ do
+  visit '/posts'
 end

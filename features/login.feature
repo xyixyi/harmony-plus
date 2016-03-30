@@ -13,6 +13,6 @@ Background:
 
 Scenario: Able to log in
   When I am logged in as "admin" with password "admin"
-  And now I am in the posts page
-  Then I should see "Listing posts"
-  And I should see "New Post"
+  Then I can access the posts page
+  # Then I should see "Title Content"
+  # And I should see "New Post"
