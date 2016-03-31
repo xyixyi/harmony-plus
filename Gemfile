@@ -5,7 +5,7 @@ ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
-gem 'codeclimate-test-reporter', require: nil
+# gem 'codeclimate-test-reporter', require: nil
 
 gem 'devise'
 
@@ -47,7 +47,7 @@ end
 
 # setup Cucumber, RSpec, autotest support
 group :test do
-  # gem 'codeclimate-test-reporter', require: nil
+  gem 'codeclimate-test-reporter', require: nil
   gem 'rspec-rails', '2.14'
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
