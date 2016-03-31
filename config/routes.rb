@@ -13,7 +13,7 @@ HarmonyPlus::Application.routes.draw do
   get 'detail', :to => 'mainframe#detail', :format => false
   get 'summer_academy', :to => 'mainframe#summer_academy', :format => false
   get 'future_planning', :to => 'mainframe#future_planning', :format => false
-  get 'login', :to => 'manager#index', :format => false
+  # get 'login', :to => 'manager#index', :format => false
   get 'b_bay_apply', :to => 'applyb#b_bay_apply', :format => false
   get 'ideal_apply', :to => 'applyi#ideal_apply', :format => false
   get 'success_b_bay', :to => 'applyb#success', :format => false
@@ -21,6 +21,12 @@ HarmonyPlus::Application.routes.draw do
   
 
   root "mainframe#index"
+  
+  devise_scope :user do
+    get "signup", to: "devise/registrations#new"
+    get "login" => "devise/sessions#new"
+    get "logout", to: "devise/sessions#destroy"
+  end
   
   #stories
   get 'stories', :to => 'stories#stories', :format => false

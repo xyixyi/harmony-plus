@@ -5,12 +5,11 @@ Feature: Managing the database and seeing all applications in DB
   I want to administrate and handle the forms and database # similar to login feature?
 
 Background:
-  
   Given the following students exist:
-    |first_name|last_name|age|email     	          |gender |country|country_code |phone_number |program|
-    |Luke	     |Wang     |12 |zhao@hotmail.com      |male   |China	|123456		    |             |b-bay	|
-    |dshdjksa  |hellop	 |13 |dsaf@hotmail.com      |male   |China	|123456		    |             |b-bay-2|
-    |Xiaoyi	   |Cheng	   |14 |xycheng0106@gmail.com |female |china	|+1           |4084555317	  |xxx    |
+    |first_name|last_name|email     	          |gender |country|country_code |phone_number |program|age|
+    |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|123456		    |             |b-bay	|18 |
+    |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|123456		    |             |b-bay-2|19 |
+    |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084555317	  |xxx    |20 |
   And I am on the manager page
   
 # Scenario: able to see all student applications
@@ -37,11 +36,11 @@ Scenario: able to create new application
   
 # Scenario: able to see the new-created application
 
-# # Scenario: able to delete application
-#   When I follow "more info"
-#   # And I press "delete this application"
-#   # Then I should be on the manager page
-#   # And I should see "Kate One's data was successfully created."
+# Scenario: able to delete application
+  # When I follow "more info"
+  # And I press "delete this application"
+  # Then I should be on the manager page
+  # And I should see "Kate One's data was successfully created."
   
 # Scenario: able to edit application
 #   When I follow "more info"

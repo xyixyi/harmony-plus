@@ -5,14 +5,19 @@ Feature: Logging into the website works
   I want to administrate and handle the forms and database
 
 Background: 
-  Given the following user exist:
-  | email                   | password     |
-  | firstuser@gmail.com     | hs1l3498174  |
-
-  And I am on the login page
+  Given the following users exist:
+  | email           | password |
+  | admin@yahoo.com | password |
+  # And I am on the login page
 
 Scenario: Able to log in
-  # I am logged in as "admin" with password "admin"
-  # Then I should see "database"
+  When I am logged in as "admin@yahoo.com" with password "password"
+  Then I can access the posts page
+  Then I should see "Title Content"
+  And I should see "New Post"
   
   
+Scenario: Non-Admins cannot access posts
+  When I access the posts page
+  Then I should see "Log in"
+  And I should see "Sign up"
