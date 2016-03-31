@@ -26,7 +26,9 @@ Given(/^now I am in b-bay apply$/) do
 end
 
 Given(/^now I am in successfully apply b-bay page$/) do
+  # puts page.body
   visit 'applyb/success_b_bay'
+  puts page.body
 end
 
 Then /I can access the posts page$/ do
