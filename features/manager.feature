@@ -5,11 +5,12 @@ Feature: Managing the database and seeing all applications in DB
   I want to administrate and handle the forms and database # similar to login feature?
 
 Background:
-  Given the following student exist:
-    |first_name|last_name|email     	          |gender |country|country_code |phone_number |program|
-    |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|123456		    |             |b-bay	|
-    |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|123456		    |             |b-bay-2|
-    |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084555317	  |xxx    |
+  
+  Given the following students exist:
+    |first_name|last_name|age|email     	          |gender |country|country_code |phone_number |program|
+    |Luke	     |Wang     |12 |zhao@hotmail.com      |male   |China	|123456		    |             |b-bay	|
+    |dshdjksa  |hellop	 |13 |dsaf@hotmail.com      |male   |China	|123456		    |             |b-bay-2|
+    |Xiaoyi	   |Cheng	   |14 |xycheng0106@gmail.com |female |china	|+1           |4084555317	  |xxx    |
   And I am on the manager page
   
 # Scenario: able to see all student applications

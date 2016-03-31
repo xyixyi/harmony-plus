@@ -6,8 +6,8 @@ Feature: Logging into the website works
 
 Background: 
   Given the following user exist:
-  | username  | password |
-  | admin     | admin    |
+  | email                   | password     |
+  | firstuser@gmail.com     | hs1l3498174  |
 
   And I am on the login page
 

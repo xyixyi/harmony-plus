@@ -3,14 +3,25 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-Given /the following (.*?) exist:$/ do |type, table|
-  table.hashes.each do |item|
-    if    type == "students" then Article.create!(item)
-    elsif type == "users" then User.create!(item)
-    # elsif type == "comments" then Comment.create!(item)
-    end
+Given(/^the following students exist:$/) do |table|
+  table.hashes.each do |student|
+    # each returned element will be a hash whose key is the table header.
+    # you should arrange to add that movie to the database here.
+    print student
+    Student.new(student).save!
   end
 end
+
+# Given /the following (.*?) exist:$/ do |type, table|
+#   table.hashes.each do |item|
+#     if    type == "student" then Student.new(item).save!
+#     elsif type == "user" then User.create!(item)
+#     # elsif type == "comments" then Comment.create!(item)
+#     else
+#       assert false
+#     end
+#   end
+# end
 
 And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   visit '/accounts/login'

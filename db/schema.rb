@@ -31,14 +31,6 @@ ActiveRecord::Schema.define(version: 20160327044936) do
   add_index "installs", ["email"], name: "index_installs_on_email", unique: true
   add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
 
-  create_table "logins", force: :cascade do |t|
-    t.string   "admin"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "email"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "content"
@@ -47,15 +39,15 @@ ActiveRecord::Schema.define(version: 20160327044936) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "first_name",   limit: 25
-    t.string   "last_name",    limit: 25
-    t.string   "email",        limit: 50, null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
     t.string   "gender"
     t.string   "country"
     t.string   "country_code"
     t.string   "phone_number"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "program"
     t.integer  "age"
   end
