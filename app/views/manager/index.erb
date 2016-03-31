@@ -51,7 +51,7 @@
         <td><%= student.country_code %></td>
         <td><%= student.phone_number %></td>
         <td><%= student.program %></td>
-        <td><%= link_to "more info", manager_path(student)%></td>
+        <td><%= link_to "Details for #{student.first_name}", manager_path(student)%></td>
        <%end%>
       </tr>
     </table>
