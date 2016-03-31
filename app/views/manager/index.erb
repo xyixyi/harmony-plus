@@ -11,12 +11,27 @@
     </style>
     <title>Manager Edit</title>
   </head>
-  <h1>All Student Application</h1>
+  
+  <h1><%= @message %></h1>
+  <% if current_user %>
+    <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <% end %>
+  
+  <% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+  <% end %>
+  
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  
+  <h2>Student Applications</h2>
   <body>
     <table>
       <tr>
         <th>first_name</th>
         <th>last_name</th>
+        <th>age</th>
         <th>email</th>
         <th>gender</th>
         <th>country</th>
@@ -29,13 +44,14 @@
       <tr>
         <td><%= student.first_name%></td>
         <td><%= student.last_name %></td>
+        <td><%= student.age %></td>
         <td><%= student.email %></td>
         <td><%= student.gender %></td>
         <td><%= student.country %></td>
         <td><%= student.country_code %></td>
         <td><%= student.phone_number %></td>
         <td><%= student.program %></td>
-        <td><%= link_to "more info", manager_path(student)%></td>
+        <td><%= link_to "Details for #{student.first_name}", manager_path(student)%></td>
        <%end%>
       </tr>
     </table>

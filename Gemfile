@@ -5,6 +5,10 @@ ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
+# gem 'codeclimate-test-reporter', require: nil
+
+gem 'devise'
+
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -43,6 +47,7 @@ end
 
 # setup Cucumber, RSpec, autotest support
 group :test do
+  gem 'codeclimate-test-reporter', require: nil
   gem 'rspec-rails', '2.14'
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
@@ -65,4 +70,4 @@ group :production do
   gem 'pg' # for Heroku deployment
 end
 
-gem "codeclimate-test-reporter", group: :test, require: nil
+# gem "codeclimate-test-reporter", group: :test, require: nil

@@ -4,43 +4,35 @@
     <title><%= @student.first_name %>'s application</title>
   </head>
   <h1>Student's Information</h1>
+  
+  <% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+  <% end %>
+  
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  
+  
   <body>
-    <%= form_for @student, url: {action: "update"}, :method => :PUT do |f|%>
-        <ul>
-        <li>
-            First_name:
-            <%= f.text_field :first_name %>
-        </li>
-        <li>
-            Last_name:
-            <%= f.text_field :last_name %>
-        </li>
-        <li>
-            Gender:
-            <%= f.text_field :gender %>
-        </li>
-        <li>
-            Email:
-            <%= f.email_field :email %>
-        </li>
-        <li>
-            Country:
-            <%= f.text_field :country %>
-        </li>
-        <li>
-            Country Code:
-            <%= f.text_field :country_code %>
-        </li>
-        <li>
-            Phone Number:
-            <%= f.telephone_field :phone_number %>
-        </li>
-        <li>
-            Program:
-            <%= f.text_field :program %>
-        </li>
-        <%= f.submit "Save application" %>
-        <%end%>
-    </form>
+    <%= form_for @student, url: {action: "update"} do%>
+      <div class='applyform'>
+        <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
+        <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
+        <%= label :student, :age, 'Age'%>
+        <%= select(:student, :age, Array(0..150))%>
+        <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "email"})%>
+        <%= label :student, :gender, 'Gender'%>
+        <%= select(:student, :gender, ['Male', 'Female'])%>
+        <%= label :student, :country, 'Country'%>
+        <%= select(:student, :country, ['U.S.', 'CHINA'])%>
+        <%= label :student, :country_code, 'Country Code'%>
+        <%= select(:student, :country_code, ['+86', '+1'])%>
+        <%= text_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+        <%= label :student, :program, 'Program'%>
+        <%= select(:student, :program, ['b-bay-1', 'b-bay-2'])%>
+        <input type="submit" name="program" class="submit_but" value= 'Submit' />
+      </div>
+<% end %>
   </body>
 </html>

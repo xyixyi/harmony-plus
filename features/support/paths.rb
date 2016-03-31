@@ -15,6 +15,10 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    when /^the manager page$/ then '/manager'
+    
+    when /^the success_b_bay page$/ then '/success_b_bay'
+    when /^the create new application page$/ then '/manager/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
