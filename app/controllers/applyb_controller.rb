@@ -46,7 +46,6 @@ class ApplybController < ActionController::Base
     end
     
 
-    
     phone_number = params[:student][:phone_number]
     
     phone_number.delete("-")
@@ -77,18 +76,6 @@ class ApplybController < ActionController::Base
   def edit
     @student = Student.find(params[:id])
   end
+  
 
-  def update
-    @student = Student.find(params[:id])
-    @student.update_attributes!(student_params)
-    flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully updated."
-    redirect_to manager_index_path
-  end
-
-  def destroy
-    @student = Student.find(params[:id])
-    @student.destroy
-    flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully deleted."
-    redirect_to manager_index_path
-  end
 end

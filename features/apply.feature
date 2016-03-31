@@ -16,16 +16,16 @@ Scenario: Able to apply
   Given now I am in b-bay apply
   When I fill in "First Name" with "Kate"
   And I fill in "Last Name" with "One"
-  And I fill in "Email" with "a@b.com"
-  And I fill in "Phone Number" with "09876"
+  And I fill in "Email" with "zhaohp@hotmail.com"
+  And I fill in "Phone Number" with "4084124987"
   And I fill in "Age" with "18"
   And I select "Female" from "Gender"
   And I select "U.S." from "Country"
   And I select "+86" from "Country Code"
   And I press "Submit"
-  Given now I am in successfully apply b-bay page
+  Then I should be on the success_b_bay page
   Then I should see "homepage"
-  # Then I should see "You have successfully apply for B-Bay"
+  Then I should see "You have successfully apply for B-Bay"
 
 Scenario: first name is missing
   Given now I am in b-bay apply

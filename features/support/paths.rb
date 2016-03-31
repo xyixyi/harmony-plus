@@ -17,6 +17,7 @@ module NavigationHelpers
       '/'
     when /^the manager page$/ then '/manager'
     
+    when /^the success_b_bay page$/ then '/success_b_bay'
     when /^the create new application page$/ then '/manager/new'
 
     # Add more mappings here.
