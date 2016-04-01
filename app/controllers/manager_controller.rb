@@ -20,7 +20,7 @@ class ManagerController < ActionController::Base
     end
     lastname = params[:student][:last_name]
     if not lastname or lastname[/[a-zA-Z]+/] != lastname
-      errormessage = "Last name cannot be empty or invaild last name."
+      errormessage = "Last name cannot be empty."
       check = false
     end
     if not params[:student][:email]
@@ -38,7 +38,7 @@ class ManagerController < ActionController::Base
     phone_number.delete("-")
     
     if phone_number.to_i.to_s != phone_number
-      errormessage = "Phone number is not vaild."
+      errormessage = "Phone number is invaild."
       check = false
     end
     
