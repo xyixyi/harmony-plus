@@ -17,45 +17,7 @@ class ApplybController < ActionController::Base
   end
   
   def create
-    check = true
-    firstName = params[:student][:first_name]
-    if firstName.empty? or firstName[/[a-zA-Z]+/] != firstName
-      errormessage = "First name cannot be empty."
-      check = false
-    end
-    lastname = params[:student][:last_name]
-    if not lastname or lastname[/[a-zA-Z]+/] != lastname
-      errormessage = "Last name cannot be empty or invaild last name."
-      check = false
-    end
-    
-    if params[:student][:email] == ""
-      errormessage = "Email address cannot be empty."
-      check = false
-    end
-    
-    if not params[:student][:phone_number]
-      errormessage = "Phone number cannot be empty."
-      check = false
-    end
-    
-    
-    if params[:student][:age].to_i == 0
-        errormessage = "please enter your age."
-        check = false
-    end
-    
 
-    phone_number = params[:student][:phone_number]
-    
-    phone_number.delete("-")
-    
-    if phone_number.to_i.to_s != phone_number
-      errormessage = "Phone number is not vaild."
-      check = false
-    end
-    
-    
     @old_student = Student.find_by_email(params[:student][:email])
     if @old_student
       @old_student.destroy
@@ -63,13 +25,20 @@ class ApplybController < ActionController::Base
     
     # print "here :"+@old_student.to_s
     @student = Student.new(student_params)
-    
-    if check == true and @student.save
+    if @student.errors.any?
+      @student.errors.full_messages.each do |error_message|
+        flash[:error] = error_message if @student.errors.full_messages.first == error_message
+        redirect_to b_bay_apply_path
+      end
+    end
+    if @student.save!
       @student.update_attribute(:program, "B-Bay")
       redirect_to success_b_bay_path
     else
-      flash[:error] = errormessage
+
+      flash[:error] = "Something wrong during saving."
       redirect_to b_bay_apply_path
+
     end
   end
 
