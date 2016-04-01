@@ -27,8 +27,7 @@ Scenario: able to create new application
   And I select "Male" from "Gender"
   And I select "U.S." from "Country"
   And I select "+1" from "Country Code"
-  And I fill in "Phone Number" with "408321345"
-  And I select "b-bay-2" from "Program"
+  And I fill in "Phone Number" with "40832134512345"
   And I press "Submit"
   Then I should be on the manager page
   And I should see "Kate One's data was successfully created."

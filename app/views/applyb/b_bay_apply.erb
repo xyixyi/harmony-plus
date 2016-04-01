@@ -11,7 +11,7 @@
   <p></p>
   <div class='bot'>
     <%= form_tag :action=> "create" do %>
-      <% if @student.errors.any? %>
+      <% if @student != nil and @student.errors.any? %>
         <div id="error_explanation">
  
           <ul>
