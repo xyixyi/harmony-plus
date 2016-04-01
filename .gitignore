@@ -19,3 +19,4 @@
 
 # Ignore coverage files
 /coverage/*
+/coverage/assets/0.10.0/application.js
