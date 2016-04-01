@@ -7,6 +7,7 @@ Given /the following (.*?) exist:$/ do |type, table|
   table.hashes.each do |item|
     if    type == "students" then Student.create!(item)
     elsif type == "users" then User.create!(item)
+    elsif type == "posts" then Post.create!(item)
     # elsif type == "comments" then Comment.create!(item)
     end
   end

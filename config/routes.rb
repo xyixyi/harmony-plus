@@ -26,6 +26,7 @@ HarmonyPlus::Application.routes.draw do
     get "signup", to: "devise/registrations#new"
     get "login" => "devise/sessions#new"
     get "logout", to: "devise/sessions#destroy"
+    match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
   end
   
   #stories
