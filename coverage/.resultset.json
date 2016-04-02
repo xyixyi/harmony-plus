@@ -362,18 +362,6 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/harmony-plus/app/models/login.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/harmony-plus/app/models/install.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/home/ubuntu/workspace/harmony-plus/app/controllers/hello_controller.rb": [
         0,
         0,
@@ -466,8 +454,20 @@
         0,
         0,
         0
+      ],
+      "/home/ubuntu/workspace/harmony-plus/app/models/install.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/harmony-plus/app/models/login.rb": [
+        0,
+        0
       ]
     },
-    "timestamp": 1459466787
+    "timestamp": 1459467584
   }
 }
