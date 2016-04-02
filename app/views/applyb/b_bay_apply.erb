@@ -1,3 +1,4 @@
+
 <div class = 'apply'>
   <%= link_to 'homepage', mainframe_path%>
   <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
@@ -11,6 +12,16 @@
   <p></p>
   <div class='bot'>
     <%= form_tag :action=> "create" do %>
+      <% if @student != nil and @student.errors.any? %>
+        <div id="error_explanation">
+ 
+          <ul>
+          <% @student.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
     <div class='applyform'>
       <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
       <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
@@ -31,5 +42,5 @@
     </div>
     <% end %>
   </div>
-</div>
 
+</div>

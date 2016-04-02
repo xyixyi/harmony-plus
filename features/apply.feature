@@ -38,7 +38,7 @@ Scenario: first name is missing
   And I select "+86" from "Country Code"
   And I press "Submit"
   Then I should see "homepage"
-  Then I should see "First name cannot be empty."
+  Then I should see "First name can't be blank"
   Then I should see "Apply for B_bay"
   
   
@@ -53,20 +53,20 @@ Scenario: last name is missing
   And I select "+86" from "Country Code"
   And I press "Submit"
   Then I should see "homepage"
-  Then I should see "Last name cannot be empty or invaild last name."
+  Then I should see "Last name can't be blank"
 
 Scenario: age is missing
   Given now I am in b-bay apply
   When I fill in "First Name" with "Bob"
   And I fill in "Last Name" with "Lee"
   And I fill in "Email" with "bob@gmail.com"
-  And I fill in "Phone Number" with "1234"
+  And I fill in "Phone Number" with "1234567890123"
   And I select "Male" from "Gender"
   And I select "U.S." from "Country"
   And I select "+86" from "Country Code"
   And I press "Submit"
   Then I should see "homepage"
-  Then I should see "please enter your age."
+  Then I should see "Age is not a number"
   Then I should see "Apply for B_bay"
   
 Scenario: email is missing
@@ -80,7 +80,7 @@ Scenario: email is missing
   And I fill in "Phone Number" with "1234"
   And I press "Submit"
   Then I should see "homepage"
-  Then I should see "Email address cannot be empty."
+  Then I should see "Email can't be blank"
   
 Scenario: phone number is missing
   Given now I am in b-bay apply
@@ -93,4 +93,4 @@ Scenario: phone number is missing
   And I select "+86" from "Country Code"
   And I press "Submit"
   Then I should see "homepage"
-  Then I should see "Phone number is not vaild."
+  Then I should see "Phone number can't be blank"
