@@ -1,7 +1,7 @@
 Feature: Submitting into the DB works
  
   As a student
-  So that I can sign up for the program
+  So that I can apply for specific program
   I want to submit my information
 
 Background:

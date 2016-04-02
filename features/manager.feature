@@ -1,8 +1,8 @@
 Feature: Managing the database and seeing all applications in DB
  
-  As an existing moderator
-  So that I can access the database
-  I want to administrate and handle the forms and database # similar to login feature?
+  As a logged-in moderator
+  So that I can handle the forms.
+  I want to access the database
 
 Background:
   Given the following students exist:
