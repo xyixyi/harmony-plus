@@ -16,15 +16,16 @@ class ManagerController < ActionController::Base
     @student = Student.new(student_params)
 
     if @student.save
-      @student.update_attribute(:program, "B-Bay")
-      redirect_to success_b_bay_path
+      # @student.update_attribute(:program, "B-Bay")
+      flash[:notice] = "#{@student.first_name} #{@student.last_name}'s data was successfully created."
+      redirect_to manager_index_path
     else
       if @student.errors.any?
         @student.errors.full_messages.each do |error_message|
           flash[:error] = error_message if @student.errors.full_messages.first == error_message
         end
       end
-      redirect_to b_bay_apply_path
+      redirect_to manager_index_path
     end
   end
 

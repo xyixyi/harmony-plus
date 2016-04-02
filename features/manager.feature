@@ -15,49 +15,6 @@ Background:
 Scenario: able to see all student applications
   And I should see "Luke"
   And I should see "Details for dshdjksa"
-
-
-Scenario: showing first name empty error message
-  When I follow "create new application"
-  Then I should be on the create new application page 
-  And I fill in "Last Name" with "One"
-  And I select "18" from "Age"
-  And I fill in "Email" with "a@b.com"
-  And I select "Male" from "Gender"
-  And I select "U.S." from "Country"
-  And I select "+1" from "Country Code"
-  And I fill in "Phone Number" with "408321345"
-  And I select "b-bay-2" from "Program"
-  And I press "Submit"
-  Then I should see "First name cannot be empty."
-  
-Scenario: showing last name empty error message
-  When I follow "create new application"
-  Then I should be on the create new application page 
-  And I fill in "First Name" with "Kate"
-  And I select "18" from "Age"
-  And I fill in "Email" with "a@b.com"
-  And I select "Male" from "Gender"
-  And I select "U.S." from "Country"
-  And I select "+1" from "Country Code"
-  And I fill in "Phone Number" with "408321345"
-  And I select "b-bay-2" from "Program"
-  And I press "Submit"
-  Then I should see "Last name cannot be empty."
-
-Scenario: without phone number showing error message
-  When I follow "create new application"
-  Then I should be on the create new application page 
-  And I fill in "First Name" with "Kate"
-  And I select "18" from "Age"
-  And I fill in "Email" with "a@b.com"
-  And I select "Female" from "Gender"
-  And I select "U.S." from "Country"
-  And I select "+1" from "Country Code"
-  And I select "b-bay-2" from "Program"
-  And I press "Submit"
-  Then I should see "Phone number is invaild."
-  
   
 Scenario: able to create new application
   When I follow "create new application"
@@ -65,13 +22,13 @@ Scenario: able to create new application
   And I should see "CREATE A STUDENT APPLICATION"
   When I fill in "First Name" with "Kate"
   And I fill in "Last Name" with "One"
-  And I select "18" from "Age"
+  And I fill in "Age" with "18"
   And I fill in "Email" with "a@b.com"
   And I select "Male" from "Gender"
   And I select "U.S." from "Country"
   And I select "+1" from "Country Code"
-  And I fill in "Phone Number" with "408321345"
-  And I select "b-bay-2" from "Program"
+  And I fill in "Phone Number" with "4083213458"
+  And I select "b-bay" from "Program"
   And I press "Submit"
   Then I should be on the manager page
   And I should see "Kate One's data was successfully created."
