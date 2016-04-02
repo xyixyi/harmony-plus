@@ -16,11 +16,6 @@ class ApplybController < ActionController::Base
   def create
 
     @old_student = Student.find_by_email(params[:student][:email])
-    # if @old_student
-    #   @old_student.destroy
-    # end
-    
-    # print "here :"+@old_student.to_s
     @student = Student.new(student_params)
 
     if @student.save
@@ -31,9 +26,6 @@ class ApplybController < ActionController::Base
         @student.errors.full_messages.each do |error_message|
           flash[:error] = error_message if @student.errors.full_messages.first == error_message
         end
-      
-      # else
-      #   flash[:error] = "Something wrong during saving."
       end
       redirect_to b_bay_apply_path
     end
