@@ -32,7 +32,7 @@
     <%= label :student, :country_code, 'Country Code'%>
     <%= select(:student, :country_code, ['+86', '+1'])%>
     <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-    <%= label :student, :program, 'You are applying for B-Bay'%>
+    <%= select(:student, :program, ['b-bay', 'ideal'])%>
     
 
     <!--:student :program 'b-bay'-->
