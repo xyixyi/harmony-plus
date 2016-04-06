@@ -49,5 +49,3 @@ Scenario: able to edit application
   Then I should be on the manager page
   And I should see "Clark Kent's data was successfully updated."
   
-  
- 
