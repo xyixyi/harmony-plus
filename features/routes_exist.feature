@@ -1,6 +1,6 @@
 Feature: Visiting all of the types of pages to ensure they exist
  
-  As a potential buyer
+  As a potential client
   So that I can learn information about the product
   I want to see what the website and program has to offer
 

@@ -16,22 +16,30 @@
   
   <body>
     <%= form_for @student, url: {action: "update"} do%>
+      <% if @student != nil and @student.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+          <% @student.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
       <div class='applyform'>
         <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
         <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
-        <%= label :student, :age, 'Age'%>
-        <%= select(:student, :age, Array(0..150))%>
-        <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "email"})%>
+        <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
+        <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
         <%= label :student, :gender, 'Gender'%>
         <%= select(:student, :gender, ['Male', 'Female'])%>
         <%= label :student, :country, 'Country'%>
         <%= select(:student, :country, ['U.S.', 'CHINA'])%>
         <%= label :student, :country_code, 'Country Code'%>
         <%= select(:student, :country_code, ['+86', '+1'])%>
-        <%= text_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-        <%= label :student, :program, 'Program'%>
-        <%= select(:student, :program, ['b-bay-1', 'b-bay-2'])%>
-        <input type="submit" name="program" class="submit_but" value= 'Submit' />
+        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+        <%= select(:student, :program, ['b-bay', 'ideal'])%>
+        <!--:student :program 'b-bay'-->
+        <input type="submit" name="submit" class="submit_but" value= 'Submit' />
       </div>
 <% end %>
   </body>

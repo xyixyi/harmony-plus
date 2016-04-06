@@ -4,26 +4,18 @@ class ApplybController < ActionController::Base
   end
   
   def show
-    # @student = Student.find(params[:id])
     redirect_to b_bay_apply_path
   end
 
   def index
-    @students = Student.all
   end
 
   def new
-    @student = Student.new
   end
   
   def create
 
     @old_student = Student.find_by_email(params[:student][:email])
-    if @old_student
-      @old_student.destroy
-    end
-    
-    # print "here :"+@old_student.to_s
     @student = Student.new(student_params)
 
     if @student.save
@@ -43,7 +35,7 @@ class ApplybController < ActionController::Base
   end
 
   def edit
-    @student = Student.find(params[:id])
+    # @student = Student.find(params[:id])
   end
   
 

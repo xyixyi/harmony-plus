@@ -2,7 +2,7 @@ Feature: Logging into the website works
  
   As an existing moderator
   So that I can access the database
-  I want to administrate and handle the forms and database
+  I want to signup an account and login
 
 Background: 
   Given the following users exist:

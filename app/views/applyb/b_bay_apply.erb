@@ -1,5 +1,12 @@
 <div class = 'apply'>
   <%= link_to 'homepage', mainframe_path%>
+  <nav id="nav-bar" class="nav-bar">
+    <a herf="/">
+      <svg viewBox="0 0 448 154" class="logo">
+        <use xlink:href="/img/apply/logo"></use>
+      </svg>
+    </a>
+  </nav>
   <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
   <p></p>
   <% if flash[:error] %>
@@ -43,4 +50,3 @@
   </div>
 
 </div>
-

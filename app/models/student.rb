@@ -2,12 +2,11 @@ class Student < ActiveRecord::Base
     validates :first_name, presence: true, length: { maximum: 20}
     validates :last_name, presence: true, length: { maximum: 20}
     validate :first_name_is_letters, :last_name_is_letters
-    validates :email, presence: true
+    validates :email, presence: true, uniqueness: true
     validates :phone_number, presence: true, length: { minimum: 10 }
     validate  :validates_phone_number
     validates :age, numericality: { only_integer: true }, length: {maximum: 3}
-    
-    
+
     def first_name_is_letters
         is_chinese = false
         # first_name = :first_name
