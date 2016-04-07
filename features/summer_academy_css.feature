@@ -1,10 +1,12 @@
 Feature: Summer Academy
-    As a Web Designer
-    I would like to test my CSS
+    
+    As a viewer 
+    So that the website feels and looks nice and beautiful
+    I want to see a pretty summer academy page
     
 Scenario: CSS
-    Given I am on "summer academy" page
-    Then I should see "harmony_logo"
+    Given I am on summer academy page
+    Then I should see logo "harmony_logo"
     And I should see "background" to be "white"
     Then the "harmony_logo " should have "margin" of "1.5em"
     Then the "UC Berkeley Hass Business School" should have "margin" of "2.5em"
