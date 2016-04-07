@@ -51,4 +51,16 @@ end
 Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
   fail "Unimplemented"
 end
-  
+
+
+Given(/^I go to "applyb.erb"$/) do
+  visit 'applyb/b_bay_apply'
+end
+
+Then /the "(.*)" should have "(.*)" of "(.*)" do |e1, e2|
+  fail "Unimplemented"
+end
+
+And the "(.*)" should look the same as before$/ do |e1|
+  fail "Unimplemented"
+end
