@@ -1,6 +1,8 @@
-Feature: Manager the data by filtering
+Feature: Managing the applications by filtering
  
-    As a manager, I can filter the information by name and email
+    As a manager, 
+    So that I can see the applications more clear
+    I want to filter the information by name and email
 
 Background:
   Given the following students exist:

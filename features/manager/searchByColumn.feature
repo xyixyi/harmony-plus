@@ -1,6 +1,8 @@
 Feature: Sort by Column
  
-    As a manager, I can sort the information by name and email
+    As a manager, 
+    So that I can see the applications more clear
+    I want to sort the information by name and email
 
 Background:
   Given the following students exist:

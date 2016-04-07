@@ -8,7 +8,7 @@ Background: I am on the EWB home page
   
   Given the following student exist:
     | first_name | last_name | gender  | country  | email          | country_code  |  phone_number
-    | Bob        | Lee       |  Male   | CHINA    | bob@gmail.com  | +86           |  12345678
+    | Bob        | Lee       |  Male   | CHINA    | abc@gmail.com  | +86           |  12345678
   
 Scenario: first name is missing
   Given now I am in b-bay apply
@@ -93,9 +93,22 @@ Scenario: phone number is too short
   
 Scenario: The same user apply twice
   Given now I am in b-bay apply
+  When I fill in "First Name" with "易峰"
+  And I fill in "Last Name" with "李"
+  And I fill in "Email" with "abc@gmail.com"       
+  And I fill in "Age" with "18"
+  And I select "Female" from "Gender"
+  And I select "CHINA" from "Country"
+  And I select "+86" from "Country Code"
+  And I fill in "Phone Number" with "1234567890"
+  And I press "Submit"
+  Then I should see "homepage"
+  Then I should see "You have successfully apply for B-Bay"
+  
+  Given now I am in b-bay apply
   When I fill in "First Name" with "亦凡"
   And I fill in "Last Name" with "吴"
-  And I fill in "Email" with "bob@gmail.com"        # same as the existing user's email
+  And I fill in "Email" with "abc@gmail.com"       
   And I fill in "Age" with "18"
   And I select "Female" from "Gender"
   And I select "CHINA" from "Country"
