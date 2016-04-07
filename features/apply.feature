@@ -9,6 +9,10 @@ Background:
   Given the following student exist:
     | first_name | last_name | gender  | country  | email          | country_code  |  phone_number
     | Bob        | Lee       |  Male   | CHINA    | bob@gmail.com  | +86           |  12345678
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4babad208bde806c6e18c2a475a19a993a219459
 Scenario: Able to apply
   Given now I am in b-bay apply
   When I fill in "First Name" with "Kate"
@@ -23,6 +27,7 @@ Scenario: Able to apply
   Then I should be on the success_b_bay page
   Then I should see "homepage"
   Then I should see "You have successfully apply for B-Bay"
+<<<<<<< HEAD
 Scenario: first name is missing
   Given now I am in b-bay apply
   And I fill in "Last Name" with "Lee"
@@ -105,20 +110,10 @@ Scenario: phone number is too short
   Then I should see "Phone number is too short (minimum is 10 characters)"
   
   
+=======
+
+>>>>>>> 4babad208bde806c6e18c2a475a19a993a219459
 Scenario: Last name and first name are Chinese characters
-  Given now I am in b-bay apply
-  When I fill in "First Name" with "好"
-  And I fill in "Last Name" with "李"
-  And I fill in "Email" with "a@b.com"
-  And I fill in "Age" with "18"
-  And I select "Female" from "Gender"
-  And I select "CHINA" from "Country"
-  And I select "+86" from "Country Code"
-  And I fill in "Phone Number" with "1234567890"
-  And I press "Submit"
-  Then I should see "homepage"
-  Then I should see "You have successfully apply for B-Bay"
-  
   Given now I am in b-bay apply
   When I fill in "First Name" with "洋"
   And I fill in "Last Name" with "杨"
@@ -132,6 +127,7 @@ Scenario: Last name and first name are Chinese characters
   Then I should see "homepage"
   Then I should see "You have successfully apply for B-Bay"
   
+<<<<<<< HEAD
   Given now I am in b-bay apply
   When I fill in "First Name" with "圆圆"
   And I fill in "Last Name" with "高"
@@ -198,3 +194,5 @@ Scenario: The same user apply twice
   And I press "Submit"
   Then I should see "homepage"
   Then I should see "Email has already been taken"
+=======
+>>>>>>> 4babad208bde806c6e18c2a475a19a993a219459
