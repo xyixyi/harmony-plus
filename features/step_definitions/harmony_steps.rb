@@ -39,3 +39,16 @@ end
 When /I access the posts page$/ do
   visit '/posts'
 end
+
+
+Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
+  fail "Unimplemented"
+end
+
+
+
+
+Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
+  fail "Unimplemented"
+end
+  
