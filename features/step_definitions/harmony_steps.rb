@@ -42,16 +42,38 @@ end
 
 
 Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
-  pending "Unimplemented"
+  pending
 end
 
+Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
+  pending
+end
+  
+When(/^I fill in "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
 
+When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I fill in "([^"]*)" with "([^"]*)"        \# same as the existing user's email$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
 
 
 Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
   pending "Unimplemented"
 end
   
-Given(/^I am no "([^"]*)" page$/) do |arg1|
+Given(/^I am on "([^"]*)" page$/) do |arg1|
   pending "Unimplemented"
+end
+
+When(/^I follow with "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see logo "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end

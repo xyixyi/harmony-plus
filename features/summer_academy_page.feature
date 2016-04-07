@@ -3,7 +3,7 @@ Feature: Summer Academy
     I would like to test my CSS
     
 Scenario: CSS
-    Given I am no "summer academy" page
+    Given I am on "summer academy" page
     Then I should see "harmony_logo"
     And I should see "background" to be "white"
     Then the "harmony_logo " should have "margin" of "1.5em"
