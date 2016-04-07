@@ -39,11 +39,3 @@ Scenario: Last name and first name are Chinese characters
   Then I should see "homepage"
   Then I should see "You have successfully apply for B-Bay"
   
-Scenario: CSS
-    Given I go to "applyb.erb"
-     Then the "logo" should
-          have "margin" of "1.5em"
-      And the "logo" should
-          look the same as before
-  
-

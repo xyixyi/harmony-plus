@@ -65,14 +65,10 @@ When(/^I follow with "([^"]*)"$/) do |arg1|
   pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^I should see logo "([^"]*)"$/) do |arg1|
+Then(/^I scroll down the page$/) do
   pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
 end
 
-When(/^I follow with "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should see logo "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see the navbar$/) do
+  pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
 end
