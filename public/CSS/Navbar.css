@@ -4,8 +4,8 @@ nav .links {
   float: right;
   position: relative;
   top: 30;
-  font-size: 100%;
-  font-family: "roboto";
+  font-size: 110%;
+  font-family: "Trebuchet MS";
 }
 
 
@@ -16,7 +16,7 @@ nav .links a.selected, nav .links a:hover {
 nav.transparent-nav {
   background: transparent;
   width: 100%;
-  height: 200px;
+  height: 100px;
   margin:0;
   padding:0;
   overflow: hidden;
