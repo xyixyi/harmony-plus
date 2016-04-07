@@ -42,13 +42,16 @@ end
 
 
 Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
-  fail "Unimplemented"
+  pending "Unimplemented"
 end
 
 
 
 
 Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
-  fail "Unimplemented"
+  pending "Unimplemented"
 end
   
+Given(/^I am no "([^"]*)" page$/) do |arg1|
+  pending "Unimplemented"
+end
