@@ -42,16 +42,35 @@ end
 
 
 Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
-  fail "Unimplemented"
+  pending
 end
 
+Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
+  pending
+end
+  
+When(/^I fill in "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
 
+When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I fill in "([^"]*)" with "([^"]*)"        \# same as the existing user's email$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
 
 
 Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
-  fail "Unimplemented"
+  pending "Unimplemented"
+end
+  
+Given(/^I am on "([^"]*)" page$/) do |arg1|
+  pending "Unimplemented"
 end
 
+<<<<<<< HEAD
 
 Given(/^I go to "applyb.erb"$/) do
   visit 'applyb/b_bay_apply'
@@ -63,4 +82,12 @@ end
 
 And the "(.*)" should look the same as before$/ do |e1|
   fail "Unimplemented"
+=======
+When(/^I follow with "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see logo "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+>>>>>>> 7243bea4473fb991ebcf1089bde59d49287d6556
 end
