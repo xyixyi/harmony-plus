@@ -69,33 +69,10 @@ Then(/^I should see logo "([^"]*)"$/) do |arg1|
   pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
 end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-Given(/^I go to "applyb.erb"$/) do
-  visit 'applyb/b_bay_apply'
-end
-
-Then /the "(.*)" should have "(.*)" of "(.*)" do |e1, e2|
-  fail "Unimplemented"
-end
-
-And the "(.*)" should look the same as before$/ do |e1|
-  fail "Unimplemented"
-=======
 When(/^I follow with "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
 Then(/^I should see logo "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
->>>>>>> 7243bea4473fb991ebcf1089bde59d49287d6556
-=======
-Then(/^I scroll down the page$/) do
-  pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should see the navbar$/) do
-  pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
->>>>>>> 0573f5c6be14fb0a81b6ff6e50bc381b29d43d46
 end

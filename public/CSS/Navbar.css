@@ -1,97 +1,47 @@
-nav .menu-icon {
-  height: 20px;
-  padding-right: 5px;
-  margin-top: 5px;
-  color: black;
-}
 
-/*nav .logo {*/
-/*  float: left;*/
-/*  fill: black;*/
-/*  height: 32px;*/
-/*}*/
 
 nav .links {
-  float: right;
-}
-
-nav .links a {
-  margin-left: 25px;
-  color: #32373B;
-}
-
-nav .links a.apply-button {
+  float: left;
   position: relative;
-  color: black;
-  background: #FFC001;
-  padding: 15px 63px 15px 20px;
-  display: inline-block;
-  -moz-transition-property: background;
-  -o-transition-property: background;
-  -webkit-transition-property: background;
-  transition-property: background;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  top: 50;
+  left: 55%;
+  font-size: 100%;
+  font-family: "roboto";
 }
 
-nav .links a.apply-button .arrow-wrapp {
-  background: #FFA201;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 48px;
-  text-align: center;
-  padding-top: 16px;
-}
-
-nav .links a.apply-button .apply-arrow {
-  color: white;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-nav .links a.apply-button:hover {
-  color: black !important;
-  background: #FFA201;
-}
-
-nav .links a.apply-button:hover .apply-arrow {
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
 
 nav .links a.selected, nav .links a:hover {
-  color: #FFC001;
+  color: rgb(83,170,142);
 }
 
 nav.transparent-nav {
   background: transparent;
-  /*color: black;/*/
+  width: 100%;
+  height: 200px;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  display: inline-block;
 }
 
-nav.transparent-nav .menu-icon {
+.logo {
+  position: fixed;
   color: black;
+  top: 30px;
+  left: 30px;
+  
 }
 
-nav.transparent-nav .logo {
-  color: black;
-}
 
 nav.transparent-nav .links a {
   color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 nav.transparent-nav .links a.selected, nav.transparent-nav .links a:hover {
-  color: #FFC001;
+  color: rgb(83,170,142);
 }
+
+

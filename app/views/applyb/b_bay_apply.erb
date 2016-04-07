@@ -1,76 +1,71 @@
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/Navbar.css">
 </head>
-<nav id="transparent-nav" class="transparent-nav">
-    <p>
-      <a href="/">
-      <img border="0" alt="harmony_logo" src="img/logo.png" width="224" height="77">
-      </a>
-    </p>
-    <div class="links">
-        <a href="future_planning">Future Planning</a>
-        <a href="summer_academy">Summer Academy</a>
-        <a href="stories">Stories</a>
-        <a href="about_us">About Us</a>
-        <a href="contact">Contact</a>
-   <!--     <a class="apply-button" href="programs">Apply-->
-			<!--<span class="arrow-wrapp">-->
-			<!--	<svg viewBox="0 0 76 32" class="apply-arrow icon-xs">-->
-   <!--                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/icons/icons.svg#arrow"></use>-->
-   <!--             </svg>-->
-			<!--</span>-->
-   <!--     </a>-->
-    </div>
-</nav>
 <div class = 'apply'>
-  <%= link_to 'homepage', mainframe_path%>
-  <nav id="nav-bar" class="nav-bar">
-    <a herf="/">
-      <svg viewBox="0 0 448 154" class="logo">
-        <use xlink:href="/img/apply/logo"></use>
-      </svg>
+  <div class = "logo">
+    <a href="/">
+      <img border="0" alt="harmony_logo" src="img/logo.png" width="134" height="46">
     </a>
-  </nav>
-  <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
-  <p></p>
-  <% if flash[:error] %>
-    <div class="error"><%= flash[:error] %></div>
-  <% end %>
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-  <p></p>
-  <div class='bot'>
-    <%= form_tag :action=> "create" do %>
-      <% if @student != nil and @student.errors.any? %>
-        <div id="error_explanation">
- 
-          <ul>
-          <% @student.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-    <div class='applyform'>
-      <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
-      <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
-      <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
-      <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
-      <%= label :student, :gender, 'Gender'%>
-      <%= select(:student, :gender, ['Male', 'Female'])%>
-      <%= label :student, :country, 'Country'%>
-      <%= select(:student, :country, ['U.S.', 'CHINA'])%>
-      <%= label :student, :country_code, 'Country Code'%>
-      <%= select(:student, :country_code, ['+86', '+1'])%>
-      <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-      <%= label :student, :program, 'You are applying for B-Bay'%>
-      
-
-      <!--:student :program 'b-bay'-->
-      <input type="submit" name="submit" class="submit_but" value= 'Submit' />
-    </div>
-    <% end %>
   </div>
+  <nav id="transparent-nav" class="transparent-nav">
+    <div class="links">
+      <a href="/">HOME</a>
+      <a href="future_planning">FUTURE PLANNING</a>
+      <a href="summer_academy">SUMMER ACADEMY</a>
+      <a href="stories">STORIES</a>
+      <a href="about_us">ABOUT US</a>
+      <a href="contact">CONTACT</a>
+      <a href="/">
+        <img border="0" alt="s" src="img/apply/search.png" width="24" height="24">
+      </a>
+      <a href="/">简体中文</a>
+    </div>
+  </nav>
 
+  
+  <div class="right-view">
+    
+  
+    <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
+    
+    <% if flash[:error] %>
+      <div class="error"><%= flash[:error] %></div>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+    
+    <div class='bot'>
+      <%= form_tag :action=> "create" do %>
+        <% if @student != nil and @student.errors.any? %>
+          <div id="error_explanation">
+   
+            <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <div class='applyform'>
+        <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
+        <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
+        <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
+        <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
+        <%= label :student, :gender, 'Gender'%>
+        <%= select(:student, :gender, ['Male', 'Female'])%>
+        <%= label :student, :country, 'Country'%>
+        <%= select(:student, :country, ['U.S.', 'CHINA'])%>
+        <%= label :student, :country_code, 'Country Code'%>
+        <%= select(:student, :country_code, ['+86', '+1'])%>
+        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+        <%= label :student, :program, 'You are applying for B-Bay'%>
+        
+  
+        <!--:student :program 'b-bay'-->
+        <input type="submit" name="submit" class="submit_but" value= 'Submit' />
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
