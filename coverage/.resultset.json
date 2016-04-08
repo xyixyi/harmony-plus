@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/models/user.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/models/user.rb": [
         1,
         null,
         null,
@@ -9,7 +9,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/controllers/applyb_controller.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/controllers/applyb_controller.rb": [
         1,
         1,
         10,
@@ -53,15 +53,15 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/helpers/application_helper.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/helpers/posts_helper.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/models/student.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/models/student.rb": [
         1,
         1,
         1,
@@ -72,40 +72,40 @@
         1,
         null,
         1,
-        36,
+        35,
         null,
         null,
-        36,
+        35,
         3,
         null,
-        36,
-        33,
+        35,
+        32,
         null,
-        36,
+        35,
         1,
         null,
         null,
         null,
         1,
-        36,
+        35,
         null,
-        36,
+        35,
         3,
         null,
         null,
-        36,
-        33,
+        35,
+        32,
         null,
         null,
-        36,
+        35,
         1,
         null,
         null,
         null,
         1,
         null,
-        36,
-        36,
+        35,
+        35,
         1,
         null,
         null,
@@ -122,13 +122,13 @@
         null,
         null,
         1,
-        72,
-        1612,
+        70,
+        1567,
         null,
         null,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/controllers/mainframe_controller.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/controllers/mainframe_controller.rb": [
         1,
         null,
         null,
@@ -160,14 +160,14 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/controllers/posts_controller.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/controllers/posts_controller.rb": [
         1,
         1,
         1,
@@ -244,18 +244,18 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/models/post.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/models/post.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/controllers/manager_controller.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/controllers/manager_controller.rb": [
         1,
         1,
         2,
         null,
         null,
         1,
-        11,
+        10,
         null,
         null,
         1,
@@ -285,10 +285,10 @@
         null,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
@@ -313,11 +313,11 @@
         null,
         1,
         1,
-        2,
+        1,
         null,
         null
       ],
-      "/home/ubuntu/workspace/cs169/harmony_plus/app/controllers/stories_controller.rb": [
+      "/home/ubuntu/workspace/harmony-plus/app/controllers/stories_controller.rb": [
         1,
         null,
         null,
@@ -354,6 +354,6 @@
         null
       ]
     },
-    "timestamp": 1460072326
+    "timestamp": 1460077179
   }
 }

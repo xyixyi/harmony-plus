@@ -5,20 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-logins = [{:admin => 'username_1', :password => 'password_1'},
-         {:admin => 'username_2', :password => 'password_2'},
-         {:admin => 'username_3', :password => 'password_3'},
-  	 ]
-
 students = [{:first_name => 'Luke', :last_name => 'Wang', :email => 'zhao@hotmail.com', 
-            :gender => 'male', :country => 'China', :country_code => '123456', :program => 'b-bay'},
+            :gender => 'male', :country => 'China', :phone_number => "412493241234", :age => 19, :country_code => '123456', :program => 'b-bay'},
             {:first_name => 'dshdjksa', :last_name => 'hellop', :email => 'dsaf@hotmail.com', 
-            :gender => 'male', :country => 'China', :country_code => '123456', :program => 'b-bay-2'}]
-
-logins.each do |login|
-  Login.create!(login)
-end
-
+            :gender => 'male', :country => 'China', :phone_number => "1210537394", :age => 59, :country_code => '123456', :program => 'b-bay-2'}]
 students.each do |student|
     Student.create!(student)
 end

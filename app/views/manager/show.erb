@@ -5,51 +5,24 @@
   </head>
   <h1>Student's Information</h1>
   <body>
-    <ul>
-    <li>
-        First_name:
-        <%= @student.first_name %>
-    </li>
-    <li>
-        Last_name:
-        <%= @student.last_name %>
-    </li>
-    <li>
-        Age:
-        <%= @student.age %>
-    </li>
-    <li>
-        Gender:
-        <%= @student.gender %>
-    </li>
-    <li>
-        Email:
-        <%= @student.email %>
-    </li>
-    <li>
-        Country:
-        <%= @student.country %>
-    </li>
-    <li>
-        Country Code:
-        <%= @student.country_code %>
-    </li>
-    <li>
-        Phone Number:
-        <%= @student.phone_number %>
-    </li>
-    <li>
-        Program:
-        <%= @student.program %>
-    </li>
-    <li>
-        Create At:
-        <%= @student.created_at %>
-    </li>
-    <li>
-        Update At:
-        <%= @student.updated_at %>
-    </li>
+      <ul>
+        <li>First_name: <%= @student.first_name %></li>
+        <li>Last_name: <%= @student.last_name %></li>
+        <li>Age: <%= @student.age %></li>
+        <li>Gender: <%= @student.gender %></li>
+        <li>Email: <%= @student.email %></li>
+        <li>Country: <%= @student.country %></li>
+        <li>Country Code: <%= @student.country_code %></li>
+        <li>Phone Number: <%= @student.phone_number %></li>
+        <li>Program: <%= @student.program %></li>
+        <li>School: <%= @student.school %></li>
+        <li>AddressLineOne: <%= @student.addressLineOne %></li>
+        <li>ZipCode: <%= @student.zipCode %></li>
+        <li>Date Of Birth: <%= @student.dateOfBirth %></li>
+        <li>GuardianName: <%= @student.guardianName %></li>
+        <li>Create At: <%= @student.created_at %></li>
+        <li>Update At: <%= @student.updated_at %></li>
+      </ul>
   </body>
   <%= button_to "edit this application", edit_manager_path(@student), :method => :get%>
   <%= button_to "delete this application", manager_path(@student), :confirm => "Are you sure?", :method => :delete%>

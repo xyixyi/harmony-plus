@@ -36,6 +36,9 @@
         <%= select(:student, :country, ['U.S.', 'CHINA'])%>
         <%= label :student, :country_code, 'Country Code'%>
         <%= select(:student, :country_code, ['+86', '+1'])%>
+        <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+        <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
+        <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
         <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
         <%= select(:student, :program, ['b-bay', 'ideal'])%>
         <!--:student :program 'b-bay'-->

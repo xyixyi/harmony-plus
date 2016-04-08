@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327044936) do
+ActiveRecord::Schema.define(version: 20160407235602) do
 
   create_table "installs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -47,17 +47,24 @@ ActiveRecord::Schema.define(version: 20160327044936) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "first_name",   limit: 25
-    t.string   "last_name",    limit: 25
-    t.string   "email",        limit: 50, null: false
+    t.string   "first_name",     limit: 25
+    t.string   "last_name",      limit: 25
+    t.string   "email",          limit: 50, null: false
     t.string   "gender"
     t.string   "country"
     t.string   "country_code"
     t.string   "phone_number"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "program"
     t.integer  "age"
+    t.string   "school"
+    t.string   "addressLineOne"
+    t.string   "addressLineTwo"
+    t.string   "province"
+    t.integer  "zipCode"
+    t.string   "dateOfBirth"
+    t.string   "guardianName"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true
