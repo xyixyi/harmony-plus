@@ -43,4 +43,37 @@ nav.transparent-nav .links a.selected, nav.transparent-nav .links a:hover {
   color: rgb(83,170,142);
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 120px;
+  background-color: #2d3d4d;
+}
 
+.footer_container {
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+.footer_container .text-muted {
+  margin: 10px 0;
+  color: white;
+}
+
+.footer_icon{
+  -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.5); /* FF3.5+ */
+      -ms-transform: scale(0.5); /* IE9 */
+       -o-transform: scale(0.5); /* Opera 10.5+ */
+          transform: scale(0.5);
+}
