@@ -38,9 +38,17 @@ div .ComingSoon{
     font-size: 32px;
 }
 
-nav .links a.selected, nav .links a:hover {
-  color: rgb(83,170,142);
+.theImage {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url("../img/Logos/Logo2.png") no-repeat;
+  background-size: 134px 46px;
+  /*width:134px;*/
+  /*height:46px;*/
+  padding-left: 180px;
 }
+
 
 nav.transparent-nav {
   background: transparent;
@@ -51,6 +59,11 @@ nav.transparent-nav {
   overflow: hidden;
   display: inline-block;
   z-index:99999;
+  background: -webkit-linear-gradient(#202020, transparent); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#202020, transparent); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#202020, transparent); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#202020, transparent); /* Standard syntax (must be last) */
+  /*opacity: .2;*/
 }
 
 .logo {

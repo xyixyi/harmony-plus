@@ -1,0 +1,128 @@
+body {
+    padding-bottom: 120px;
+}
+
+h1 {
+    /*text-align: center;*/
+    color: white;
+}
+
+.heading {
+    color: #fff;
+    font-size: 64px;
+	margin: 45px 0 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+}
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 30;
+    text-align: center;
+    color: rgb(83,170,142);
+}
+
+.theImage {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url("../img/Logos/Logo2.png") no-repeat;
+  background-size: 134px 46px;
+  /*width:134px;*/
+  /*height:46px;*/
+  padding-left: 180px;
+}
+
+.special_links{
+    text-align: center;
+    color: white;
+}
+
+nav.transparent-nav .links a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.opening{
+    margin-top: -110px;
+    background-image: url("../img/Lighthouse.png");
+    height: 1200px;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.opening .container {
+  margin-top: 300px;
+  margin-left: 900px;
+}
+
+.opening .container p {
+  color: white;
+  font-size: 24px;
+}
+
+.btn-primary {
+    color: rgb(83,170,142);
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: rgb(83,170,142);
+    border-color: transparent;
+}
+
+.special_text{
+    text-align: center;
+    font-size: 24px;
+}
+
+/*.col-md-6-left{*/
+/*    float: left;*/
+/*    background:url("../img/Campus.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: 300px;*/
+/*    width: 50%;*/
+/*    background-position: center center;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    min-height: 1px;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+/*.col-md-6-right{*/
+/*    float: left;*/
+/*    background:url("../img/World.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: 300px;*/
+/*    width: 50%;*/
+/*    background-position: center center;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    min-height: 1px;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+.col-md-6{
+    margin-bottom: 150px;
+}
+
+.col-md-6 .footer{
+    height: 150px;
+    /*width: 50%;*/
+    bottom: -150px;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.col-md-6 p{
+    color:white;
+}
