@@ -62,6 +62,6 @@ class ManagerController < ActionController::Base
   # <% end %>
   private
     def student_params
-       params.require(:student).permit(:first_name, :last_name, :age, :email, :gender, :country, :country_code, :phone_number, :program)
+       params.require(:student).permit(:first_name, :last_name, :age, :email, :gender, :country, :country_code, :phone_number, :program, :school, :addressLineOne, :addressLineTwo, :dateOfBirth, :zipCode)
     end
 end
