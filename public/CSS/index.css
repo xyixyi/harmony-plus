@@ -1,5 +1,6 @@
 body {
     padding-bottom: 120px;
+    background-color: #d3d3d3;
 }
 
 h1 {
@@ -37,6 +38,20 @@ h2 {
 .special_links{
     text-align: center;
     color: white;
+}
+
+nav.transparent-nav {
+  margin-top: -40px;
+  background: transparent;
+  position: fixed;
+  background: -webkit-linear-gradient(#202020, transparent);
+   /*For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#202020, transparent);
+   /*For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#202020, transparent);
+   /*For Firefox 3.6 to 15 */
+  background: linear-gradient(#202020, transparent);
+   /*Standard syntax (must be last) */
 }
 
 nav.transparent-nav .links a {
@@ -115,7 +130,7 @@ nav.transparent-nav .links a {
 
 .col-md-6 .footer{
     height: 150px;
-    /*width: 50%;*/
+    width: 96.4%;
     bottom: -150px;
     min-height: 1px;
     padding-right: 15px;
@@ -125,4 +140,5 @@ nav.transparent-nav .links a {
 
 .col-md-6 p{
     color:white;
+    text-align: center;
 }
