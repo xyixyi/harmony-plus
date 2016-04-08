@@ -1,8 +1,9 @@
 body {
-    /*background-image: url("img/ComingSoon.png");*/
+    background-image: url("../img/ComingSoon.png");
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;  
+    
 }
 
 h1 {
