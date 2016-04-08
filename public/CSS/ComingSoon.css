@@ -49,9 +49,6 @@ div .ComingSoon{
   padding-left: 180px;
 }
 
-nav .links a.selected, nav .links a:hover {
-  color: rgb(83,170,142);
-}
 
 nav.transparent-nav {
   background: transparent;
