@@ -1,5 +1,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/Navbar.css">
+<link rel="stylesheet" type="text/css" href="CSS/apply.css">
 </head>
 <div class = 'apply'>
   <div class = "logo">
@@ -21,32 +22,32 @@
       <a href="/">简体中文</a>
     </div>
   </nav>
-
   
-  <div class="right-view">
+  <div class="background" style="background url('img/apply/background.png')">
+    <div class="right-view">
     
   
-    <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
+      <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
     
-    <% if flash[:error] %>
+      <% if flash[:error] %>
       <div class="error"><%= flash[:error] %></div>
-    <% end %>
-    <% if flash[:notice] %>
+      <% end %>
+      <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
+      <% end %>
     
-    <div class='bot'>
-      <%= form_tag :action=> "create" do %>
-        <% if @student != nil and @student.errors.any? %>
-          <div id="error_explanation">
+      <div class='bot'>
+        <%= form_tag :action=> "create" do %>
+          <% if @student != nil and @student.errors.any? %>
+            <div id="error_explanation">
    
             <ul>
-            <% @student.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
+              <% @student.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
             </ul>
-          </div>
-        <% end %>
+            </div>
+          <% end %>
       <div class='applyform'>
         <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
         <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
@@ -64,8 +65,12 @@
   
         <!--:student :program 'b-bay'-->
         <input type="submit" name="submit" class="submit_but" value= 'Submit' />
+        </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
+    
+  
+
 </div>

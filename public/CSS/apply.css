@@ -1,0 +1,10 @@
+.background {
+    width: 100%;
+    color: white;
+    float: left;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    
+    background: url("../img/apply/background.png");
+}
