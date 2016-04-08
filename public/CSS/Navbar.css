@@ -21,6 +21,7 @@ nav.transparent-nav {
   padding:0;
   overflow: hidden;
   display: inline-block;
+  z-index:99999;
 }
 
 .logo {
