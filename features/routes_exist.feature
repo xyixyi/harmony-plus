@@ -39,5 +39,6 @@ Scenario: I can access the About Us page
   
 Scenario: I can access the Future Planning page
   #Future Planning Page exists
-  When I follow "F.P."
+  When I follow "FUTURE PLANNING"
   Then I should see "Future Planning"
+  And I should see "coming soon"
