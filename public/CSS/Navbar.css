@@ -8,7 +8,6 @@ nav .links {
   font-family: "Trebuchet MS";
 }
 
-
 nav .links a.selected, nav .links a:hover {
   color: rgb(83,170,142);
 }
