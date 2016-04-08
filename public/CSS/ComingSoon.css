@@ -38,6 +38,17 @@ div .ComingSoon{
     font-size: 32px;
 }
 
+.theImage {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url("../img/Logos/Logo2.png") no-repeat;
+  background-size: 134px 46px;
+  /*width:134px;*/
+  /*height:46px;*/
+  padding-left: 180px;
+}
+
 nav .links a.selected, nav .links a:hover {
   color: rgb(83,170,142);
 }

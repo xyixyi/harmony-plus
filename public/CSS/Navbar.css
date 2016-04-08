@@ -1,8 +1,6 @@
-
-
 nav .links {
-  float: right;
-  position: relative;
+  right: 0;
+  position: fixed;
   top: 30px;
   font-size: 110%;
   font-family: "Trebuchet MS";
@@ -30,7 +28,6 @@ nav.transparent-nav {
   left: 30px;
   
 }
-
 
 nav.transparent-nav .links a {
   color: black;
