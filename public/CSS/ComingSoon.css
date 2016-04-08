@@ -1,12 +1,14 @@
 body {
-    /*background-image: url("img/ComingSoon.png");*/
+    background-image: url("../img/ComingSoon.png");
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;  
+    
 }
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 .heading {
@@ -25,10 +27,10 @@ h2 {
 }
 
 nav .menu-icon {
-  height: 20px;
-  padding-right: 5px;
-  margin-top: 5px;
-  color: white;
+    height: 20px;
+    padding-right: 5px;
+    margin-top: 5px;
+    color: white;
 }
 
 div .ComingSoon{
@@ -36,87 +38,49 @@ div .ComingSoon{
     font-size: 32px;
 }
 
-nav .links {
-  float: right;
+.theImage {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url("../img/Logos/Logo2.png") no-repeat;
+  background-size: 134px 46px;
+  /*width:134px;*/
+  /*height:46px;*/
+  padding-left: 180px;
 }
 
-nav .links a {
-  margin-left: 25px;
-  color: #32373B;
-}
-
-nav .links a.apply-button {
-  position: relative;
-  color: black;
-  background: #FFC001;
-  padding: 15px 63px 15px 20px;
-  display: inline-block;
-  -moz-transition-property: background;
-  -o-transition-property: background;
-  -webkit-transition-property: background;
-  transition-property: background;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-nav .links a.apply-button .arrow-wrapp {
-  background: #FFA201;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 48px;
-  text-align: center;
-  padding-top: 16px;
-}
-
-nav .links a.apply-button .apply-arrow {
-  color: white;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-nav .links a.apply-button:hover {
-  color: white !important;
-  background: #FFA201;
-}
-
-nav .links a.apply-button:hover .apply-arrow {
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-nav .links a.selected, nav .links a:hover {
-  color: #FFC001;
-}
 
 nav.transparent-nav {
   background: transparent;
-  /*color: black;/*/
+  width: 100%;
+  height: 100px;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  display: inline-block;
+  z-index:99999;
+  background: -webkit-linear-gradient(#202020, transparent); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#202020, transparent); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#202020, transparent); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#202020, transparent); /* Standard syntax (must be last) */
+  /*opacity: .2;*/
 }
 
-nav.transparent-nav .menu-icon {
-  color: white;
-}
-
-nav.transparent-nav .logo {
-  color: white;
+.logo {
+  position: fixed;
+  color: black;
+  top: 30px;
+  left: 30px;
+  
 }
 
 nav.transparent-nav .links a {
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 nav.transparent-nav .links a.selected, nav.transparent-nav .links a:hover {
-  color: #FFC001;
+  color: rgb(83,170,142);
 }

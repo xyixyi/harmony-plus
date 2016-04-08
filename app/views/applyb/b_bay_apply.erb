@@ -2,12 +2,13 @@
 <link rel="stylesheet" type="text/css" href="CSS/Navbar.css">
 <link rel="stylesheet" type="text/css" href="CSS/apply.css">
 </head>
-<div class = 'apply'>
+<nav id="transparent-nav" class="transparent-nav">
   <div class = "logo">
     <a href="/">
-      <img border="0" alt="harmony_logo" src="img/logo.png" width="134" height="46">
+        <img border="0" alt="harmony_logo" src="img/Logos/logo.png" width="134" height="46">
     </a>
   </div>
+<<<<<<< HEAD
   <nav id="transparent-nav" class="transparent-nav">
     <div class="links">
       <a href="/">HOME</a>
@@ -28,6 +29,25 @@
     
   
       <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
+=======
+  <div class="links">
+    <a href="/">HOME</a>
+    <a href="future_planning">FUTURE PLANNING</a>
+    <a href="summer_academy">SUMMER ACADEMY</a>
+    <a href="stories">STORIES</a>
+    <a href="about_us">ABOUT US</a>
+    <a href="contact">CONTACT</a>
+    <a href="/">
+      <img border="0" alt="s" src="img/apply/search.png" width="24" height="24">
+    </a>
+    <a href="/">简体中文</a>
+  </div>
+</nav>
+
+  
+  <div class="right-view">
+    <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
+>>>>>>> 94e681286314cf14f4e84a7c3e9af87fe01ac3dc
     
       <% if flash[:error] %>
       <div class="error"><%= flash[:error] %></div>
@@ -61,7 +81,13 @@
         <%= select(:student, :country_code, ['+86', '+1'])%>
         <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
         <%= label :student, :program, 'You are applying for B-Bay'%>
-        
+        <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+        <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
+        <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
+        <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%>
+        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+        <%= label :student, :dateOfBirth, 'Date of Birth'%>
+        <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
   
         <!--:student :program 'b-bay'-->
         <input type="submit" name="submit" class="submit_but" value= 'Submit' />
