@@ -60,7 +60,13 @@
         <%= select(:student, :country_code, ['+86', '+1'])%>
         <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
         <%= label :student, :program, 'You are applying for B-Bay'%>
-        
+        <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+        <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
+        <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
+        <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%>
+        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+        <%= label :student, :dateOfBirth, 'Date of Birth'%>
+        <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
   
         <!--:student :program 'b-bay'-->
         <input type="submit" name="submit" class="submit_but" value= 'Submit' />

@@ -5,7 +5,7 @@ class AddColumnsToStudent < ActiveRecord::Migration
     add_column :students, :addressLineTwo, :string
     add_column :students, :province, :string
     add_column :students, :zipCode, :integer
-    add_column :students, :dateOfBirth, :string
+    add_column :students, :dateOfBirth, :date
     add_column :students, :guardianName, :string
   end
 end
