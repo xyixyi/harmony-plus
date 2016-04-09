@@ -1,10 +1,91 @@
-.background {
-    width: 100%;
+.left-view {
+    width: 50%;
     color: white;
     float: left;
     height: 100%;
     position: fixed;
-    left: 0;
+    left: 0px;
     
-    background: url("../img/apply/background.png");
+    background: url("../img/apply/leftView.png");
+}
+
+.right-view {
+    width: 50%;
+    color: gray;
+    float: right;
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    background: url("../img/apply/rightView.png");
+}
+
+.applyf {
+    border: none;
+    border-bottom: 1px solid #c9ccd2;
+    
+
+    
+}
+
+.left-text {
+    width: 60%;
+    margin: 30% auto;
+    
+}
+
+h4 {
+    color: rgb(83,170,142);
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-family: "Trebuchet MS";
+    text-align: center;
+}
+
+.btn-primary {
+    color: rgb(83,170,142);
+    background-color: transparent;
+    border-color: rgb(83,170,142);
+    color: white;
+}
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: rgb(83,170,142);
+    border-color: transparent;
+}
+
+.footer {
+  background-color: #e7e7e6;
+  height: 100px;
+}
+
+.footer_container {
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+.footer_container .text-muted {
+  margin: 10px 0;
+  color: white;
+}
+
+.footer_icon{
+  -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.5); /* FF3.5+ */
+      -ms-transform: scale(0.5); /* IE9 */
+       -o-transform: scale(0.5); /* Opera 10.5+ */
+          transform: scale(0.5);
+}
+
+.empty {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    background-color: white;
 }

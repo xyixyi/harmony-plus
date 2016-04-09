@@ -1,53 +1,20 @@
+<!--#include file="app/views/layouts.html.erb"-->
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/Navbar.css">
 <link rel="stylesheet" type="text/css" href="CSS/apply.css">
+<!--<link rel="stylesheet" type="text/css" href="CSS/index.css">-->
 </head>
-<nav id="transparent-nav" class="transparent-nav">
-  <div class = "logo">
-    <a href="/">
-        <img border="0" alt="harmony_logo" src="img/Logos/logo.png" width="134" height="46">
-    </a>
-  </div>
-<<<<<<< HEAD
-  <nav id="transparent-nav" class="transparent-nav">
-    <div class="links">
-      <a href="/">HOME</a>
-      <a href="future_planning">FUTURE PLANNING</a>
-      <a href="summer_academy">SUMMER ACADEMY</a>
-      <a href="stories">STORIES</a>
-      <a href="about_us">ABOUT US</a>
-      <a href="contact">CONTACT</a>
-      <a href="/">
-        <img border="0" alt="s" src="img/apply/search.png" width="24" height="24">
-      </a>
-      <a href="/">简体中文</a>
-    </div>
-  </nav>
-  
-  <div class="background" style="background url('img/apply/background.png')">
-    <div class="right-view">
-    
-  
-      <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
-=======
-  <div class="links">
-    <a href="/">HOME</a>
-    <a href="future_planning">FUTURE PLANNING</a>
-    <a href="summer_academy">SUMMER ACADEMY</a>
-    <a href="stories">STORIES</a>
-    <a href="about_us">ABOUT US</a>
-    <a href="contact">CONTACT</a>
-    <a href="/">
-      <img border="0" alt="s" src="img/apply/search.png" width="24" height="24">
-    </a>
-    <a href="/">简体中文</a>
-  </div>
-</nav>
 
-  
+  <div class="left-view" style=background>
+    <div class="left-text">
+      <h4>B-BAY</h4>
+      <p>Berkeley Business Academy for Youth</p>
+      <p><a class="btn btn-primary btn-lg" href="/about_us" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
   <div class="right-view">
     <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
->>>>>>> 94e681286314cf14f4e84a7c3e9af87fe01ac3dc
     
       <% if flash[:error] %>
       <div class="error"><%= flash[:error] %></div>
@@ -94,9 +61,8 @@
         </div>
         <% end %>
       </div>
-    </div>
   </div>
+  <div class="empty">
     
-  
+  </div>
 
-</div>
