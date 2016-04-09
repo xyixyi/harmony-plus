@@ -4,6 +4,18 @@ body {
   background-color: #d3d3d3
 }
 
+.center_text{
+  text-align: center;
+}
+
+.table-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+}
+
 .form-container {
     padding-right: 15px;
     padding-left: 15px;
@@ -11,7 +23,7 @@ body {
     margin-left: auto;
 }
 
-.new_user {
+.new_user{
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
@@ -49,4 +61,20 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.btn-primary {
+    color: rgb(83,170,142);
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: rgb(83,170,142);
+    border-color: transparent;
+}
+
+.btn-post{
+    display: block;
 }

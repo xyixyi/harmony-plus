@@ -1,23 +1,26 @@
-%h1 Listing posts
+%title Harmony Plus Posts
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Content
-      %th
-      %th
-      %th
-
-  %tbody
-    - @posts.each do |post|
+%div{:class => "table-container"}
+  %h1{:class => "center_text"} Listing posts
+  %table{:class => "table"}
+    %thead
       %tr
-        %td= post.title
-        %td= post.content
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th Title
+        %th Content
+        %th Show
+        %th Edit
+        %th Destroy
+  
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td= post.content
+          %td= link_to 'Show', post
+          %td= link_to 'Edit', edit_post_path(post)
+          %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          
+  %br
+  = link_to 'New Post', new_post_path, :class => "btn btn-primary btn-lg btn-post"
 
-%br
-
-= link_to 'New Post', new_post_path
+// 
