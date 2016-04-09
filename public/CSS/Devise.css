@@ -29,6 +29,13 @@ body {
   margin: 0 auto;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .new_user h2{
   text-align: center;
 }

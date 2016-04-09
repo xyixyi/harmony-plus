@@ -22,9 +22,12 @@
 .applyf {
     border: none;
     border-bottom: 1px solid #c9ccd2;
-    
+    background-color: #EDECED;
+}
 
-    
+body {
+    background-color: white;
+    padding-top: 0px;
 }
 
 .left-text {
@@ -61,7 +64,6 @@ p {
 
 .footer {
   background-color: #e7e7e6;
-  height: 100px;
 }
 
 .footer_container {
@@ -86,6 +88,27 @@ p {
     height: 50px;
     width: 100%;
     position: absolute;
-    bottom: 100px;
+    bottom: 120px;
     background-color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+select {
+    padding: 20px 0px;
+    border: none;
+    border-bottom: 1px solid #c9ccd2;
+    background-color: #EDECED;
+}
+
+input {
+    padding: 20px 0px;
+}
+.apply-page-header {
+    
 }
