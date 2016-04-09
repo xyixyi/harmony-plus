@@ -74,3 +74,16 @@ body {
        -o-transform: scale(0.5); /* Opera 10.5+ */
           transform: scale(0.5);
 }
+
+.btn-primary {
+    color: rgb(83,170,142);
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: rgb(83,170,142);
+    border-color: transparent;
+}
+
