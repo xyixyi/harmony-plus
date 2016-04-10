@@ -1,0 +1,11 @@
+.container
+{
+    width:100%;
+    text-align: center;
+}
+
+div.left
+{
+    margin-left: 100px;
+    margin-right: 150px;
+}
