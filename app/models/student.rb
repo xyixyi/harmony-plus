@@ -5,8 +5,23 @@ class Student < ActiveRecord::Base
     validates :email, presence: true, uniqueness: true
     validates :phone_number, presence: true, length: { minimum: 10 }
     validate  :validates_phone_number
+    validate  :gender_correct
+    validate  :country_correct
     validates :age, numericality: { only_integer: true }, length: {maximum: 3}
-
+    validates :dateOfBirth, timeliness: { on_or_before: lambda { Date.current }, type: :date }
+    
+    def country_correct
+        if country=="Country"
+            errors.add("Please select your country.")
+        end
+    end
+    
+    def gender_correct
+        if gender=='Gender'
+            errors.add("Please select your gender.")
+        end
+    end
+    
     def first_name_is_letters
         is_chinese = false
         # first_name = :first_name
