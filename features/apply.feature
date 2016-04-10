@@ -11,7 +11,7 @@ Background:
     | Bob        | Lee       |  Male   | CHINA    | bob@gmail.com  | +86           |  12345678
 
 Scenario: Able to apply
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "Kate"
   And I fill in "Last Name" with "One"
   And I fill in "Email" with "zhaohp@hotmail.com"
@@ -26,7 +26,7 @@ Scenario: Able to apply
   Then I should see "You have successfully apply for B-Bay"
 
 Scenario: Last name and first name are Chinese characters
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "洋"
   And I fill in "Last Name" with "杨"
   And I fill in "Email" with "lee@b.com"
