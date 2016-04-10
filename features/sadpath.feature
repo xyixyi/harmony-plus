@@ -5,7 +5,6 @@ Feature: Applying for specific program with bad arguments
   I want to see some notices
 
 Background: I am on the EWB home page
-  
   Given the following student exist:
     | first_name | last_name | gender  | country  | email          | country_code  |  phone_number
     | Bob        | Lee       |  Male   | CHINA    | abc@gmail.com  | +86           |  12345678
