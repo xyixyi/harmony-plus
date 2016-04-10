@@ -32,13 +32,13 @@ Given(/^now I am in successfully apply b-bay page$/) do
   puts page.body
 end
 
-Then /I can access the posts page$/ do
-  visit '/posts'
-end
+# Then /I can access the posts page$/ do
+#   visit '/posts'
+# end
 
-When /I access the posts page$/ do
-  visit '/posts'
-end
+# When /I access the posts page$/ do
+#   visit '/posts'
+# end
 
 
 Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|

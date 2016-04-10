@@ -5,6 +5,9 @@ Feature: Managing the database and seeing all applications in DB
   I want to access the database
 
 Background:
+  Given the following users exist:
+    | email           | password |
+    | admin@yahoo.com | password |
   Given the following students exist:
     |first_name|last_name|email     	          |gender |country|country_code |phone_number |program|age|
     |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|+1		        |4084111317   |b-bay	|18 |
@@ -12,11 +15,18 @@ Background:
     |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084333317	  |xxx    |20 |
   And I am on the manager page
   
+  
+Scenario: Able to log in
+  When I am logged in as "admin@yahoo.com" with password "password"
+  Then I am on the manager page
+  
 Scenario: able to see all student applications
+  When I am logged in as "admin@yahoo.com" with password "password"
   And I should see "Luke"
   And I should see "Details for dshdjksa"
   
 Scenario: able to create new application
+  When I am logged in as "admin@yahoo.com" with password "password"
   When I follow "create new application"
   Then I should be on the create new application page 
   And I should see "CREATE A STUDENT APPLICATION"
@@ -34,6 +44,7 @@ Scenario: able to create new application
   And I should see "Kate One's data was successfully created."
 
 Scenario: able to delete application
+  When I am logged in as "admin@yahoo.com" with password "password"
   When I follow "Details for Luke"
   And I press "delete this application"
   Then I should be on the manager page
@@ -41,6 +52,7 @@ Scenario: able to delete application
   And I should not see "Details for Luke"
   
 Scenario: able to edit application
+  When I am logged in as "admin@yahoo.com" with password "password"
   When I follow "Details for dshdjksa"
   And I press "edit this application"
   And I fill in "First Name" with "Clark"
