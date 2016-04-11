@@ -2,14 +2,13 @@ $(function () {
 
   var stepNumber = 0,
     sumProgPortion = 0,
-    appStepsTotal = 3,
+    appStepsTotal = $('.application').length,
     progPortion = 100 / appStepsTotal;
 
   // APPLICATION FORM
   $('#next').on('click', function (e) {
     e.preventDefault();
-
-    if ($(this).hasClass('submit')) {
+    if ($(this).hasClass('submit-btn')) {
       return;
     }
 

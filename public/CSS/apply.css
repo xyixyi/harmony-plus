@@ -156,7 +156,7 @@ h1 {
     font-weight: bold;
 }
 
-.applycation {
+.application {
     position: absolute;
     left: 0;
     top: 0;
@@ -167,14 +167,14 @@ h1 {
 
 .form-nav {
     position: fixed;
-    background: #EDECED;
+    background: transparent;
     bottom: 220px;
     right: 0px;
     padding: 10px 8% 30px 8%;
     width: 50%;
 }
 
-.applycation.current {
+.application.current {
     moz-transition-property: all;
     -o-transition-property: all;
     -webkit-transition-property: all;
@@ -194,7 +194,7 @@ h1 {
     opacity: 1;
 }
 
-.applycation.next {
+.application.next {
     -moz-transition-property: all;
     -o-transition-property: all;
     -webkit-transition-property: all;
@@ -209,7 +209,7 @@ h1 {
     transform: translateX(120%);
 }
 
-.applycation.prev {
+.application.prev {
     -moz-transition-property: all;
     -o-transition-property: all;
     -webkit-transition-property: all;
@@ -272,3 +272,11 @@ h1 {
     left: 10%;
 }
 
+.field_with_errors {
+    float: right;
+    color: black;
+    padding: 2px;
+    background-color: red;
+    display: table;
+    text-align: center;
+}
