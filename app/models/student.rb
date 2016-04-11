@@ -1,4 +1,5 @@
 class Student < ActiveRecord::Base
+    searchkick
     validates :first_name, presence: true, length: { maximum: 20}
     validates :last_name, presence: true, length: { maximum: 20}
     validate :first_name_is_letters, :last_name_is_letters
@@ -11,21 +12,25 @@ class Student < ActiveRecord::Base
     validates :addressLineOne, presence: true, length: { minimum: 5, maximum: 100 }
     validates :addressLineTwo, length: { maximum: 100 }
     validates :school, length: {maximum:50}
-    validates_zipcode :zipcode
+    validates :zipCode, numericality: { only_integer: true }, length: {maximum: 6}
     validates_date :dateOfBirth, on_or_before: lambda { Date.current }
-    validates :GuardianName, length: { maximum: 30 }
+    validates :guardianName, length: { maximum: 30 }
     validates :city, length: { maximum: 30 }
     validates :grade, length: { maximum: 20 }
     
+    def full_name
+      [first_name, last_name].join(' ') 
+    end
+    
     def country_correct
         if country=="Country"
-            errors.add("Please select your country.")
+            errors.add(:country, "not selected.")
         end
     end
     
     def gender_correct
         if gender=='Gender'
-            errors.add("Please select your gender.")
+            errors.add(:gender, "not selected.")
         end
     end
     

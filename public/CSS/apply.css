@@ -137,6 +137,10 @@ input {
     float: right !important;
 }
 
+.submit-btn {
+    float: right !important;
+}
+
 .bleft {
     float: left !important;
 }
@@ -205,6 +209,21 @@ h1 {
     transform: translateX(120%);
 }
 
+.applycation.prev {
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    -moz-transform: translateX(-220%);
+    -ms-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+}
+
 #student_dateOfBirth_1i {
     position: relative;
     left: 20%;
@@ -230,7 +249,26 @@ h1 {
     width: 100px;
 }
 
+.applyf.zc {
+    position: relative;
+    left: 30%;
+    width: 100px;
+}
+
+.applyf.province {
+    position: relative;
+    left: 0%;
+    width: 100px;
+}
+
+.applyf.city {
+    position: relative;
+    left: 15%;
+    width: 100px;
+}
+
 #student_gender {
     position: relative;
     left: 10%;
 }
+
