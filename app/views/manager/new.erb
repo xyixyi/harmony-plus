@@ -1,6 +1,4 @@
 <h1>CREATE A STUDENT APPLICATION</h1>
-
-  <%= layout:application %>
 <% if flash[:error] %>
   <div><%= flash[:error] %></div>
 <% end %>
@@ -37,7 +35,7 @@
     <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
     <%= label :student, :program, 'Program'%>
     <%= select(:student, :program, ['b-bay', 'ideal'])%>
-    "Address Line One"})%>
+    <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
     <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
     <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
     <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%>
