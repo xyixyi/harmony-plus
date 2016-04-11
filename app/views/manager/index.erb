@@ -17,6 +17,19 @@
     <% end %>
     
     <h2>Student Applications</h2>
+  
+  <%=form_tag manager_index_path, class: "form-inline", method: :get do %>
+    <div class="form-group">
+      <%= text_field_tag :query, params[:query], class: "form-control" %>    
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% if params[:query].present? %>    
+        <%= link_to "clear", manager_index_path%>
+      <% end %>
+    </div>
+<% end %>
+  
+  
+  
   <body>
     <table>
       <tr>
@@ -49,3 +62,6 @@
   </body>
   <%= link_to "create new application", new_manager_path %>
 </html>
+
+
+

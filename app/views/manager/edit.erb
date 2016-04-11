@@ -10,7 +10,6 @@
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
   
-  
   <body>
     <%= form_for @student, url: {action: "update"} do%>
       <% if @student != nil and @student.errors.any? %>

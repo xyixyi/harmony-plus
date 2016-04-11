@@ -1,4 +1,5 @@
 class Student < ActiveRecord::Base
+    searchkick
     validates :first_name, presence: true, length: { maximum: 20}
     validates :last_name, presence: true, length: { maximum: 20}
     validate :first_name_is_letters, :last_name_is_letters
@@ -16,6 +17,10 @@ class Student < ActiveRecord::Base
     validates :GuardianName, length: { maximum: 30 }
     validates :city, length: { maximum: 30 }
     validates :grade, length: { maximum: 20 }
+    
+    def full_name
+      [first_name, last_name].join(' ') 
+    end
     
     def country_correct
         if country=="Country"
