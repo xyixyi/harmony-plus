@@ -36,7 +36,7 @@ class ManagerController < ActionController::Base
           flash[:error] = error_message if @student.errors.full_messages.first == error_message
         end
       end
-      redirect_to manager_index_path
+      redirect_to new_manager_path
     end
   end
 
