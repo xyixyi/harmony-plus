@@ -25,6 +25,8 @@
     <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
     <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
     <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
+    <%= label :student, :dateOfBirth, 'Date of Birth'%>
+    <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
     <%= label :student, :gender, 'Gender'%>
     <%= select(:student, :gender, ['Male', 'Female'])%>
     <%= label :student, :country, 'Country'%>
@@ -34,12 +36,12 @@
     <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
     <%= label :student, :program, 'Program'%>
     <%= select(:student, :program, ['b-bay', 'ideal'])%>
-    <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
     <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
     <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
+    <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
     <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%>
-    <%= label :student, :dateOfBirth, 'Date of Birth'%>
-    <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
+    <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+    <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
     <!--:student :program 'b-bay'-->
     <input type="submit" name="submit" class="submit_but" value= 'Submit' />
   </div>

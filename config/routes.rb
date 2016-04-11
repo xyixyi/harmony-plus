@@ -1,5 +1,4 @@
 HarmonyPlus::Application.routes.draw do
-  get 'hello/hello'
 
   resources :posts
   devise_for :users
