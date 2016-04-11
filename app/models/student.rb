@@ -8,7 +8,14 @@ class Student < ActiveRecord::Base
     validate  :gender_correct
     validate  :country_correct
     validates :age, numericality: { only_integer: true }, length: {maximum: 3}
-    validates :dateOfBirth, timeliness: { on_or_before: lambda { Date.current }, type: :date }
+    validates :addressLineOne, presence: true, length: { minimum: 5, maximum: 100 }
+    validates :addressLineTwo, length: { maximum: 100 }
+    validates :school, length: {maximum:50}
+    validates_zipcode :zipcode
+    validates_date :dateOfBirth, on_or_before: lambda { Date.current }
+    validates :GuardianName, length: { maximum: 30 }
+    validates :city, length: { maximum: 30 }
+    validates :grade, length: { maximum: 20 }
     
     def country_correct
         if country=="Country"
@@ -60,6 +67,7 @@ class Student < ActiveRecord::Base
              errors.add(:phone_number, "is not vaild.")
         end
     end
+    
     
 end
 
