@@ -2,7 +2,7 @@ $(function () {
 
   var stepNumber = 0,
     sumProgPortion = 0,
-    appStepsTotal = $('.application').length,
+    appStepsTotal = 3,
     progPortion = 100 / appStepsTotal;
 
   // APPLICATION FORM
@@ -29,10 +29,16 @@ $(function () {
     if (stepNumber > 0) {
       $('#prev').show();
     }
+    
+    // if (stepNumber > 1) {
+    //   $('#next').hide();
+    //   $('.submit-btn').show();
+    // }
 
     if (stepNumber === appStepsTotal - 1) {
-      $(this).addClass('submit');
-      $(this).text("Submit")
+      $('#next').hide();
+      $('.submit-btn').show();
+      
       e.stopPropagation();
     }
 
@@ -54,10 +60,14 @@ $(function () {
     if (stepNumber < 1) {
       $(this).hide();
     }
-
+    
+    // if (stepNumber !== appStepsTotal - 1) {
+    //   $('#next').hide();
+    //   $('.submit-btn').show();
+    // }
     if (stepNumber < appStepsTotal - 1) {
-      $('#next').removeClass('submit');
-      $('#next').text("Next")
+      $('#next').show();
+      $('.submit-btn').hide();
     }
 
   });
