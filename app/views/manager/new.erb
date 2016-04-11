@@ -7,7 +7,7 @@
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-  
+
 <div class='bot'>
   <%= form_tag :action=> "create" do %>
     <% if @student != nil and @student.errors.any? %>

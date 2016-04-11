@@ -1,5 +1,5 @@
 class ManagerController < ActionController::Base
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   layout 'application'
   def show
     @student = Student.find(params[:id])
@@ -7,7 +7,14 @@ class ManagerController < ActionController::Base
 
   def index
     sort = params[:sort] || session[:sort]
-    @students = Student.all
+    # @students = Student.all
+    
+    if params[:query].present?
+      @students = Student.search(params[:query])
+    else
+      @students = Student.all
+    end
+    
     @students = Student.order("lower(#{sort})") if sort
   end
 
