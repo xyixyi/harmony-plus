@@ -9,11 +9,11 @@ class ManagerController < ActionController::Base
     sort = params[:sort] || session[:sort]
     @students = Student.all
     
-    # if params[:query].present?
-    #   @students = Student.search(params[:query])
-    # else
-    #   @students = Student.all
-    # end
+    if params[:query].present?
+      @students = Student.search(params[:query])
+    else
+      @students = Student.all
+    end
     
     @students = Student.order("lower(#{sort})") if sort
   end
