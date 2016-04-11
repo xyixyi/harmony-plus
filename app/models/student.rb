@@ -12,9 +12,9 @@ class Student < ActiveRecord::Base
     validates :addressLineOne, presence: true, length: { minimum: 5, maximum: 100 }
     validates :addressLineTwo, length: { maximum: 100 }
     validates :school, length: {maximum:50}
-    validates_zipcode :zipcode
+    validates :zipCode, numericality: { only_integer: true }, length: {maximum: 6}
     validates_date :dateOfBirth, on_or_before: lambda { Date.current }
-    validates :GuardianName, length: { maximum: 30 }
+    validates :guardianName, length: { maximum: 30 }
     validates :city, length: { maximum: 30 }
     validates :grade, length: { maximum: 20 }
     
