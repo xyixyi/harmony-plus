@@ -7,7 +7,6 @@ class ManagerController < ActionController::Base
 
   def index
     sort = params[:sort] || session[:sort]
-    @students = Student.all
     
     if params[:query].present?
       @students = Student.search(params[:query])
@@ -16,6 +15,7 @@ class ManagerController < ActionController::Base
     end
     
     @students = Student.order("lower(#{sort})") if sort
+    # need to change when searched and then sort // see hw4 for reference
   end
 
   def new
