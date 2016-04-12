@@ -12,5 +12,5 @@ students = [{:first_name => 'Luke', :last_name => 'Wang', :email => 'zhaohp@hotm
 students.each do |student|
     Student.create!(student)
     
-User.create(email: 'test@hotmail.com', password: 'testforgabe')
+User.create(email: 'test@hotmail.com', password: '12345678')
 end
