@@ -139,15 +139,31 @@ h10{
 
 .bottom_images
 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
     position: relative;
-    top: 10px;
-    bottom: 100px;
-    height: 600px;
+    top: 3%;
+    /*bottom: 10%;*/
+    height: 300px;
 }
 
+.bottom_images2
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    top: 0.5%;
+    bottom: 25%;
+    height: 400px;
+}
+
+
 .bottom_images .image
+{
+    position: relative; 
+    width: 100%;
+}
+.bottom_images2 .image
 {
     position: relative; 
     width: 100%;
@@ -228,12 +244,5 @@ nav.transparent-nav .links a {
 
 .center_bottom
 {
-    /*width:100%;*/
     text-align: center;
-    /*position: relative;*/
-    /*left: 50px;*/
-    /*right: 100px;*/
-    /*position: relative;*/
-    /*left: 5%;*/
-    /*margin-right: -50%;*/
 }
