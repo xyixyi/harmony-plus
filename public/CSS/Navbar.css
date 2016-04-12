@@ -45,15 +45,15 @@ html {
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
+   /*Margin bottom by footer height */
   margin-bottom: 120px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 120%;
+   /*Set the fixed height of the footer here */
+  height: 120px;
   background-color: #2d3d4d;
 }
 
