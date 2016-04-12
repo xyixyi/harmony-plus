@@ -1,12 +1,39 @@
 class Student < ActiveRecord::Base
+    searchkick
     validates :first_name, presence: true, length: { maximum: 20}
     validates :last_name, presence: true, length: { maximum: 20}
     validate :first_name_is_letters, :last_name_is_letters
     validates :email, presence: true, uniqueness: true
     validates :phone_number, presence: true, length: { minimum: 10 }
     validate  :validates_phone_number
+    validate  :gender_correct
+    validate  :country_correct
     validates :age, numericality: { only_integer: true }, length: {maximum: 3}
-
+    validates :addressLineOne, presence: true, length: { minimum: 5, maximum: 100 }
+    validates :addressLineTwo, length: { maximum: 100 }
+    validates :school, length: {maximum:50}
+    validates :zipCode, numericality: { only_integer: true }, length: {maximum: 6}
+    validates_date :dateOfBirth, on_or_before: lambda { Date.current }
+    validates :guardianName, length: { maximum: 30 }
+    validates :city, length: { maximum: 30 }
+    validates :grade, length: { maximum: 20 }
+    
+    def full_name
+      [first_name, last_name].join(' ') 
+    end
+    
+    def country_correct
+        if country=="Country"
+            errors.add(:country, "not selected.")
+        end
+    end
+    
+    def gender_correct
+        if gender=='Gender'
+            errors.add(:gender, "not selected.")
+        end
+    end
+    
     def first_name_is_letters
         is_chinese = false
         # first_name = :first_name
@@ -45,6 +72,7 @@ class Student < ActiveRecord::Base
              errors.add(:phone_number, "is not vaild.")
         end
     end
+    
     
 end
 

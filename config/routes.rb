@@ -1,7 +1,5 @@
 HarmonyPlus::Application.routes.draw do
-  get 'hello/hello'
 
-  resources :posts
   devise_for :users
   # mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)]
   resources :manager
@@ -25,6 +23,7 @@ HarmonyPlus::Application.routes.draw do
   devise_scope :user do
     get "signup", to: "devise/registrations#new"
     get "login" => "devise/sessions#new"
+    get '/users/sign_out' => 'devise/sessions#destroy'
     get "logout", to: "devise/sessions#destroy"
     match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
   end

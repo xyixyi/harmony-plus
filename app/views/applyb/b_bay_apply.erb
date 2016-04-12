@@ -1,75 +1,154 @@
+<!--#include file="app/views/layouts.html.erb"-->
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/Navbar.css">
-<title>Harmony Plus B-Bay Apply Page</title>
+<link rel="stylesheet" type="text/css" href="CSS/apply.css">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<!--<link rel="stylesheet" type="text/css" href="CSS/index.css">-->
 </head>
-<nav id="transparent-nav" class="transparent-nav">
-  <div class = "logo">
-    <a href="/">
-        <img border="0" alt="harmony_logo" src="img/Logos/logo.png" width="134" height="46">
-    </a>
-  </div>
-  <div class="links">
-    <a href="/">HOME</a>
-    <a href="future_planning">FUTURE PLANNING</a>
-    <a href="summer_academy">SUMMER ACADEMY</a>
-    <a href="stories">STORIES</a>
-    <a href="about_us">ABOUT US</a>
-    <a href="contact">CONTACT</a>
-    <a href="/">
-      <img border="0" alt="s" src="img/apply/search.png" width="24" height="24">
-    </a>
-    <a href="/">简体中文</a>
-  </div>
-</nav>
 
-  
-  <div class="right-view">
-    <h_bbayapply class= "apply-page-header"> Apply for B_bay </h_bbayapply>
-    
-    <% if flash[:error] %>
-      <div class="error"><%= flash[:error] %></div>
-    <% end %>
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-    
-    <div class='bot'>
-      <%= form_tag :action=> "create" do %>
-        <% if @student != nil and @student.errors.any? %>
-          <div id="error_explanation">
-   
-            <ul>
-            <% @student.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-      <div class='applyform'>
-        <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
-        <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
-        <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
-        <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
-        <%= label :student, :gender, 'Gender'%>
-        <%= select(:student, :gender, ['Male', 'Female'])%>
-        <%= label :student, :country, 'Country'%>
-        <%= select(:student, :country, ['U.S.', 'CHINA'])%>
-        <%= label :student, :country_code, 'Country Code'%>
-        <%= select(:student, :country_code, ['+86', '+1'])%>
-        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-        <%= label :student, :program, 'You are applying for B-Bay'%>
-        <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
-        <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
-        <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
-        <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%>
-        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-        <%= label :student, :dateOfBirth, 'Date of Birth'%>
-        <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
-  
-        <!--:student :program 'b-bay'-->
-        <input type="submit" name="submit" class="submit_but" value= 'Submit' />
-      </div>
-      <% end %>
+  <div class="left-view" style=background>
+    <div class="left-text">
+      <h4>B-BAY</h4>
+      <p>Berkeley Business Academy for Youth</p>
+      <p><a class="btn btn-primary btn-lg" href="/about_us" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
-</div>
+
+  <!--<div class="right-view">-->
+       <%= form_tag :action=> "create", :html => {:multipart => true} do %>
+        <div id="error_explanation" class="field_with_errors">
+          <% if @student != nil and @student.errors.any? %>
+            <!--<div id="error_explanation">-->
+            <ul>
+              <% @student.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          <% end %>
+          <% if flash[:error] %>
+              <div class="error"><%= flash[:error] %></div>
+            <% end %>
+          <% if flash[:notice] %>
+              <div class="notice"><%= flash[:notice] %></div>
+          <% end %>
+        </div>
+        <div class="application current">
+          <h1>Personal Info</h1>
+          <%= text_field(:student, :first_name, {:class => 'applyf name', :placeholder => "First Name"})%>
+          <%= text_field(:student, :last_name, {:class => 'applyf name', :placeholder => "Last Name"})%>
+          <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
+          <%= number_field(:student, :age, {:class => 'applyf age', :placeholder => "Age"})%>
+          <%= select(:student, :gender, ['Gender','Male', 'Female'], {:class =>"gender"})%>
+          <%= label(:student, :dateOfBirth, 'Birthday', {:class => "bday"})%>
+          <%= date_select :student, :dateOfBirth, :start_year=>1900%>
+        </div>
+        <div class="application next">
+          <h1>Contact Info</h1>
+          <%= select(:student, :country, ['Country','U.S.', 'CHINA'])%>
+          <%= select(:student, :country_code, ['+86', '+1'])%>
+          <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
+          <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
+          <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
+          <%= text_field(:student, :province, {:class => 'applyf province', :placeholder => "State/Province"})%>
+          <%= text_field(:student, :city, {:class => 'applyf city', :placeholder => "City"})%>
+          <%= text_field(:student, :zipCode, {:class => 'applyf zc', :placeholder => "zipCode"})%>
+        </div>
+        <div class="application next">
+          <h1>Education Background</h1>
+          <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+          <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
+          <!--<input type="submit" value="Submit" class="btn submit-btn">-->
+        </div>
+        <div class="form-nav">
+          <a class="btn bright" id="next">Next</a>
+          <!--<a class= "btn" id="prev" style="display: none;">Back</a>-->
+          <a class= "btn bleft" id="prev" style="display: none;">Back</a>
+          <input type="submit" value="Submit" class="btn submit-btn" style="display: none;">
+        </div>
+    <% end %>
+
+  </div>
+  <div class="empty">
+    
+  </div>
+  
+  <!--INCLUDE SCRIPT FILES-->
+  <!--<script type="text/javascript" src="../apply.js"></script>-->
+
+<script>
+  $(function () {
+
+  var stepNumber = 0,
+    sumProgPortion = 0,
+    appStepsTotal = $('.application').length,
+    progPortion = 100 / appStepsTotal;
+
+  // APPLICATION FORM
+  $('#next').on('click', function (e) {
+    e.preventDefault();
+    // document.write(appStepsTotal)
+    if ($(this).hasClass('submit-btn')) {
+      return;
+    }
+
+    var $inView = $('.current');
+
+    // if(!$inView.find('input,select,textarea').valid()) {
+    //   return false;
+    // }
+
+    $('.current').next().removeClass('next').addClass('current');
+    $inView.removeClass('current').addClass('prev');
+
+    stepNumber++;
+
+    sumProgPortion = sumProgPortion + progPortion;
+
+    if (stepNumber > 0) {
+      $('#prev').show();
+    }
+    
+    // if (stepNumber > 1) {
+    //   $('#next').hide();
+    //   $('.submit-btn').show();
+    // }
+
+    if (stepNumber === appStepsTotal - 1) {
+      $('#next').hide();
+      $('.submit-btn').show();
+      
+      e.stopPropagation();
+    }
+
+  });
+  
+    $('#prev').on('click', function (e) {
+    e.preventDefault();
+
+    var $inView = $('.current');
+
+    $('.current').prev().removeClass('prev').addClass('current');
+    $inView.removeClass('current').addClass('next');
+
+    stepNumber--;
+
+    // sumProgPortion = sumProgPortion - progPortion;
+    // $('.progress-bar').css("width", sumProgPortion + "%");
+
+    if (stepNumber < 1) {
+      $(this).hide();
+    }
+    
+    // if (stepNumber !== appStepsTotal - 1) {
+    //   $('#next').hide();
+    //   $('.submit-btn').show();
+    // }
+    if (stepNumber < appStepsTotal - 1) {
+      $('#next').show();
+      $('.submit-btn').hide();
+    }
+
+  });
+})
+</script>
