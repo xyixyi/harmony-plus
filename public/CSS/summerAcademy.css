@@ -31,22 +31,25 @@ h1{
 
 div.left
 {
-    width: 60%;
+    width: 55%;
     float: left;
     position: relative;
     top: 100px;
-    left: 80px;
-    right: 400px;
+    /*left: 80px;*/
+    left: 7%;
+    /*right: 400px;*/
+    /*right: 40%;*/
     height: 1350px;
 }
 
 .right
 {
-    width: 40%;
+    width: 45%;
     float: right;
     position: relative;
     top: 100px;
-    left: 120px;
+    /*left: 120px;*/
+    left: 15%;
     right: 20px;
     height: 1350px;
 }
