@@ -83,8 +83,9 @@ div.left
     border-color: gray;
 }
 
-h4 btn-lg{
+h4 btn-primary{
     text-align: right;
+    float: right;
 }
 .center_bottom hr
 {
@@ -120,8 +121,8 @@ h10{
 
 .center_bottom
 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 8%;
+    margin-right: 8%;
     text-align: center;
     font-size: 12px;
 }
@@ -139,8 +140,8 @@ h10{
 
 .bottom_images
 {
-    margin-left: 10%;
-    margin-right: 10%;
+    left: 10%;
+    right: 10%;
     position: relative;
     top: 3%;
     /*bottom: 10%;*/
@@ -149,8 +150,8 @@ h10{
 
 .bottom_images2
 {
-    margin-left: 10%;
-    margin-right: 10%;
+    left: 10%;
+    right: 10%;
     position: relative;
     top: 0.5%;
     bottom: 25%;
@@ -163,20 +164,29 @@ h10{
     position: relative; 
     width: 100%;
 }
+
+
+
 .bottom_images2 .image
 {
     position: relative; 
     width: 100%;
+    top: -20px;
 }
 
 h9
 {
     position: absolute; 
-    top: 200px; 
-    left: 0;
+    top: 190px; 
+    left: 1px;
     width: 100%;
     color: white;
     font-weight: 900;
+}
+
+h11
+{
+    color: rgb(83,170,142);
 }
 
 .photo
