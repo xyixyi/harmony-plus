@@ -1,11 +1,235 @@
+body{
+    background-color: white;
+}
+
 .container
 {
     width:100%;
     text-align: center;
 }
 
+
+.text {
+    margin-top: 350px;
+    position: relative;
+    top: -300px;
+    width:100%;
+    text-align: center;
+}
+
+h1{
+    color: rgb(83,170,142);
+    font-size: 28px;
+}
+
+
+.text p{
+    color: gray;
+    font-size: 20px;
+}
+
 div.left
 {
+    width: 60%;
+    float: left;
+    position: relative;
+    top: 100px;
+    left: 80px;
+    right: 400px;
+    height: 1350px;
+}
+
+.right
+{
+    width: 40%;
+    float: right;
+    position: relative;
+    top: 100px;
+    left: 120px;
+    right: 20px;
+    height: 1350px;
+}
+
+.bottom_left
+{
+    width: 50%;
+    float: left;
+    position: relative;
+    left: 50px;
+    top: 100px;
+    height: 400px;
+    /*text-align: right;*/
+    font-size: 12px;
+}
+
+.bottom_right
+{
+    width: 50%;
+    float: right;
+    position: relative;
+    top: 100px;
+    right: 50px;
+    font-size: 12px;
+    height: 400px;
+    
+}
+
+.info hr
+{
+    width: 98%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+}
+
+.center_bottom hr
+{
+    border-style: solid;
+    width: 40px;
+    border-width: 3px;
+    border-color: rgb(83,170,142);
+}
+
+.info p{
+    color: gray;
+}
+
+h2, h3, h4, h5, h6, h7{font-size: 16px;}
+
+h4, h6
+{
+    color: rgb(83,170,142);
+}
+h5
+{
+    font-size: 16px;
+}
+
+h8
+{
+    font-size: 24px;
+}
+h10{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.center_bottom
+{
     margin-left: 100px;
-    margin-right: 150px;
+    margin-right: 100px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.bottom_left_right
+{
+    position: relative;
+    top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    height: 400px;
+    font-size: 12px;
+}
+
+.bottom_images
+{
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+    top: 10px;
+    bottom: 100px;
+    height: 600px;
+}
+
+.bottom_images .image
+{
+    position: relative; 
+    width: 100%;
+}
+
+h9
+{
+    position: absolute; 
+    top: 200px; 
+    left: 0;
+    width: 100%;
+    color: white;
+    font-weight: 900;
+}
+
+.photo
+{
+    float:left; 
+    padding:5px;
+}
+
+.photo2
+{
+    float:left; 
+    padding:5px;
+    margin-bottom: 100px;
+}
+
+nav.transparent-nav {
+  margin-top: -40px;
+  background: transparent;
+  position: fixed;
+  background: -webkit-linear-gradient(rgba(255,255,255,1), transparent);
+   /*For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255,255,255,1), transparent);
+   /*For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255,255,255,1), transparent);
+   /*For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255,255,255,1), transparent);
+   /*Standard syntax (must be last) */
+}
+
+nav.transparent-nav .links a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.opening{
+    margin-top: 60px;
+    background-image: url("../img/summerAcademy/opening.png");
+    /*height: 1200px;*/
+    background-position: center center;
+    -webkit-background-size: 100% auto;
+
+    -moz-background-size: 100% auto;
+
+    -ms-background-size: 100% auto;
+
+    -o-background-size: 100% auto;
+
+    background-size: 100% auto;
+    overflow: hidden;
+}
+
+.btn-primary {
+    color: rgb(83,170,142);
+    background-color: transparent;
+    border-color: rgb(83,170,142);
+}
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: rgb(83,170,142);
+    border-color: transparent;
+}
+
+.center_bottom
+{
+    /*width:100%;*/
+    text-align: center;
+    /*position: relative;*/
+    /*left: 50px;*/
+    /*right: 100px;*/
+    /*position: relative;*/
+    /*left: 5%;*/
+    /*margin-right: -50%;*/
 }
