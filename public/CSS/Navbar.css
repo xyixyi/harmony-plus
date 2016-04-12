@@ -87,3 +87,13 @@ body {
     border-color: transparent;
 }
 
+.btn-bar{
+  color: rgb(83,170,142)!important;
+  background-color: transparent!important;
+  border-color: white!important;
+}
+.btn-bar:hover{
+  color: #fff!important;
+  background-color: rgb(83,170,142)!important;
+  border-color: transparent!important;
+}
