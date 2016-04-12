@@ -274,9 +274,13 @@ h1 {
 
 .field_with_errors {
     float: right;
+    position: relative;
+    top: 10%;
+    right: 40%;
     color: black;
+    color: red;
     padding: 2px;
-    background-color: red;
+    background-color: #EDECED;
     display: table;
     text-align: center;
 }
