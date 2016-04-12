@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20160410080950) do
     t.string   "addressLineTwo"
     t.string   "province"
     t.integer  "zipCode"
-    t.string   "dateOfBirth"
+    t.date     "dateOfBirth"
     t.string   "guardianName"
     t.string   "city"
     t.string   "grade"
