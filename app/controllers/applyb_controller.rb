@@ -2,7 +2,8 @@ class ApplybController < ActionController::Base
   layout 'application'
   def student_params
     params.require(:student).permit(:first_name, :last_name, :email, :gender, :country, 
-                  :country_code, :phone_number, :age, :program, :zipCode)
+                  :country_code, :phone_number, :age, :program, :zipCode, :dateOfBirth, :addressLineOne, :addressLineTwo,
+                  :province, :city, :school, :grade)
   end
   
   def show

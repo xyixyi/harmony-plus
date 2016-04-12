@@ -58,6 +58,7 @@
           <h1>Education Background</h1>
           <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
           <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
+          <%= hidden_field_tag(:program, "b-bay") %>
           <!--<input type="submit" value="Submit" class="btn submit-btn">-->
         </div>
         <div class="form-nav">
@@ -72,6 +73,23 @@
   <div class="empty">
     
   </div>
+  <footer class="footer">
+    <div class="footer_container">
+      <p class="text-muted">&copy;2016 Harmony Plus</p>
+      <a href="https://www.facebook.com/">
+      <img title="Facebook" alt="Facebook" src="/img/Footer/Facebook.png" class="footer_icon">
+      </a>
+      <a href="https://twitter.com/">
+      <img title="Twitter" alt="Twitter" src="/img/Footer/Twitter.png" class="footer_icon">
+      </a>
+      <a href="https://www.tumblr.com/">
+      <img title="Tumblr" alt="Tumblr" src="/img/Footer/Tumblr.png" class="footer_icon">
+      </a>
+      <a href="https://www.pinterest.com/">
+      <img title="Pintrest" alt="Pintrest" src="/img/Footer/Pintrest.png" class="footer_icon">
+      </a>
+    </div>
+  </footer>
   
   <!--INCLUDE SCRIPT FILES-->
   <!--<script type="text/javascript" src="../apply.js"></script>-->

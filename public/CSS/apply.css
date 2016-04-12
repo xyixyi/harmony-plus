@@ -67,9 +67,9 @@ p {
     border-color: transparent;
 }
 
-.footer {
-  background-color: #e7e7e6;
-}
+/*.footer {*/
+/*  background-color: #e7e7e6;*/
+/*}*/
 
 .footer_container {
   width: 100%;
@@ -93,7 +93,7 @@ p {
     height: 50px;
     width: 100%;
     position: absolute;
-    bottom: 120px;
+    bottom: 10%;
     background-color: white;
 }
 
@@ -168,7 +168,7 @@ h1 {
 .form-nav {
     position: fixed;
     background: transparent;
-    bottom: 220px;
+    bottom: 15%;
     right: 0px;
     padding: 10px 8% 30px 8%;
     width: 50%;
@@ -279,4 +279,69 @@ h1 {
     background-color: red;
     display: table;
     text-align: center;
+}
+
+.footer {
+  position: fixed;
+   /*Set the fixed height of the footer here */
+  height: 10%;
+  /*height: 10%;*/
+  background-color: #e7e7e6;
+}
+
+.footer_container {
+  position: fixed;
+  height: 10%;
+}
+.footer_container .text-muted {
+  margin: 10px 0;
+  color: white;
+}
+
+.footer_icon{
+  -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.5); /* FF3.5+ */
+      -ms-transform: scale(0.5); /* IE9 */
+       -o-transform: scale(0.5); /* Opera 10.5+ */
+          transform: scale(0.5);
+}
+
+body {
+   /*Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+
+nav.transparent-nav {
+  background: white;/* For browsers that do not support gradients */
+  width: 100%;
+  position: fixed;
+  height: 9.26%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  display: inline-block;
+  z-index:99999;
+}
+
+.logo {
+  position: fixed;
+  color: black;
+  top: 1.6%;
+  left: 1.6%;
+  
+}
+
+nav.transparent-nav .links a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav .links {
+  right: 0;
+  position: fixed;
+  top: 2.8%;
+  font-size: 110%;
+  font-family: "Trebuchet MS";
 }
