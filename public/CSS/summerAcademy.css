@@ -28,6 +28,7 @@ h1{
     font-size: 20px;
 }
 
+
 div.left
 {
     width: 60%;
@@ -82,6 +83,9 @@ div.left
     border-color: gray;
 }
 
+h4 btn-lg{
+    text-align: right;
+}
 .center_bottom hr
 {
     border-style: solid;
