@@ -21,25 +21,15 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   # page.has_content? 'Login successful'
 end
 
-
-Given(/^now I am in b-bay apply$/) do
-  visit 'applyb/b_bay_apply'
-end
-
-Given(/^now I am in successfully apply b-bay page$/) do
-  # puts page.body
-  visit 'applyb/success_b_bay'
-  puts page.body
-end
-
-# Then /I can access the posts page$/ do
-#   visit '/posts'
+# Given(/^now I am in b-bay apply$/) do
+#   visit 'applyb/b_bay_apply'
 # end
 
-# When /I access the posts page$/ do
-#   visit '/posts'
+# Given(/^now I am in successfully apply b-bay page$/) do
+#   # puts page.body
+#   visit 'applyb/success_b_bay'
+#   puts page.body
 # end
-
 
 Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
   pending

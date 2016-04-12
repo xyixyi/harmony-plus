@@ -1,12 +1,21 @@
 class ManagerController < ActionController::Base
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   layout 'application'
   def show
     @student = Student.find(params[:id])
   end
 
   def index
-    @students = Student.all
+    sort = params[:sort] || session[:sort]
+    
+    if params[:query].present?
+      @students = Student.search(params[:query])
+    else
+      @students = Student.all
+    end
+    
+    @students = Student.order("lower(#{sort})") if sort
+    # need to change when searched and then sort // see hw4 for reference
   end
 
   def new
@@ -27,7 +36,7 @@ class ManagerController < ActionController::Base
           flash[:error] = error_message if @student.errors.full_messages.first == error_message
         end
       end
-      redirect_to manager_index_path
+      redirect_to new_manager_path
     end
   end
 
@@ -49,21 +58,8 @@ class ManagerController < ActionController::Base
     redirect_to manager_index_path
   end
   
-  # def manager
-  #   if current_user
-  #     @message = "Welcome admin!"
-  #     redirect_to manager_index_path
-  #   else
-  #     @message = "Access Denied"
-  #   end
-  # end
-  
-  # <h1><%= @message %></h1>
-  # <% if current_user %>
-  #   <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  # <% end %>
   private
     def student_params
-       params.require(:student).permit(:first_name, :last_name, :age, :email, :gender, :country, :country_code, :phone_number, :program, :school, :addressLineOne, :addressLineTwo, :dateOfBirth, :zipCode)
+       params.require(:student).permit(:first_name, :last_name, :age, :email, :gender, :country, :country_code, :phone_number, :program, :school, :addressLineOne, :addressLineTwo, :dateOfBirth, :zipCode, :grade, :city)
     end
 end

@@ -1,7 +1,5 @@
 HarmonyPlus::Application.routes.draw do
-  get 'hello/hello'
 
-  resources :posts
   devise_for :users
   # mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)]
   resources :manager

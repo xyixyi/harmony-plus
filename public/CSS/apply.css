@@ -9,7 +9,7 @@
     background: url("../img/apply/leftView.png");
 }
 
-.right-view {
+form {
     width: 50%;
     color: gray;
     float: right;
@@ -23,6 +23,11 @@
     border: none;
     border-bottom: 1px solid #c9ccd2;
     background-color: #EDECED;
+    width: 100%
+}
+
+.applyf.name {
+    width: 50%;
 }
 
 body {
@@ -109,6 +114,169 @@ select {
 input {
     padding: 20px 0px;
 }
-.apply-page-header {
-    
+
+.btn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #53AA8E;
+  padding: 10px 20px 10px 18px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #4a947b;
+  color: white;
+  text-decoration: none;
+}
+
+.bright {
+    float: right !important;
+}
+
+.submit-btn {
+    float: right !important;
+}
+
+.bleft {
+    float: left !important;
+}
+
+h1 {
+    font-family: "Trebuchet MS";
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.application {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 700px;
+    width: 100%;
+    padding: 16%;
+}
+
+.form-nav {
+    position: fixed;
+    background: transparent;
+    bottom: 220px;
+    right: 0px;
+    padding: 10px 8% 30px 8%;
+    width: 50%;
+}
+
+.application.current {
+    moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    /*-moz-transform: translateX(0);*/
+    /*-ms-transform: translateX(0);*/
+    /*-webkit-transform: translateX(0);*/
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.application.next {
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    -moz-transform: translateX(120%);
+    -ms-transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+}
+
+.application.prev {
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    -moz-transform: translateX(-220%);
+    -ms-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+}
+
+#student_dateOfBirth_1i {
+    position: relative;
+    left: 20%;
+}
+
+#student_dateOfBirth_2i {
+    position: relative;
+    left: 20%;
+}
+
+#student_dateOfBirth_3i {
+    /*float: right;*/
+    position: relative;
+    left: 20%;
+}
+
+.bday {
+    position: relative;
+    left: 20%;
+}
+
+.applyf.age {
+    width: 100px;
+}
+
+.applyf.zc {
+    position: relative;
+    left: 30%;
+    width: 100px;
+}
+
+.applyf.province {
+    position: relative;
+    left: 0%;
+    width: 100px;
+}
+
+.applyf.city {
+    position: relative;
+    left: 15%;
+    width: 100px;
+}
+
+#student_gender {
+    position: relative;
+    left: 10%;
+}
+
+.field_with_errors {
+    float: right;
+    color: black;
+    padding: 2px;
+    background-color: red;
+    display: table;
+    text-align: center;
 }

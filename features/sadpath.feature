@@ -10,7 +10,7 @@ Background: I am on the EWB home page
     | Bob        | Lee       |  Male   | CHINA    | abc@gmail.com  | +86           |  12345678
   
 Scenario: first name is missing
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   And I fill in "Last Name" with "Lee"
   And I fill in "Email" with "bob@gmail.com"
   And I fill in "Phone Number" with "4084124987"
@@ -21,10 +21,9 @@ Scenario: first name is missing
   And I press "Submit"
   Then I should see "HOME"
   Then I should see "First name can't be blank"
-  Then I should see "Apply for B_bay"
   
 Scenario: last name is missing
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "Bob"
   And I fill in "Email" with "bob@gmail.com"
   And I fill in "Phone Number" with "4084124987"
@@ -37,7 +36,7 @@ Scenario: last name is missing
   Then I should see "Last name can't be blank"
   
 Scenario: age is missing
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "Bob"
   And I fill in "Last Name" with "Lee"
   And I fill in "Email" with "bob@gmail.com"
@@ -48,10 +47,9 @@ Scenario: age is missing
   And I press "Submit"
   Then I should see "HOME"
   Then I should see "Age is not a number"
-  Then I should see "Apply for B_bay"
   
 Scenario: email is missing
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "Kate"
   And I fill in "Last Name" with "One"
   And I fill in "Age" with "18"
@@ -64,7 +62,7 @@ Scenario: email is missing
   Then I should see "Email can't be blank"
   
 Scenario: phone number is missing
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "Kate"
   And I fill in "Last Name" with "One"
   And I fill in "Email" with "a@b.com"
@@ -77,7 +75,7 @@ Scenario: phone number is missing
   Then I should see "Phone number can't be blank"
   
 Scenario: phone number is too short
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "Kate"
   And I fill in "Last Name" with "One"
   And I fill in "Email" with "a@b.com"
@@ -91,7 +89,7 @@ Scenario: phone number is too short
   Then I should see "Phone number is too short (minimum is 10 characters)"
   
 Scenario: The same user apply twice
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "易峰"
   And I fill in "Last Name" with "李"
   And I fill in "Email" with "abcd@gmail.com"       
@@ -103,7 +101,7 @@ Scenario: The same user apply twice
   And I press "Submit"
   Then I should see "You have successfully apply for B-Bay"
   
-  Given now I am in b-bay apply
+  Given I am on b-bay apply page
   When I fill in "First Name" with "亦凡"
   And I fill in "Last Name" with "吴"
   And I fill in "Email" with "abcd@gmail.com"       

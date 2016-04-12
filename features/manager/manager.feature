@@ -13,20 +13,22 @@ Background:
     |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|+1		        |4084111317   |b-bay	|18 |
     |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|+1   		    |4084222317   |b-bay-2|19 |
     |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084333317	  |xxx    |20 |
-  And I am on the manager page
+  Given I am on the login page
   
   
 Scenario: Able to log in
   When I am logged in as "admin@yahoo.com" with password "password"
-  Then I am on the manager page
+  Then I am on the homepage
   
 Scenario: able to see all student applications
   When I am logged in as "admin@yahoo.com" with password "password"
+  And I go to the manager page
   And I should see "Luke"
   And I should see "Details for dshdjksa"
   
 Scenario: able to create new application
   When I am logged in as "admin@yahoo.com" with password "password"
+  And I go to the manager page
   When I follow "create new application"
   Then I should be on the create new application page 
   And I should see "CREATE A STUDENT APPLICATION"
@@ -45,6 +47,7 @@ Scenario: able to create new application
 
 Scenario: able to delete application
   When I am logged in as "admin@yahoo.com" with password "password"
+  And I go to the manager page
   When I follow "Details for Luke"
   And I press "delete this application"
   Then I should be on the manager page
@@ -53,6 +56,7 @@ Scenario: able to delete application
   
 Scenario: able to edit application
   When I am logged in as "admin@yahoo.com" with password "password"
+  And I go to the manager page
   When I follow "Details for dshdjksa"
   And I press "edit this application"
   And I fill in "First Name" with "Clark"

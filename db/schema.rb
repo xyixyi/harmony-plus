@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407235602) do
+ActiveRecord::Schema.define(version: 20160410080950) do
 
   create_table "installs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -63,8 +63,10 @@ ActiveRecord::Schema.define(version: 20160407235602) do
     t.string   "addressLineTwo"
     t.string   "province"
     t.integer  "zipCode"
-    t.date     "dateOfBirth"
+    t.string   "dateOfBirth"
     t.string   "guardianName"
+    t.string   "city"
+    t.string   "grade"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true
