@@ -28,6 +28,10 @@ h1{
     font-size: 20px;
 }
 
+.top_container
+{
+    height: 1350px;
+}
 
 div.left
 {
@@ -56,25 +60,25 @@ div.left
 
 .bottom_left
 {
-    width: 50%;
+    width: 42%;
     float: left;
     position: relative;
-    left: 50px;
+    left: 6%;
     top: 100px;
-    height: 400px;
-    /*text-align: right;*/
+    height: 350px;
+    text-align: right;
     font-size: 12px;
 }
 
 .bottom_right
 {
-    width: 50%;
+    width: 42%;
     float: right;
     position: relative;
     top: 100px;
-    right: 50px;
+    right: 6%;
     font-size: 12px;
-    height: 400px;
+    height: 350px;
     
 }
 
@@ -86,10 +90,10 @@ div.left
     border-color: gray;
 }
 
-h4 btn-primary{
-    text-align: right;
-    float: right;
-}
+/*h4 a{*/
+    /*text-align: right;*/
+/*    float: right;*/
+/*}*/
 .center_bottom hr
 {
     border-style: solid;
@@ -130,35 +134,25 @@ h10{
     font-size: 12px;
 }
 
-.bottom_left_right
-{
-    position: relative;
-    top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    text-align: center;
-    height: 400px;
-    font-size: 12px;
-}
 
 .bottom_images
 {
-    left: 10%;
-    right: 10%;
+    left: 13%;
+    right: 13%;
     position: relative;
     top: 3%;
     /*bottom: 10%;*/
-    height: 300px;
+    height: 700px;
 }
 
 .bottom_images2
 {
-    left: 10%;
-    right: 10%;
+    left: 13%;
+    right: 13%;
     position: relative;
-    top: 0.5%;
-    bottom: 25%;
-    height: 400px;
+    top: -50px;
+    bottom: 100px;
+    height: 300px;
 }
 
 
@@ -227,19 +221,11 @@ nav.transparent-nav .links a {
 }
 
 .opening{
-    margin-top: 60px;
+    margin-top: 70px;
     background-image: url("../img/summerAcademy/opening.png");
-    /*height: 1200px;*/
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: 100% auto;
-
-    -moz-background-size: 100% auto;
-
-    -ms-background-size: 100% auto;
-
-    -o-background-size: 100% auto;
-
-    background-size: 100% auto;
     overflow: hidden;
 }
 
@@ -257,5 +243,7 @@ nav.transparent-nav .links a {
 
 .center_bottom
 {
+    position: relative;
+    top: 5%;
     text-align: center;
 }
