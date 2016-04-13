@@ -11,19 +11,19 @@
 :rocket: [Heroku](http://harmony-plus.herokuapp.com/)
 
 
-:rocket: Team #37
-Team members: Henry Gan, Yiran Rao, Hangpeng Zhao, Qianmei Luo, Xiaoyi Cheng, Shrayus Gupta
+:rocket: Team #37: Henry Gan, Yiran Rao, Hangpeng Zhao, Qianmei Luo, Xiaoyi Cheng, Shrayus Gupta
 
 ----------
 We use Searchkick gem to enable the search function on /manager page to filter/search student applications.
-If you use icloud9 or other web IDE, please make sure elastic search is running to make it functional.
+If you use icloud9 or other web IDE, please make sure elastic search is running.
+
+Here is the code to set up elastic search. [[reference](http://stackoverflow.com/questions/31477463/how-do-i-setup-searchkick-elasticsearch-on-the-new-nitrous-io-ide/31588991#31588991)]
 
 ```sh
 # Firstly, uninstall:
 sudo apt-get --purge autoremove elasticsearch
 
 # then made a fresh install.
-
 wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.7.0.deb
 sudo dpkg -i elasticsearch-1.7.0.deb
 
@@ -51,6 +51,7 @@ curl http://localhost:9200
 #}
 ```
 Then 
-sh```
-rake searchkick:reindex:all
+```sh
+rake searchkick:reindex:CLASS=Student
 ```
+The search feature should be functonal now~
