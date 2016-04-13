@@ -247,3 +247,10 @@ nav.transparent-nav .links a {
     top: 5%;
     text-align: center;
 }
+
+.left a
+{
+    width: 130px;
+    height: 43px;
+    float: right;
+}
