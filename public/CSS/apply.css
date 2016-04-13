@@ -226,23 +226,23 @@ h1 {
 
 #student_dateOfBirth_1i {
     position: relative;
-    left: 20%;
+    left: 10%;
 }
 
 #student_dateOfBirth_2i {
     position: relative;
-    left: 20%;
+    left: 10%;
 }
 
 #student_dateOfBirth_3i {
     /*float: right;*/
     position: relative;
-    left: 20%;
+    left: 10%;
 }
 
 .bday {
     position: relative;
-    left: 20%;
+    left: 10%;
 }
 
 .applyf.age {
@@ -269,7 +269,7 @@ h1 {
 
 #student_gender {
     position: relative;
-    left: 10%;
+    left: 5%;
 }
 
 .field_with_errors {
