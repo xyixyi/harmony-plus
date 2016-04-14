@@ -21,7 +21,7 @@ HarmonyPlus::Application.routes.draw do
   root "mainframe#index"
   
   devise_scope :user do
-    get "signup", to: "devise/registrations#new"
+    # get "signup", to: "devise/registrations#new"
     get "login" => "devise/sessions#new"
     get '/users/sign_out' => 'devise/sessions#destroy'
     get "logout", to: "devise/sessions#destroy"
