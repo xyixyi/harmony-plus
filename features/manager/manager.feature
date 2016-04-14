@@ -9,11 +9,17 @@ Background:
     | email           | password |
     | admin@yahoo.com | password |
   Given the following students exist:
-    |first_name|last_name|email     	          |gender |country|country_code |phone_number |program|age|
-    |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|+1		        |4084111317   |b-bay	|18 |
-    |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|+1   		    |4084222317   |b-bay-2|19 |
-    |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084333317	  |xxx    |20 |
+    |first_name|last_name|email     	      |gender |country|country_code |phone_number |program|age|
+    |Luke	     |Wang     |zhao@hotmail.com  |male   |China	|+1		        |4084111317   |b-bay	|18 |
+    |dshdjksa  |hellop	 |dsaf@hotmail.com  |male   |China	|+1   		    |4084222317   |b-bay-2|19 |
+    |Xiaoyi	   |Cheng	   |0106@gmail.com    |female |china	|+1           |4084333317	  |xxx    |20 |
   Given I am on the login page
+  
+  Validation failed: Addresslineone can't be blank, 
+  Addresslineone is too short (minimum is 5 characters), 
+  Zipcode is not a number, Dateofbirth translation missing: 
+  en.activerecord.errors.models.student.attributes.dateOfBirth.invalid_date (ActiveRecord::RecordInvalid)
+  
   
   
 Scenario: Able to log in
