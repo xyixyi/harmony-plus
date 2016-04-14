@@ -105,10 +105,11 @@ button:focus {
 }
 
 select {
-    padding: 20px 0px;
+    /*padding: 20px 0px;*/
     border: none;
     border-bottom: 1px solid #c9ccd2;
-    background-color: #EDECED;
+    background-color: transparent;
+    height: 58px;
 }
 
 input {
