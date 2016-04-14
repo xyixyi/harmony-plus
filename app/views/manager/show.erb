@@ -5,10 +5,10 @@
   </head>
   <h1>Student's Information</h1>
   <body>
-      <ul>
+      <ol>
         <li>First_name: <%= @student.first_name %></li>
         <li>Last_name: <%= @student.last_name %></li>
-        <li>Age: <%= @student.age %></li>2
+        <li>Age: <%= @student.age %></li>
         <li>Gender: <%= @student.gender %></li>
         <li>Email: <%= @student.email %></li>
         <li>Country: <%= @student.country %></li>
@@ -25,7 +25,7 @@
         <li>Grade: <%= @student.grade %></li>
         <li>Create At: <%= @student.created_at %></li>
         <li>Update At: <%= @student.updated_at %></li>
-      </ul>
+      </ol>
   </body>
   <%= button_to "edit this application", edit_manager_path(@student), :method => :get%>
   <%= button_to "delete this application", manager_path(@student), :confirm => "Are you sure?", :method => :delete%>

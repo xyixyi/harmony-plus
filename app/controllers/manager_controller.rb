@@ -1,5 +1,5 @@
 class ManagerController < ActionController::Base
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   layout 'application'
   def show
     @student = Student.find(params[:id])
