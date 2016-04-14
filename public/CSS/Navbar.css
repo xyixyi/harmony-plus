@@ -117,3 +117,7 @@ body {
   background-color: rgb(83,170,142)!important;
   border-color: transparent!important;
 }
+
+.btn{
+  border-radius: 2px!important;
+}
