@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/general.css">
   </head>
+  <title>Manager Home</title>
     <h1><%= @message %></h1>
     <% if current_user %>
       <% link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -17,53 +18,53 @@
     <% end %>
     
     <h2>Student Applications</h2>
-  
-  <div class = "form">
-    <!--<div class="form-group">-->
-      <%=form_tag manager_index_path, class: "form-inline", method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control" %>    
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% if params[:query].present? %>    
-        <%= link_to "clear", manager_index_path%>
+  <div id = "body" >
+    <div class = "form">
+      <!--<div class="form-group">-->
+        <%=form_tag manager_index_path, class: "form-inline", method: :get do %>
+        <%= text_field_tag :query, params[:query], {class: "form-control", :placeholder=>"search here"}%>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% if params[:query].present? %>    
+          <%= link_to "clear", manager_index_path%>
+        <% end %>
+      <!--</div>-->
       <% end %>
-    <!--</div>-->
-    <% end %>
+    </div>
+    
+    <div class = "container">
+        <table class="table">
+          <tr>
+            <th><%= link_to 'First_Name', manager_index_path(:sort => 'first_name', :query => params[:query])%></th>
+            <th><%= link_to 'Last_Name', manager_index_path(:sort => 'last_name', :query => params[:query])%></th>
+            <th>Age</th>
+            <th><%= link_to 'Email', manager_index_path(:sort => 'email')%></th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Country_Code</th>
+            <th>Phone_Number</th>
+            <th>Program</th>
+            <th>Birthday</th>
+            <th>Details</th>
+          </tr>
+           <% @students.each do |student| %>
+          <tr>
+            <td><%= student.first_name%></td>
+            <td><%= student.last_name %></td>
+            <td><%= student.age %></td>
+            <td><%= student.email %></td>
+            <td><%= student.gender %></td>
+            <td><%= student.country %></td>
+            <td><%= student.country_code %></td>
+            <td><%= student.phone_number %></td>
+            <td><%= student.program %></td>
+            <td><%= student.dateOfBirth %></td>
+            <td><%= link_to "Details for #{student.first_name}", manager_path(student)%></td>
+           <%end%>
+          </tr>
+        </table>
+      <div class = "link"><%= link_to "create new application", new_manager_path %></div>
+    </div> 
   </div>
-  
-  
-  <div class ="manager_text">
-    <table class="table">
-      <tr>
-        <th><%= link_to 'First_Name', manager_index_path(:sort => 'first_name', :query => params[:query])%></th>
-        <th><%= link_to 'Last_Name', manager_index_path(:sort => 'last_name', :query => params[:query])%></th>
-        <th>Age</th>
-        <th><%= link_to 'Email', manager_index_path(:sort => 'email')%></th>
-        <th>Gender</th>
-        <th>Country</th>
-        <th>Country_Code</th>
-        <th>Phone_Number</th>
-        <th>Program</th>
-        <th>Birthday</th>
-        <th>Details</th>
-      </tr>
-       <% @students.each do |student| %>
-      <tr>
-        <td><%= student.first_name%></td>
-        <td><%= student.last_name %></td>
-        <td><%= student.age %></td>
-        <td><%= student.email %></td>
-        <td><%= student.gender %></td>
-        <td><%= student.country %></td>
-        <td><%= student.country_code %></td>
-        <td><%= student.phone_number %></td>
-        <td><%= student.program %></td>
-        <td><%= student.dateOfBirth %></td>
-        <td><%= link_to "Details for #{student.first_name}", manager_path(student)%></td>
-       <%end%>
-      </tr>
-    </table>
-  </div>
-  <div class = "link"><%= link_to "create new application", new_manager_path %></div>
 </html>
 
 

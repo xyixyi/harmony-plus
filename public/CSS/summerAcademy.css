@@ -8,6 +8,17 @@ body{
     text-align: center;
 }
 
+.b-bay_time
+{
+    position: relative;
+    top: 80px;
+}
+
+.ideal_time
+{
+    position: relative;
+    top: 280px;
+}
 
 .text {
     margin-top: 350px;
@@ -30,32 +41,28 @@ h1{
 
 .top_container
 {
-    height: 1350px;
+    height: 1450px;
 }
 
 div.left
 {
-    width: 55%;
+    width: 50%;
     float: left;
     position: relative;
     top: 100px;
-    /*left: 80px;*/
-    left: 7%;
-    /*right: 400px;*/
-    /*right: 40%;*/
-    height: 1350px;
+    left: 9%;
+    height: 1450px;
 }
 
 .right
 {
-    width: 45%;
+    width: 50%;
     float: right;
     position: relative;
     top: 100px;
-    /*left: 120px;*/
-    left: 15%;
+    left: 19%;
     right: 20px;
-    height: 1350px;
+    height: 1450px;
 }
 
 .bottom_left
@@ -84,10 +91,15 @@ div.left
 
 .info hr
 {
-    width: 98%;
+    width: 100%;
     border-style: solid;
     border-width: 1px;
     border-color: #DADAD9;
+<<<<<<< HEAD
+=======
+    position: relative;
+    top: 15px;
+>>>>>>> d726f742e147d02c3319ade72c75831c469777f1
 }
 
 

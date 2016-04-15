@@ -21,16 +21,6 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   # page.has_content? 'Login successful'
 end
 
-# Given(/^now I am in b-bay apply$/) do
-#   visit 'applyb/b_bay_apply'
-# end
-
-# Given(/^now I am in successfully apply b-bay page$/) do
-#   # puts page.body
-#   visit 'applyb/success_b_bay'
-#   puts page.body
-# end
-
 Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
   pending
 end
@@ -39,10 +29,6 @@ Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
   pending
 end
   
-When(/^I fill in "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
   pending # Write code here that turns the phrase above into concrete actions
 end
@@ -65,4 +51,15 @@ end
 
 Then(/^I should see logo "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do |first, last, arg3|
+  fill_in("First Name", :with => first)
+  fill_in("Last Name", :with => last)
+  fill_in("Email", :with => arg3)
+  # for testing reason all fileds are the same  fu*k the grade report
+  fill_in("Phone Number", :with => "4081234111")
+  fill_in("Age", :with => "18")
+  fill_in("Zipcode", :with => "94709")
+  click_button("Submit")
 end
