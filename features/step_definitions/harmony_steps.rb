@@ -71,3 +71,8 @@ end
 Then /^I see the page with video link "(.*?)" to "(.*?)"$/ do |link,url|
   page.should have_link(link, :href => url)
 end
+
+Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
+  expectation = negate ? :should_not : :should
+  page.send(expectation, have_css(selector))
+end
