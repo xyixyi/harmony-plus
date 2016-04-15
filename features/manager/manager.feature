@@ -9,12 +9,11 @@ Background:
     | email           | password |
     | admin@yahoo.com | password |
   Given the following students exist:
-    |first_name|last_name|email     	          |gender |country|country_code |phone_number |program|age|
-    |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|+1		        |4084111317   |b-bay	|18 |
-    |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|+1   		    |4084222317   |b-bay-2|19 |
-    |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084333317	  |xxx    |20 |
+    |first_name|last_name|email     	      |gender |country|country_code |phone_number |program|age|zipCode|dateOfBirth|
+    |Luke	     |Wang     |zhao@hotmail.com  |male   |China	|+1		        |4084111317   |b-bay	|18 |12345  |1993/01/01|
+    |dshdjksa  |hellop	 |dsaf@hotmail.com  |male   |China	|+1   		    |4084222317   |b-bay-2|19 |54321  |1992/01/01|
+    |Xiaoyi	   |Cheng	   |0106@gmail.com    |female |china	|+1           |4084333317	  |xxx    |20 |11234  |1991/01/01|
   Given I am on the login page
-  
   
 Scenario: Able to log in
   When I am logged in as "admin@yahoo.com" with password "password"
@@ -32,16 +31,7 @@ Scenario: able to create new application
   When I follow "create new application"
   Then I should be on the create new application page 
   And I should see "CREATE A STUDENT APPLICATION"
-  When I fill in "First Name" with "Kate"
-  And I fill in "Last Name" with "One"
-  And I fill in "Age" with "18"
-  And I fill in "Email" with "a@b.com"
-  And I select "Male" from "Gender"
-  And I select "U.S." from "Country"
-  And I select "+1" from "Country Code"
-  And I fill in "Phone Number" with "4083213458"
-  And I select "b-bay" from "Program"
-  And I press "Submit"
+  And I submit an application as "Kate" "One" with email "abc@gmil.com"
   Then I should be on the manager page
   And I should see "Kate One's data was successfully created."
 

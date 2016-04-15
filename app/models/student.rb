@@ -9,7 +9,7 @@ class Student < ActiveRecord::Base
     validate  :gender_correct
     validate  :country_correct
     validates :age, numericality: { only_integer: true }, length: {maximum: 3}
-    validates :addressLineOne, presence: true, length: { minimum: 5, maximum: 100 }
+    validates :addressLineOne, length: { maximum: 100 }
     validates :addressLineTwo, length: { maximum: 100 }
     validates :school, length: {maximum:50}
     validates :zipCode, numericality: { only_integer: true }, length: {maximum: 6}
@@ -17,10 +17,6 @@ class Student < ActiveRecord::Base
     validates :guardianName, length: { maximum: 30 }
     validates :city, length: { maximum: 30 }
     validates :grade, length: { maximum: 20 }
-    
-    def full_name
-      [first_name, last_name].join(' ') 
-    end
     
     def country_correct
         if country=="Country"
