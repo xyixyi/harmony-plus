@@ -64,4 +64,4 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Phone Number", :with => "4081234111")
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
-end
+end   
