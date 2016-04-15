@@ -5,22 +5,29 @@ Feature: Managing the applications by filtering
     I want to filter the information by name and email
 
 Background:
+  Given the following users exist:
+    | email           | password |
+    | admin@yahoo.com | password |
   Given the following students exist:
-    |first_name|last_name|email     	          |gender |country|country_code |phone_number |program|age|zipCode|dateOfBirth|
-    |Luke	     |Wang     |zhao@hotmail.com      |male   |China	|+1		        |4084111317   |b-bay	|18 |83262  |1993/01/01 |
-    |dshdjksa  |hellop	 |dsaf@hotmail.com      |male   |China	|+1   		    |4084222317   |b-bay-2|19 |72818  |1993/02/01 |
-    |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com |female |china	|+1           |4084333317	  |xxx    |20 |23151  |1993/03/01 |
-  And I am on the manager page
+    |first_name|last_name|email     	             |gender |country|country_code |phone_number |program|age|zipCode|dateOfBirth|
+    |Luke	     |Wang     |zhao@hotmail.com         |male   |China	|+1		        |4084111317   |b-bay	|18 |12345  |1993/01/01|
+    |dshdjksa  |hellop	 |dsaf@hotmail.com         |male   |China	|+1   		    |4084222317   |b-bay-2|19 |54321  |1992/01/01|
+    |Xiaoyi	   |Cheng	   |xycheng0106@gmail.com    |female |china	|+1           |4084333317	  |xxx    |20 |11234  |1991/01/01|
+  Given I am on the login page
   
 Scenario: able to filter by email
-  And I fill in "search here" with "zhao@hotmail.com"
-  Then I press "search"
+  When I am logged in as "admin@yahoo.com" with password "password"
+  When I fill in "Search" with "zhao@hotmail.com"
+  And I refresh the index
+  Then I press "Search"
   And I should see "Luke"
   And I should see "Wang"
   And I should not see "Xiaoyi"
   
 Scenario: able to filter by name
-  When I fill in "Xiaoyi"
-  Then I press "search"
+  When I am logged in as "admin@yahoo.com" with password "password"
+  When I fill in "Search" with "Xiaoyi"
+  And I refresh the index
+  Then I press "Search"
   And I should see "xycheng0106@gmail.com"
-
+  
