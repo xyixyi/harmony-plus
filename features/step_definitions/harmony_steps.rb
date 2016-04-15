@@ -21,13 +21,6 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   # page.has_content? 'Login successful'
 end
 
-Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
-  pending
-end
-
-Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
-  pending
-end
   
 And /^I refresh the index$/ do
   Student.reindex
