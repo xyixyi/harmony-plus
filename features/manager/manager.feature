@@ -17,7 +17,7 @@ Background:
   
 Scenario: Able to log in
   When I am logged in as "admin@yahoo.com" with password "password"
-  Then I am on the homepage
+  Then I am on the manager page
   
 Scenario: able to see all student applications
   When I am logged in as "admin@yahoo.com" with password "password"
@@ -29,8 +29,7 @@ Scenario: able to create new application
   When I am logged in as "admin@yahoo.com" with password "password"
   And I go to the manager page
   When I follow "create new application"
-  Then I should be on the create new application page 
-  And I should see "CREATE A STUDENT APPLICATION"
+  Then I should be on the create new application page  
   And I submit an application as "Kate" "One" with email "abc@gmil.com"
   Then I should be on the manager page
   And I should see "Kate One's data was successfully created."
@@ -54,4 +53,9 @@ Scenario: able to edit application
   And I press "Submit"
   Then I should be on the manager page
   And I should see "Clark Kent's data was successfully updated."
+  
+Scenario: redirected to manager page
+  When I am logged in as "admin@yahoo.com" with password "password"
+  And I go to the login page
+  Then I should be on the manager page
   

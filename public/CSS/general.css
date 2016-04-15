@@ -1,6 +1,7 @@
 table {
   border-collapse: collapse;
   background-color: transparent;
+  overflow: scroll;
 }
 table, td, th {
   border: 2px solid black;
@@ -19,4 +20,13 @@ h2 {
 .form {
   text-align: right;
   padding-right:16%;
+}
+.manager_form {
+  text-align: center;
+  overflow: scroll;
+}
+body {
+   min-height: 400px;
+   margin-bottom: 100px;
+   clear: both;
 }

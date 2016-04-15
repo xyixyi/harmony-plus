@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <title>Manager Edit Page</title>
   <h1>Student's Information</h1>
   
   <% if flash[:error] %>
@@ -40,7 +41,7 @@
         <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
         <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
         <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
-        <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "ZipCode"})%>
+        <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "Zipcode"})%>
         <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
         <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
         <input type="submit" name="submit" class="submit_but" value= 'Submit' />
