@@ -1,6 +1,10 @@
 body{
     background-color: white;
+<<<<<<< HEAD
     width: 100%;
+=======
+    overflow-x: hidden;
+>>>>>>> a2bd564a52eb046d641488b5a11dd12c9f2de634
 }
 
 .container
