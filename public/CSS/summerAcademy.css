@@ -12,13 +12,13 @@ body{
 .b-bay_time
 {
     position: relative;
-    top: 120px;
+    top: 170px;
 }
 
 .ideal_time
 {
     position: relative;
-    top: 300px;
+    top: 350px;
 }
 
 .text {
@@ -67,7 +67,7 @@ div.left
     float: right;
     position: relative;
     top: 100px;
-    left: 19%;
+    left: 20%;
     /*right: 20px;*/
     height: 1450px;
 }
@@ -160,7 +160,6 @@ h10{
     right: 13%;
     position: relative;
     top: 150px;
-    /*bottom: 10%;*/
     height: 700px;
 }
 
