@@ -8,14 +8,8 @@ Scenario: test homepage
     Given I am on the future planning page
     Then I scroll down the page
     And I should see the navbar
-    And I should see "F.P."
-    And I should see "ABOUT US"
-    And I should see "STORIES"
     
 Scenario: test about us page
     Given I am on the about us page
     Then I scroll down the page
     And I should see the navbar
-    And I should see "CONTACT"
-    And I should see "HOMEPAGE"
-    And I should see "STORIES"
