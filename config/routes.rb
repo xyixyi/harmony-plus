@@ -30,4 +30,5 @@ HarmonyPlus::Application.routes.draw do
   
   #stories
   get 'stories', :to => 'stories#stories', :format => false
+  
 end
