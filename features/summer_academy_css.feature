@@ -22,6 +22,7 @@ Scenario: CSS
     Then I should see the image "summerAcademy/video1.png"
     Then I should see the image "summerAcademy/video2.png"
     Then I should see the image "summerAcademy/video3.png"
+    Then I should see the opening image "summerAcademy/opening.png"
     Then I should see the image "summerAcademy/people.png"
     # And I should see "background" to be "white"
     # Then the "harmony_logo " should have "margin" of "1.5em"

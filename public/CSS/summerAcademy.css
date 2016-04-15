@@ -1,5 +1,6 @@
 body{
     background-color: white;
+    width: 100%;
 }
 
 .container
@@ -36,12 +37,18 @@ h1{
 
 .text p{
     color: gray;
-    font-size: 20px;
+    
+}
+
+.videos p
+{
+    font-size: 14px;
 }
 
 .top_container
 {
     height: 1450px;
+    width: 95%;
 }
 
 div.left
@@ -61,7 +68,7 @@ div.left
     position: relative;
     top: 100px;
     left: 19%;
-    right: 20px;
+    /*right: 20px;*/
     height: 1450px;
 }
 
