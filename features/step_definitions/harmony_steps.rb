@@ -62,9 +62,6 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Phone Number", :with => "4081234111")
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
-<<<<<<< HEAD
-end   
-=======
 end
 
 Then /^I should see the image "(.+)"$/ do |image|
@@ -79,4 +76,3 @@ Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
   expectation = negate ? :should_not : :should
   page.send(expectation, have_css(selector))
 end
->>>>>>> 5e53eef522167a983cb5de68d5f27701dfda4044
