@@ -63,3 +63,11 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
 end
+
+Then /^I should see the image "(.+)"$/ do |image|
+    page.should have_xpath("//img[@src=\"img/#{image}\"]")
+end
+
+Then /^I see the page with video link "(.*?)" to "(.*?)"$/ do |link,url|
+  page.should have_link(link, :href => url)
+end
