@@ -62,7 +62,6 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Email", :with => arg3)
   # for testing reason all fileds are the same  fu*k the grade report
   fill_in("Phone Number", :with => "4081234111")
-  fill_in("Age", :with => "18")
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
 end
