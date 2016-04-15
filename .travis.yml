@@ -5,9 +5,12 @@ rvm:
 env:
   - DB=sqlite
 services:
-  - postgresql 
   - elasticsearch
+  - postgresql 
+before_install:
+  - curl -O https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.2.4.deb && sudo dpkg -i --force-confnew elasticsearch-1.2.4.deb && sudo service elasticsearch restart
 before_script:
+  - sleep 10
   - bundle exec rake db:migrate
   - bundle exec rake db:test:prepare
 script:
