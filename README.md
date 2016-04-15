@@ -4,7 +4,7 @@
 [![Issue Count](https://codeclimate.com/github/xyixyi/harmony-plus/badges/issue_count.svg)](https://codeclimate.com/github/xyixyi/harmony-plus)
 [![Build Status](https://travis-ci.org/xyixyi/harmony-plus.svg?branch=master)](https://travis-ci.org/xyixyi/harmony-plus)
 
-
+[![Coverage Status](https://coveralls.io/repos/github/xyixyi/harmony-plus/badge.svg?branch=master)](https://coveralls.io/github/xyixyi/harmony-plus?branch=master)
 
 :rocket: [Pivotal Tracker:](https://www.pivotaltracker.com/n/projects/1544921)
 
