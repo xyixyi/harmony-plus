@@ -5,7 +5,8 @@ rvm:
 env:
   - DB=sqlite
 services:
-- postgresql 
+  - postgresql 
+  - elasticsearch
 before_script:
   - bundle exec rake db:migrate
   - bundle exec rake db:test:prepare
