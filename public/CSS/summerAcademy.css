@@ -1,5 +1,6 @@
 body{
     background-color: white;
+    overflow-x: hidden;
 }
 
 .container
@@ -95,8 +96,11 @@ div.left
     border-style: solid;
     border-width: 1px;
     border-color: #DADAD9;
+<<<<<<< HEAD
+=======
     position: relative;
     top: 15px;
+>>>>>>> d726f742e147d02c3319ade72c75831c469777f1
 }
 
 
@@ -245,6 +249,7 @@ nav.transparent-nav .links a {
     color: rgb(83,170,142);
     background-color: transparent;
     border-color: rgb(83,170,142);
+    padding: 1px 12px;
 }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
@@ -262,7 +267,5 @@ nav.transparent-nav .links a {
 
 .left a
 {
-    width: 130px;
-    height: 43px;
     float: right;
 }
