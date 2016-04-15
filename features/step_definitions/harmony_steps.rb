@@ -32,13 +32,11 @@ end
 And /^I refresh the index$/ do
   Student.reindex
 end
+
 When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+  page.body.should =~ /#{arg1}.*#{arg2}/m
 end
 
-When(/^I fill in "([^"]*)" with "([^"]*)"        \# same as the existing user's email$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
-end
 
 When(/^I follow with "([^"]*)"$/) do |arg1|
   pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
@@ -64,4 +62,21 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Phone Number", :with => "4081234111")
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
+<<<<<<< HEAD
 end   
+=======
+end
+
+Then /^I should see the image "(.+)"$/ do |image|
+    page.should have_xpath("//img[@src=\"img/#{image}\"]")
+end
+
+Then /^I see the page with video link "(.*?)" to "(.*?)"$/ do |link,url|
+  page.should have_link(link, :href => url)
+end
+
+Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
+  expectation = negate ? :should_not : :should
+  page.send(expectation, have_css(selector))
+end
+>>>>>>> 5e53eef522167a983cb5de68d5f27701dfda4044

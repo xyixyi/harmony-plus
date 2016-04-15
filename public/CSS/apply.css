@@ -272,6 +272,12 @@ h1 {
     position: relative;
 }
 
+.useless, .useless:hover {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+}
+
 .field_with_errors {
     float: right;
     position: relative;

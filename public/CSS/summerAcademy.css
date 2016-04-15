@@ -12,13 +12,13 @@ body{
 .b-bay_time
 {
     position: relative;
-    top: 80px;
+    top: 170px;
 }
 
 .ideal_time
 {
     position: relative;
-    top: 280px;
+    top: 350px;
 }
 
 .text {
@@ -37,12 +37,18 @@ h1{
 
 .text p{
     color: gray;
-    font-size: 20px;
+    
+}
+
+.videos p
+{
+    font-size: 14px;
 }
 
 .top_container
 {
     height: 1450px;
+    width: 95%;
 }
 
 div.left
@@ -61,17 +67,17 @@ div.left
     float: right;
     position: relative;
     top: 100px;
-    left: 19%;
-    right: 20px;
+    left: 20%;
+    /*right: 20px;*/
     height: 1450px;
 }
 
 .bottom_left
 {
-    width: 42%;
+    width: 39%;
     float: left;
     position: relative;
-    left: 6%;
+    left: 9%;
     top: 200px;
     height: 350px;
     text-align: right;
@@ -80,11 +86,11 @@ div.left
 
 .bottom_right
 {
-    width: 42%;
+    width: 39%;
     float: right;
     position: relative;
     top: 200px;
-    right: 6%;
+    right: 9%;
     font-size: 12px;
     height: 350px;
     
@@ -96,11 +102,8 @@ div.left
     border-style: solid;
     border-width: 1px;
     border-color: #DADAD9;
-<<<<<<< HEAD
-=======
     position: relative;
     top: 15px;
->>>>>>> d726f742e147d02c3319ade72c75831c469777f1
 }
 
 
@@ -157,7 +160,6 @@ h10{
     right: 13%;
     position: relative;
     top: 150px;
-    /*bottom: 10%;*/
     height: 700px;
 }
 
@@ -261,7 +263,7 @@ nav.transparent-nav .links a {
 .center_bottom
 {
     position: relative;
-    top: 100px;
+    top: 135px;
     text-align: center;
 }
 
