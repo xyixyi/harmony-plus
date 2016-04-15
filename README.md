@@ -17,6 +17,9 @@
 We use Searchkick gem to enable the search function on /manager page to filter/search student applications.
 If you use icloud9 or other web IDE, please make sure elastic search is running.
 
+If you see "Connection refused = connect(2) for "localhost" port 9200 (Faraday::ConnectionFailed)",
+you definitely want to see the instructions below:
+
 Here is the code to set up elastic search. [[reference](http://stackoverflow.com/questions/31477463/how-do-i-setup-searchkick-elasticsearch-on-the-new-nitrous-io-ide/31588991#31588991)]
 
 ```sh

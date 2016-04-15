@@ -29,13 +29,14 @@ Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
   pending
 end
   
-When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+And /^I refresh the index$/ do
+  Student.reindex
 end
 
-When(/^I fill in "([^"]*)" with "([^"]*)"        \# same as the existing user's email$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
+  page.body.should =~ /#{arg1}.*#{arg2}/m
 end
+
 
 When(/^I follow with "([^"]*)"$/) do |arg1|
   pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
@@ -59,7 +60,6 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Email", :with => arg3)
   # for testing reason all fileds are the same  fu*k the grade report
   fill_in("Phone Number", :with => "4081234111")
-  fill_in("Age", :with => "18")
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
 end
