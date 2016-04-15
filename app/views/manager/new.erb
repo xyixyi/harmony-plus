@@ -1,48 +1,53 @@
-<h1>CREATE A STUDENT APPLICATION</h1>
-<% if flash[:error] %>
-  <div><%= flash[:error] %></div>
-<% end %>
-
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
-
-<div class='bot'>
-  <%= form_tag :action=> "create" do %>
-    <% if @student != nil and @student.errors.any? %>
-      <div id="error_explanation">
-
-        <ul>
-        <% @student.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-  <div class='applyform'>
-    <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
-    <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
-    <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
-    <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%>
-    <%= label :student, :dateOfBirth, 'Date of Birth'%>
-    <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
-    <%= label :student, :gender, 'Gender'%>
-    <%= select(:student, :gender, ['Male', 'Female'])%>
-    <%= label :student, :country, 'Country'%>
-    <%= select(:student, :country, ['U.S.', 'CHINA'])%>
-    <%= label :student, :country_code, 'Country Code'%>
-    <%= select(:student, :country_code, ['+86', '+1'])%>
-    <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-    <%= label :student, :program, 'Program'%>
-    <%= select(:student, :program, ['b-bay', 'ideal'])%>
-    <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
-    <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
-    <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
-    <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%>
-    <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
-    <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
-    <!--:student :program 'b-bay'-->
-    <input type="submit" name="submit" class="submit_but" value= 'Submit' />
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/CSS/general.css">
+  </head>
+  <h2>CREATE A STUDENT APPLICATION</h2>
+  <% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+  <% end %>
+  
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  
+  <div class='bot'>
+    <%= form_tag :action=> "create" do %>
+      <% if @student != nil and @student.errors.any? %>
+        <div id="error_explanation">
+  
+          <ul>
+          <% @student.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <fieldset class="manager_form">
+      <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
+      <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%><p></p>
+      <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
+      <%= number_field(:student, :age, {:class => 'applyf', :placeholder => "Age"})%><p></p>
+      <%= label :student, :dateOfBirth, 'Date of Birth'%>
+      <%= date_select :student, :dateOfBirth, :start_year=>1900 %><p></p>
+      <%= label :student, :gender, 'Gender'%>
+      <%= select(:student, :gender, ['Male', 'Female'])%><p></p>
+      <%= label :student, :country, 'Country'%>
+      <%= select(:student, :country, ['U.S.', 'CHINA'])%><p></p>
+      <%= select(:student, :country_code, ['+86', '+1'])%>
+      <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%><p></p>
+      <%= label :student, :program, 'Program'%>
+      <%= select(:student, :program, ['b-bay', 'ideal'])%><p></p>
+      <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
+      <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%><p></p>
+      <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
+      <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "zipCode"})%><p></p>
+      <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+      <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%><p></p>
+      <!--:student :program 'b-bay'-->
+      <input type="submit" name="submit" class="submit_but" value= 'Submit' />
+    </div>
   </div>
-</div>
-<% end %>
+  <% end %>
+</html>
