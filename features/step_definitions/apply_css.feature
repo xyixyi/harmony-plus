@@ -5,7 +5,7 @@ Feature: Apply B-Bay
     I want to see a pretty summer academy page
     
 Scenario: CSS
-    Given I am on b_bay_apply page
+    Given I am on b_bay apply page
     Then I should see logo "harmony_logo"
     And I should see "background" to be "white"
     Then the "harmony_logo " should have "font-size" of "200%"
