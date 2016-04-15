@@ -8,7 +8,6 @@ class Student < ActiveRecord::Base
     validate  :validates_phone_number
     validate  :gender_correct
     validate  :country_correct
-    validates :age, numericality: { only_integer: true }, length: {maximum: 3}
     validates :addressLineOne, length: { maximum: 100 }
     validates :addressLineTwo, length: { maximum: 100 }
     validates :school, length: {maximum:50}
