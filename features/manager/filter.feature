@@ -13,7 +13,7 @@ Background:
   And I am on the manager page
   
 Scenario: able to filter by email
-  When I fill in "zhao@hotmail.com"
+  And I fill in "search here" with "zhao@hotmail.com"
   Then I press "search"
   And I should see "Luke"
   And I should see "Wang"
