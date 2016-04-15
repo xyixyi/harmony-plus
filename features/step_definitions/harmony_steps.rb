@@ -30,7 +30,7 @@ Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
 end
   
 When(/^I fill in "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in("search here", :with => arg1) # Write code here that turns the phrase above into concrete actions
 end
 
 When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
