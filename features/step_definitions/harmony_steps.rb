@@ -29,6 +29,9 @@ Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
   pending
 end
   
+And /^I refresh the index$/ do
+  Student.reindex
+end
 When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
   pending # Write code here that turns the phrase above into concrete actions
 end
