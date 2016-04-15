@@ -57,6 +57,7 @@ end
 
 # setup Cucumber, RSpec, autotest support
 group :test do
+  gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
   gem 'rspec-rails', '2.14'
   gem 'simplecov', :require => false
