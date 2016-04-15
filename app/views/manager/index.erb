@@ -22,7 +22,7 @@
     <div class = "form">
       <!--<div class="form-group">-->
         <%=form_tag manager_index_path, class: "form-inline", method: :get do %>
-        <%= text_field_tag :query, params[:query], {class: "form-control", :placeholder=>"search here"}%>
+        <%= text_field_tag :query, params[:query], {:class => "form-control", :placeholder => "Search"} %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
         <% if params[:query].present? %>    
           <%= link_to "clear", manager_index_path%>
@@ -36,7 +36,6 @@
           <tr>
             <th><%= link_to 'First_Name', manager_index_path(:sort => 'first_name', :query => params[:query])%></th>
             <th><%= link_to 'Last_Name', manager_index_path(:sort => 'last_name', :query => params[:query])%></th>
-            <th>Age</th>
             <th><%= link_to 'Email', manager_index_path(:sort => 'email')%></th>
             <th>Gender</th>
             <th>Country</th>
@@ -50,7 +49,6 @@
           <tr>
             <td><%= student.first_name%></td>
             <td><%= student.last_name %></td>
-            <td><%= student.age %></td>
             <td><%= student.email %></td>
             <td><%= student.gender %></td>
             <td><%= student.country %></td>

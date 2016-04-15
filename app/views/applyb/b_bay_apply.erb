@@ -59,13 +59,14 @@
           <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
           <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
           <%= hidden_field_tag(:program, "b-bay") %>
-          <!--<input type="submit" value="Submit" class="btn submit-btn">-->
+          <!--remove later before submit-->
+          <input type="submit" value="Submit" class="btn submit-btn useless">
         </div>
         <div class="form-nav">
           <a class="btn bright" id="next">Next</a>
           <!--<a class= "btn" id="prev" style="display: none;">Back</a>-->
           <a class= "btn bleft" id="prev" style="display: none;">Back</a>
-          <input type="submit" value="Submit" class="btn submit-btn" style="display: none;">
+          <input type="submit" id="submit" value="Submit" class="btn submit-btn" style="display: none;">
         </div>
     <% end %>
 
@@ -118,7 +119,6 @@
     if (stepNumber === appStepsTotal - 1) {
       $('#next').hide();
       $('.submit-btn').show();
-      
       e.stopPropagation();
     }
 
