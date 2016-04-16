@@ -15,7 +15,9 @@ Background:
     |Xiaoyi	   |Cheng	   |0106@gmail.com    |female |china	|+1           |4084333317	  |xxx    |11234  |1991/01/01 |
   Given I am on the login page
   
-Scenario: redirected to manager page
+Scenario: authentication and redirected to manager page after login
+  When I go to the manager page
+  Then I should be on the sign in page
   When I am logged in as "admin@yahoo.com" with password "password"
   And I go to the login page
   Then I should be on the manager page
