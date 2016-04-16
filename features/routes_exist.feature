@@ -8,14 +8,8 @@ Background:
   Given I am on the homepage
 
 Scenario: I can access the BBay Learn More page
-  #Home Page exists
-  #Information not fully updated/implemented yet
-#   When I follow "b-bay_learn_more"
-#   Then I should be on the BbayLearnMore page
-  
-# Scenario: I can access the Ideal Learn More page
-#   When I follow "ideal_learn_more"
-#   Then I should be on the IdealLearnMore page
+  When I follow "b_bay_details"
+  Then I should be on b-bay apply page
 
 Scenario: I can access the Stories page
   #Stories Page exists
