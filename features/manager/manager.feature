@@ -15,9 +15,10 @@ Background:
     |Xiaoyi	   |Cheng	   |0106@gmail.com    |female |china	|+1           |4084333317	  |xxx    |11234  |1991/01/01 |
   Given I am on the login page
   
-Scenario: Able to log in
+Scenario: redirected to manager page
   When I am logged in as "admin@yahoo.com" with password "password"
-  Then I am on the manager page
+  And I go to the login page
+  Then I should be on the manager page
   
 Scenario: able to see all student applications
   When I am logged in as "admin@yahoo.com" with password "password"
@@ -48,14 +49,10 @@ Scenario: able to edit application
   And I go to the manager page
   When I follow "Details for dshdjksa"
   And I press "edit this application"
-  And I fill in "First Name" with "Clark"
-  And I fill in "Last Name" with "Kent"
+  And I change "First Name" to "Clark"
+  And I change "Last Name" to "Kent"
   And I press "Submit"
   Then I should be on the manager page
   And I should see "Clark Kent's data was successfully updated."
   
-Scenario: redirected to manager page
-  When I am logged in as "admin@yahoo.com" with password "password"
-  And I go to the login page
-  Then I should be on the manager page
   
