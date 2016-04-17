@@ -20,7 +20,7 @@ If you use icloud9 or other web IDE, please make sure elastic search is running.
 If you see "Connection refused = connect(2) for "localhost" port 9200 (Faraday::ConnectionFailed)",
 you definitely want to see the instructions below:
 
-Here is the code to set up elastic search. [[reference](http://stackoverflow.com/questions/31477463/how-do-i-setup-searchkick-elasticsearch-on-the-new-nitrous-io-ide/31588991#31588991)]
+Here is the code to install and start elastic search. [[reference](http://stackoverflow.com/questions/31477463/how-do-i-setup-searchkick-elasticsearch-on-the-new-nitrous-io-ide/31588991#31588991)]
 
 ```sh
 # Firstly, uninstall:
@@ -32,7 +32,10 @@ sudo dpkg -i elasticsearch-1.7.0.deb
 
 # enable on bootup
 sudo update-rc.d elasticsearch defaults 95 10
+```
 
+Start the service:
+```sh
 # Start ElasticSearch 
 sudo /etc/init.d/elasticsearch start
 

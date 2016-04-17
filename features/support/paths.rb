@@ -20,7 +20,8 @@ module NavigationHelpers
     when /^the about us$/ then '/about_us'
     when /^future planning page$/ then '/future_planning'
     when /^summer academy page$/ then '/summer_academy'
-    when /^b-bay apply page$/ then '/b_bay_apply'
+    when /^b-bay apply page$/ then b_bay_apply_path
+    when /^the sign in page$/ then '/users/sign_in'
     
     else
       begin
