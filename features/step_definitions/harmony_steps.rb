@@ -21,6 +21,10 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   # page.has_content? 'Login successful'
 end
 
+<<<<<<< HEAD
+  
+=======
+>>>>>>> df3cd431b20ad85725b4f19a34731512773d76f1
 And /^I refresh the index$/ do
   Student.reindex
 end

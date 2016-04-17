@@ -74,10 +74,10 @@ div.left
 
 .bottom_left
 {
-    width: 39%;
+    width: 42%;
     float: left;
     position: relative;
-    left: 9%;
+    left: 7%;
     top: 200px;
     height: 350px;
     text-align: right;
@@ -86,11 +86,11 @@ div.left
 
 .bottom_right
 {
-    width: 39%;
+    width: 42%;
     float: right;
     position: relative;
     top: 200px;
-    right: 9%;
+    right: 7%;
     font-size: 12px;
     height: 350px;
     
