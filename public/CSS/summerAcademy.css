@@ -9,16 +9,115 @@ body{
     text-align: center;
 }
 
+.info1
+{
+    height: 600px;
+}
+
+.info2
+{
+    height: 450px;
+}
+
+.info3
+{
+    height: 450px;
+}
+
+.info1_right
+{
+    width: 50%;
+    float: right;
+    position: relative;
+    top: 100px;
+    left: 20%;
+    /*right: 20px;*/
+    height: 600px;
+}
+
+.info1_left
+{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 100px;
+    left: 9%;
+    height: 600px;
+}
+
+.info2_right
+{
+    width: 50%;
+    float: right;
+    position: relative;
+    top: 120px;
+    left: 20%;
+    /*right: 20px;*/
+    height: 450px;
+}
+
+.info2_left
+{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 120px;
+    left: 9%;
+    height: 450px;
+}
+
+.info3_right
+{
+    width: 50%;
+    float: right;
+    position: relative;
+    top: -10px;
+    left: 20%;
+    /*right: 20px;*/
+    height: 300px;
+}
+
+.info3_left
+{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: -10px;
+    left: 9%;
+    height: 300px;
+}
+
+.info2_left a
+{
+    float: right;
+}
+
+.info3_left a
+{
+    float: right;
+}
+
+.top_container p{
+    color: gray;
+    font-weight: 300;
+}
+
+.b-bay_time p, .ideal_time p, .info1_right p
+{
+    color: black;
+    font-weight: normal;
+}
+
 .b-bay_time
 {
     position: relative;
-    top: 170px;
+    top: 100px;
 }
 
 .ideal_time
 {
     position: relative;
-    top: 350px;
+    top: 180px;
 }
 
 .text {
@@ -51,25 +150,12 @@ h1{
     width: 95%;
 }
 
-div.left
-{
-    width: 50%;
-    float: left;
-    position: relative;
-    top: 100px;
-    left: 9%;
-    height: 1450px;
-}
 
-.right
+
+.bottom_container
 {
-    width: 50%;
-    float: right;
     position: relative;
-    top: 100px;
-    left: 20%;
-    /*right: 20px;*/
-    height: 1450px;
+    height: 350px;
 }
 
 .bottom_left
@@ -81,7 +167,7 @@ div.left
     top: 200px;
     height: 350px;
     text-align: right;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .bottom_right
@@ -91,12 +177,12 @@ div.left
     position: relative;
     top: 200px;
     right: 7%;
-    font-size: 12px;
+    font-size: 13px;
     height: 350px;
     
 }
 
-.info hr
+.top_container hr
 {
     width: 100%;
     border-style: solid;
@@ -116,13 +202,16 @@ div.left
     border-color: rgb(83,170,142);
 }
 
-.info p{
-    color: gray;
-}
 
-h2, h3, h4, h5, h6, h7
+h2, h3, h4, h6
 {
     font-size: 22px;
+    font-weight: bold;
+}
+
+h5, h7
+{
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -149,8 +238,10 @@ h10{
 {
     margin-left: 8%;
     margin-right: 8%;
+    font-size: 13px;
+    position: relative;
+    top: 100px;
     text-align: center;
-    font-size: 12px;
 }
 
 
@@ -160,7 +251,7 @@ h10{
     right: 13%;
     position: relative;
     top: 150px;
-    height: 700px;
+    height: 350px;
 }
 
 .bottom_images2
@@ -169,7 +260,7 @@ h10{
     right: 13%;
     position: relative;
     top: 80px;
-    bottom: 5%;
+    bottom: 3%;
     height: 450px;
 }
 
@@ -260,14 +351,4 @@ nav.transparent-nav .links a {
     border-color: transparent;
 }
 
-.center_bottom
-{
-    position: relative;
-    top: 135px;
-    text-align: center;
-}
 
-.left a
-{
-    float: right;
-}
