@@ -13,14 +13,19 @@ h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
+    left: 15%;
     color: rgb(83,170,142);
+    white-space: pre;
 }
 
 hr {
     width: 3.5%;
     /*border-color: teal;*/
     border: 3px solid rgb(83,170,142);
+}
+
+p {
+    white-space: pre;
 }
 
 .WeChat{
@@ -61,13 +66,17 @@ nav.transparent-nav .links a {
     background-size:cover;
 }
 
-.col-md-6{
-    margin-bottom: 150px;
+.row{
+    width: 75%;
+    margin: auto;
 }
 
-.col-md-6 p{
-    color:white;
-    text-align: center;
+.col-xs-6{
+    left: 15%;
+}
+
+.col-xs-6 p{
+    color:black;
 }
 
 .text_container{
