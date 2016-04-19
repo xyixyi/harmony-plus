@@ -72,7 +72,7 @@ nav.transparent-nav .links a {
 }
 
 .col-xs-6{
-    left: 15%;
+    left: 10%;
 }
 
 .col-xs-6 p{
@@ -86,4 +86,18 @@ nav.transparent-nav .links a {
 .text_container p {
     color: #808080;
     font-weight: 550;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    color: #606060;
+    margin: 2px;
+    padding: 2px;
+    border: 2px;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+thead{
 }
