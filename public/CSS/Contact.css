@@ -1,0 +1,103 @@
+body {
+    padding-bottom: 120px;
+    /*background-color: #d3d3d3;*/
+    background-color: white;
+}
+
+h1 {
+    /*text-align: center;*/
+    color: black;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    left: 15%;
+    color: rgb(83,170,142);
+    white-space: pre;
+}
+
+hr {
+    width: 3.5%;
+    /*border-color: teal;*/
+    border: 3px solid rgb(83,170,142);
+}
+
+p {
+    white-space: pre;
+}
+
+.WeChat{
+    width: 150px;
+    height: 150px;
+}
+
+.theImage {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url("../img/Logos/logo.png") no-repeat;
+  background-size: 134px 46px;
+  padding-left: 180px;
+}
+
+nav.transparent-nav {
+  margin-top: -40px;
+  background: transparent;
+  position: fixed;
+  background: white;
+}
+
+nav.transparent-nav .links a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.opening{
+    margin-top: 60px;
+    background-image: url("../img/Contact/Map.png");
+    height: 855px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size:cover;
+}
+
+.row{
+    width: 75%;
+    margin: auto;
+}
+
+.col-xs-6{
+    left: 10%;
+}
+
+.col-xs-6 p{
+    color:black;
+}
+
+.text_container{
+    text-align: center;
+}
+
+.text_container p {
+    color: #808080;
+    font-weight: 550;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    color: #606060;
+    margin: 2px;
+    padding: 2px;
+    border: 2px;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+thead{
+}
