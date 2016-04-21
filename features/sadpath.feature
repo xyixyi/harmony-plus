@@ -71,7 +71,7 @@ Scenario: create bad applications by manager
   Given I am on the login page
   When I am logged in as "admin@yahoo.com" with password "password"
   And I go to the manager page
-  When I follow "create new application"
+  When I follow "Create New Application"
   And I submit an application as "Kate" "One" with email ""
   Then I should be on the create new application page
   And I should see " Email can't be blank"
