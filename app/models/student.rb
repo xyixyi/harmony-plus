@@ -1,3 +1,4 @@
+require 'csv'
 class Student < ActiveRecord::Base
     searchkick
     validates :first_name, presence: true, length: { maximum: 20}
@@ -16,6 +17,16 @@ class Student < ActiveRecord::Base
     validates :guardianName, length: { maximum: 30 }
     validates :city, length: { maximum: 30 }
     validates :grade, length: { maximum: 20 }
+    
+    def self.to_csv
+        CSV.generate do |csv|
+            csv << column_names
+            all.each do |product|
+                csv << product.attributes.values_at(*column_names)
+            end
+        end
+    end
+    
     
     def country_correct
         if country=="Country"
