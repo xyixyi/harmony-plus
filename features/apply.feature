@@ -61,4 +61,3 @@ Scenario: Last name and first name are Chinese characters
   Then I should be on the success_b_bay page
   Then I should see "homepage"
   Then I should see "You have successfully apply for B-Bay"
-  
