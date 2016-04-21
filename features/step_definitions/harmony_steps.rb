@@ -21,37 +21,16 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   # page.has_content? 'Login successful'
 end
 
-Then /I should see "(.*)" to be "(.*)"/ do |e1, e2|
-  pending
-end
-
-Then /^the "(.*)" should have "(.*)" of "(.*)"$/ do |e1, e2, e3|
-  pending
-end
+<<<<<<< HEAD
   
+=======
+>>>>>>> df3cd431b20ad85725b4f19a34731512773d76f1
 And /^I refresh the index$/ do
   Student.reindex
 end
 
 When(/^I should see "([^"]*)" before "([^"]*)"$/) do |arg1, arg2|
   page.body.should =~ /#{arg1}.*#{arg2}/m
-end
-
-
-When(/^I follow with "([^"]*)"$/) do |arg1|
-  pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I scroll down the page$/) do
-  pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should see the navbar$/) do
-  pending "Unimplemented" # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should see logo "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
 end
 
 Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do |first, last, arg3|
@@ -63,6 +42,60 @@ Then(/^I submit an application as "([^"]*)" "([^"]*)" with email "([^"]*)"$/) do
   fill_in("Zipcode", :with => "94709")
   click_button("Submit")
 end
+
+When(/^I apply for b\-bay as "([^"]*)" "([^"]*)" with "([^"]*)"$/) do |arg1, arg2, arg3|
+  fill_in("First Name", :with => arg1)
+  fill_in("Last Name", :with => arg2)
+  fill_in("Email", :with => arg3)
+  # for testing reason all fileds are the same  fu*k the grade report
+  fill_in("Phone Number", :with => "4081234111")
+  fill_in("Zipcode", :with => "94709")
+  select("U.S.", :from => "student_country")
+  select("Female", :from => "student_gender")
+  click_button("Submit")
+end
+
+When(/^I apply for b\-bay without filling "([^"]*)"$/) do |type|
+  fill_in("First Name", :with => "Kate")
+  fill_in("Last Name", :with => "Test")
+  fill_in("Email", :with => "test@gmail.com")
+  fill_in("Phone Number", :with => "4081234111")
+  fill_in("Zipcode", :with => "94709")
+  select("U.S.", :from => "student_country")
+  select("Female", :from => "student_gender")
+  
+  if type == "email" 
+    fill_in("Email", :with => "")
+  elsif type == "first name"
+    fill_in("First Name", :with => "")
+  elsif type == "last name"
+    fill_in("Last Name", :with => "")
+  elsif type == "phone number"
+    fill_in("Phone Number", :with => "")
+  elsif type == "zipcode"
+    fill_in("Zipcode", :with => "")
+  end
+  click_button("Submit")
+end
+
+When(/^I apply for b\-bay without selecting "([^"]*)"$/) do |type|
+  fill_in("First Name", :with => "Kate")
+  fill_in("Last Name", :with => "Test")
+  fill_in("Email", :with => "test@gmail.com")
+  fill_in("Phone Number", :with => "4081234111")
+  fill_in("Zipcode", :with => "94709")
+  if type == "country"
+    select("Female", :from => "student_gender")
+  else # type is gender
+    select("U.S.", :from => "student_country")
+  end
+  click_button("Submit")
+end
+
+When(/^I change "([^"]*)" to "([^"]*)"$/) do |arg1, arg2|
+  fill_in(arg1, :with => arg2)
+end
+
 
 Then /^I should see the image "(.+)"$/ do |image|
     page.should have_xpath("//img[@src=\"img/#{image}\"]")
