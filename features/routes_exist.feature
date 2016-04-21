@@ -21,15 +21,13 @@ Scenario: I can access the Contacts page
   When I follow "CONTACT"
   Then I should see "U.S"
   And I should see "China"
-  And I should see "(666)666-6666"
+  And I should see "+1 650 6257896"
   #Not working phone number yet
   
 Scenario: I can access the About Us page
   #About Us Page exists
   When I follow "ABOUT US"
-  Then I should see "Who are we?"
-  And I should see "What's Our Goal?"
-  And I should see "How We Work?"
+  Then I should see "HARMONY-PLUS EDUCATION"
   
 Scenario: I can access the Future Planning page
   #Future Planning Page exists
