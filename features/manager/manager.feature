@@ -31,7 +31,7 @@ Scenario: able to see all student applications
 Scenario: able to create new application
   When I am logged in as "admin@yahoo.com" with password "password"
   And I go to the manager page
-  When I follow "create new application"
+  When I follow "Create New Application"
   Then I should be on the create new application page  
   And I submit an application as "Kate" "One" with email "abc@gmil.com"
   Then I should be on the manager page
