@@ -21,10 +21,6 @@ And /I am logged in as "(.*?)" with password "(.*?)"$/ do |u, p|
   # page.has_content? 'Login successful'
 end
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> df3cd431b20ad85725b4f19a34731512773d76f1
 And /^I refresh the index$/ do
   Student.reindex
 end
@@ -108,4 +104,8 @@ end
 Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
   expectation = negate ? :should_not : :should
   page.send(expectation, have_css(selector))
+end
+
+Then(/^the downloaded file content should be:$/) do |string|
+  pending # Write code here that turns the phrase above into concrete actions
 end
