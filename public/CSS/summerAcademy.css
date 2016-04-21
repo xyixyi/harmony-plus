@@ -348,6 +348,7 @@ nav.transparent-nav .links a {
     background-color: transparent;
     border-color: rgb(83,170,142);
     padding: 1px 12px;
+    width: 80px;
 }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
