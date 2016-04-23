@@ -146,6 +146,7 @@ P {
     top: 50px;
     height: 1000px;
     width: 100%;
+<<<<<<< HEAD
 }
 
 
@@ -179,4 +180,46 @@ P {
     left: 0%;
     width: 100%;
     text-align: center;
+=======
+    background-color: white;
+    position: relative;
+}
+
+.current {
+    moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    /*-moz-transform: translateX(0);*/
+    /*-ms-transform: translateX(0);*/
+    /*-webkit-transform: translateX(0);*/
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.smalllogo {
+    background-image: url("../img/aboutus/chart.png");
+    margin: auto;
+    height: 55px;
+    width: 58px;
+    position: relative;
+    top: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info {
+    height: 1000px;
+    width: 100%;
+    margin: auto;
+>>>>>>> ab3edfdf48853f8dbc5ea3617be918a52d6d5a30
 }
