@@ -18,7 +18,7 @@ Background:
 Scenario: Exporting the fruits list
   When I am logged in as "admin@yahoo.com" with password "password"
   And I am on the manager page
-  When I follow "Export"
+  When I follow "Download CSV"
   Then the downloaded file content should be:
     """
     first_name,last_name,email,country_code,phone_number

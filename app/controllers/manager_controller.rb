@@ -15,6 +15,11 @@ class ManagerController < ActionController::Base
     end
     
     @students = Student.order("lower(#{sort})") if sort
+    
+    respond_to do |format|
+      format.html
+      format.csv { render text: @students.to_csv }
+    end
     # need to change when searched and then sort // see hw4 for reference
   end
 

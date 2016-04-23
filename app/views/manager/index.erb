@@ -24,7 +24,7 @@
         <%=form_tag manager_index_path, class: "form-inline", method: :get do %>
         <%= text_field_tag :query, params[:query], {:class => "form-control", :placeholder => "Search"} %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
-        <%= link_to 'Export'%></th>
+        
         <% if params[:query].present? %>    
           <%= link_to "clear", manager_index_path%>
         <% end %>
@@ -32,9 +32,11 @@
       <% end %>
     </div>
     
+    
     <div class = "container">
         <table class="table">
           <tr>
+            <th>#</th>
             <th><%= link_to 'First_Name', manager_index_path(:sort => 'first_name', :query => params[:query])%></th>
             <th><%= link_to 'Last_Name', manager_index_path(:sort => 'last_name', :query => params[:query])%></th>
             <th><%= link_to 'Email', manager_index_path(:sort => 'email')%></th>
@@ -48,6 +50,7 @@
           </tr>
            <% @students.each do |student| %>
           <tr>
+            <td><%= student.id%></td>
             <td><%= student.first_name%></td>
             <td><%= student.last_name %></td>
             <td><%= student.email %></td>
@@ -61,7 +64,9 @@
            <%end%>
           </tr>
         </table>
-      <div class = "link"><%= link_to "create new application", new_manager_path %></div>
+        
+        <span class="nowrap_left"><%= link_to "Create New Application", new_manager_path %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="nowrap_righ"><%= link_to "Download CSV", manager_index_path(format: "csv") %></span>
     </div> 
   </div>
 </html>
