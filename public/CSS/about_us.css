@@ -90,42 +90,6 @@ P {
 }
 
 
-.people_info {
-    position: relative;
-    top: 50px;
-    height: 1000px;
-    width: 100%;
-}
-
-
-.info
-{
-    display: none;
-}
-
-.info
-{
-    position: relative;
-    top: 300px;
-    height: 1000px;
-    
-}
-
-
-.bottoms:hover  .info
-{
-    display: block;
-    width: 100%;
-    background-size: cover;
-    text-align: center;
-}
-
-
-.info
-{
-    position: relative;
-    top: 500px;
-}
 
 
 .l1 {
@@ -147,6 +111,7 @@ P {
     position: absolute;
     right: 10%;
 }
+
 
 .earth {
     background-image: url("../img/aboutus/earth.png");
@@ -176,3 +141,42 @@ P {
     
 }
 
+.people_info {
+    position: relative;
+    top: 50px;
+    height: 1000px;
+    width: 100%;
+}
+
+
+.info
+{
+    display: none;
+}
+
+.info
+{
+    position: relative;
+    top: 300px;
+    height: 1000px;
+    
+}
+
+
+.bottoms:hover  .info
+{
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.details
+{
+    left: 0%;
+    width: 100%;
+    text-align: center;
+}
