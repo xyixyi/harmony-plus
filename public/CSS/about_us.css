@@ -1,5 +1,5 @@
 .top {
-    margin-top: 70px;
+    /*margin-top: 70px;*/
     background-image: url("../img/aboutus/top.png");
     height: 550px;
     background-position: center center;
@@ -47,7 +47,7 @@ P {
     color: black;
 }
 
-.left {
+.leftbanner {
     width: 50%;
     float: left;
 }
@@ -63,7 +63,7 @@ P {
     left: 43%;
 }
 
-.right {
+.rightbanner {
     width: 50%;
     float: right;
 }
@@ -97,9 +97,17 @@ P {
     left: 10%;
 }
 
-.l2 {
+.c2 {
+    text-transform: uppercase;
+    position: relative;
+    top: 70px;
+    color: white;
+}
+.l2{
     left: 30%;
     position: absolute;
+    background-color: #53AA8E;
+    color: white;
 }
 
 .r1 {
@@ -125,7 +133,7 @@ P {
     margin: auto;
 }
 
-.companyname {
+.companyname.c1,.companyname.c3,.companyname.c4 {
     text-transform: uppercase;
     position: relative;
     top: 70px;
@@ -146,8 +154,41 @@ P {
     top: 50px;
     height: 1000px;
     width: 100%;
-    background-color: white;
+}
+
+
+.info
+{
+    display: none;
+}
+
+.info
+{
     position: relative;
+    top: 300px;
+    height: 1000px;
+    
+}
+
+
+.bottoms:hover  .info
+{
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.detail
+{
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    position: absolute;
 }
 
 .current {
@@ -155,19 +196,49 @@ P {
     -o-transition-property: all;
     -webkit-transition-property: all;
     transition-property: all;
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-    -webkit-transition-duration: 0s;
-    -moz-transition-duration: 0s;
-    -o-transition-duration: 0s;
-    transition-duration: 0s;
-    /*-moz-transform: translateX(0);*/
-    /*-ms-transform: translateX(0);*/
-    /*-webkit-transform: translateX(0);*/
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
+}
+
+.left {
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transform: translateX(-220%);
+    -ms-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+}
+
+.right {
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transform: translateX(120%);
+    -ms-transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
 }
 
 .smalllogo {
