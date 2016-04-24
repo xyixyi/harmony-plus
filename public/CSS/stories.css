@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    font-size: medium;
+    color: rgb(96,96,96);
+}
+h3 {
+    text-align: center;
+    font-size: large;
+    color: gray;
+}
+body {
+    background-color: white;
+}
+
+p {
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height: 2.0;
+    color: gray;
+}
+hr {
+    height: 4px;
+    background: #53AA8E;
+    border: none;
+    width: 60px;
+}
+.image {
+    text-align: center;
+}
+
+.btn-primary {
+    margin-left: 200px;
+    color: rgb(83,170,142);
+    background-color: transparent;
+    border-color: rgb(83,170,142);
+    padding: 1px 12px;
+    width: 150px;
+}
