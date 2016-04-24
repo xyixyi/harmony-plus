@@ -22,8 +22,7 @@ class ApplybController < ActionController::Base
     @student = Student.new(student_params)
 
     if @student.save
-      @student.update_attribute(:program, "B-Bay")
-      redirect_to success_b_bay_path
+      redirect_to success_path
     else
       if @student.errors.any?
         @student.errors.full_messages.each do |error_message|
@@ -33,7 +32,11 @@ class ApplybController < ActionController::Base
       else
         flash[:error] = "Something wrong during saving."
       end
-      redirect_to b_bay_apply_path
+      if params[:student][:program] == "B-Bay"
+        redirect_to b_bay_apply_path
+      else
+        redirect_to ideal_apply_path
+      end
     end
   end
 
