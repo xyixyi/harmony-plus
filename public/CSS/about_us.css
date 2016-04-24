@@ -122,7 +122,7 @@ P {
 
 
 .earth {
-    background-image: url("../img/aboutus/earth.png");
+    /*background-image: url("../img/aboutus/earth.png");*/
     width: 150px;
     height: 150px;
     position: relative;
@@ -131,6 +131,22 @@ P {
     background-repeat: no-repeat;
     overflow: auto;
     margin: auto;
+}
+
+.img1 {
+    background-image: url("../img/aboutus/head1.png");
+}
+
+.img2 {
+    background-image: url("../img/aboutus/head2.png");
+}
+
+.img3 {
+    background-image: url("../img/aboutus/head3.png");
+}
+
+.img4 {
+    background-image: url("../img/aboutus/head4.png");
 }
 
 .companyname.c1,.companyname.c3,.companyname.c4 {
