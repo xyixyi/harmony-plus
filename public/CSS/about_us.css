@@ -146,41 +146,6 @@ P {
     top: 50px;
     height: 1000px;
     width: 100%;
-<<<<<<< HEAD
-}
-
-
-.info
-{
-    display: none;
-}
-
-.info
-{
-    position: relative;
-    top: 300px;
-    height: 1000px;
-    
-}
-
-
-.bottoms:hover  .info
-{
-    display: block;
-    vertical-align: middle;
-    position: relative;
-    left: 0%;
-    width: 100%;
-    text-align: center;
-    
-}
-
-.details
-{
-    left: 0%;
-    width: 100%;
-    text-align: center;
-=======
     background-color: white;
     position: relative;
 }
@@ -221,5 +186,4 @@ P {
     height: 1000px;
     width: 100%;
     margin: auto;
->>>>>>> ab3edfdf48853f8dbc5ea3617be918a52d6d5a30
 }
