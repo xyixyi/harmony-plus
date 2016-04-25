@@ -14,7 +14,7 @@ Scenario: I can access the BBay Learn More page
 Scenario: I can access the Stories page
   #Stories Page exists
   When I follow "STORIES"
-  Then I should see "Our Stories"
+  Then I should see "Our stories in Haas Business School"
 
 Scenario: I can access the Contacts page
   #Contacts Page exists

@@ -15,7 +15,7 @@ module NavigationHelpers
 
     when /^the home\s?page$/ then '/'
     when /^the manager page$/ then '/manager'
-    when /^the success_b_bay page$/ then '/success_b_bay'
+    when /^the success_b_bay page$/ then '/success'
     when /^the create new application page$/ then '/manager/new'
     when /^the about us$/ then '/about_us'
     when /^future planning page$/ then '/future_planning'

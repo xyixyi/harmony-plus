@@ -32,11 +32,12 @@ class ApplybController < ActionController::Base
       else
         flash[:error] = "Something wrong during saving."
       end
-      if params[:student][:program] == "B-Bay"
-        redirect_to b_bay_apply_path
-      else
-        redirect_to ideal_apply_path
-      end
+      redirect_to b_bay_apply_path
+      # if params[:student][:program] == "B-Bay"
+      #   redirect_to b_bay_apply_path
+      # else
+      #   redirect_to ideal_apply_path
+      # end 这两行code在这里怎么都会direct到ideal 根本就没有那个params
     end
   end
 
