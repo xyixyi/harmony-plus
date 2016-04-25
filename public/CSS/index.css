@@ -6,6 +6,7 @@ body {
 
 h1 {
     /*text-align: center;*/
+    font-size: 30px;
     color: white;
 }
 
@@ -78,14 +79,15 @@ nav.transparent-nav .links a {
 .opening{
     margin-top: -110px;
     background-image: url("/img/homepage/Lighthouse.png");
-    height: 1200px;
+    height: 900px;
     background-position: center center;
     overflow: hidden;
 }
 
 .opening .container {
   margin-top: 300px;
-  margin-left: 50%;
+  margin-left: 40%;
+  font-size: 20px;
 }
 
 .opening .container p {
