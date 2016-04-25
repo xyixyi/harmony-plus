@@ -105,39 +105,6 @@ nav.transparent-nav .links a {
     border-color: transparent;
 }
 
-/*.special_text{*/
-/*    text-align: center;*/
-/*    font-size: 24px;*/
-/*}*/
-
-/*.col-md-6-left{*/
-/*    float: left;*/
-/*    background:url("../img/Campus.png") no-repeat;*/
-/*    background-size: cover;*/
-/*    height: 300px;*/
-/*    width: 50%;*/
-/*    background-position: center center;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-/*    min-height: 1px;*/
-/*    padding-right: 15px;*/
-/*    padding-left: 15px;*/
-/*}*/
-
-/*.col-md-6-right{*/
-/*    float: left;*/
-/*    background:url("../img/World.png") no-repeat;*/
-/*    background-size: cover;*/
-/*    height: 300px;*/
-/*    width: 50%;*/
-/*    background-position: center center;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-/*    min-height: 1px;*/
-/*    padding-right: 15px;*/
-/*    padding-left: 15px;*/
-/*}*/
-
 .col-md-6{
     margin-bottom: 150px;
 }
@@ -166,12 +133,12 @@ nav.transparent-nav .links a {
     font-weight: 550;
 }
 .marquee{
-    width: 100%;
-    margin: 0 auto;
+    margin-left: 135px;
+    margin-right: 135px;
     background-repeat: repeat-x;
     /*animation: marquee 45s linear infinite;*/
 }
-@keyframes marquee {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
+/*@keyframes marquee {*/
+/*    0%   { transform: translate(0, 0); }*/
+/*    100% { transform: translate(-100%, 0); }*/
+/*}*/
