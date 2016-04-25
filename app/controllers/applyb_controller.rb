@@ -32,11 +32,9 @@ class ApplybController < ActionController::Base
       else
         flash[:error] = "Something wrong during saving."
       end
-      if params[:student][:program] == "B-Bay"
-        redirect_to b_bay_apply_path
-      else
-        redirect_to ideal_apply_path
-      end
+
+      redirect_to :back
+      
     end
   end
 

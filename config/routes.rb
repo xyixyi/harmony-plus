@@ -8,7 +8,6 @@ HarmonyPlus::Application.routes.draw do
   get 'mainframe', :to => 'mainframe#index', :format => false
   get 'contact', :to => 'mainframe#contact', :format => false
   get 'about_us', :to => 'mainframe#about_us', :format => false
-  get 'detail', :to => 'mainframe#detail', :format => false
   get 'summer_academy', :to => 'mainframe#summer_academy', :format => false
   get 'future_planning', :to => 'mainframe#future_planning', :format => false
   # get 'login', :to => 'manager#index', :format => false
@@ -17,7 +16,7 @@ HarmonyPlus::Application.routes.draw do
   get 'success', :to => 'applyb#success', :format => false
   # get 'success_ideal', :to => 'applyb#success', :format => false
   get '/', :to => 'mainframe#index', :format => false
-
+  get 'details', :to => 'mainframe#details', :format => false
 
   root "mainframe#index"
   
