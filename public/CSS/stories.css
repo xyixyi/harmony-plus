@@ -31,11 +31,11 @@ hr {
     text-align: center;
 }
 
-.btn-primary {
-    margin-left: 200px;
+.story-btn-primary {
     color: rgb(83,170,142);
     background-color: transparent;
     border-color: rgb(83,170,142);
     padding: 1px 12px;
     width: 150px;
 }
+
