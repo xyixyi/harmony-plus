@@ -179,7 +179,7 @@ P {
 
 .people_info {
     position: relative;
-    top: 50px;
+    top: 100px;
     height: 1000px;
     width: 100%;
 }
@@ -240,6 +240,7 @@ P {
 }
 
 .left {
+    display: none;
     -moz-transition-property: all;
     -o-transition-property: all;
     -webkit-transition-property: all;
@@ -255,6 +256,7 @@ P {
 }
 
 .right {
+    display: none;
     -moz-transition-property: all;
     -o-transition-property: all;
     -webkit-transition-property: all;
