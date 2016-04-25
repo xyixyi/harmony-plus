@@ -11,7 +11,7 @@ hr {
     text-align: center;
 }
 
-.firstPart, .secondPart, .forthPart, .fifthPart {
+.firstPart, .secondPart, .forthPart, .fifthPart, .sixthPart {
     position: relative;
     text-align: center;
     width: 80%;
@@ -19,7 +19,7 @@ hr {
 }
 
 .fifthPart {
-    height: 900px;
+    height: 750px;
 }
 
 
@@ -34,6 +34,12 @@ hr {
     height: 700px;
 }
 
+.sixthPart {
+    /*height: 1700px;*/
+    text-align: left;
+}
+
+
 h1 {
     color: rgb(96,96,96);
 }
@@ -47,6 +53,11 @@ h3 {
     color: #969594;
     font-weight: 300;
     font-size: 150%;
+}
+
+h4 {
+    color: rgb(83,170,142);
+    font-size: 200%;
 }
 
 p{
@@ -67,16 +78,63 @@ p{
 }
 
 .head {
+    position: relative;
+    top: -10px;
     width: 200px;
-    height: 250px;
+    
     display: inline-block;
 }
+
+.head1, .head2, .head3 {
+    height: 250px;
+    width: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.head1 {
+    background-image: url("../img/details/p1.png");
+}
+
+.head2 {
+    background-image: url("../img/details/p2.png");
+}
+
+.head3 {
+    background-image: url("../img/details/p3.png");
+}
+
 
 .discription {
     width: 60%;
     display: inline-block;
     position: relative;
     left: 50px;
-    top: 5px;
+    top: -40px;
     margin-right: 10%;
+}
+
+.info, .discription {
+    height: 250px;
+}
+
+.schedule {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.bbay {
+    /*background-image: url("../img/details/BBAY.png");*/
+}
+
+.ideal {
+    /*background-image: url("../img/details/IDEAL2.png");*/
+}
+
+.aaa {
+    /*height: 2700px;*/
+    
 }
