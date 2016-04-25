@@ -106,6 +106,10 @@ Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
   page.send(expectation, have_css(selector))
 end
 
-Then(/^the downloaded file content should be:$/) do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then "the downloaded file content should be:" do |content|
+  page.source.should have_content content
+end
+
+Then /^I should get a download with the filename "([^\"]*)"$/ do |filename|
+  page.driver.response.headers['Content-Disposition'].should include("filename=\"#{filename}\"")
 end
