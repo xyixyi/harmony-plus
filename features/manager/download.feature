@@ -19,11 +19,4 @@ Scenario: Exporting the fruits list
   When I am logged in as "admin@yahoo.com" with password "password"
   And I am on the manager page
   When I follow "Download CSV"
-  # Then I should get a download with the filename "manager.csv"
-  Then the downloaded file content should be:
-    """
-    id,first_name,last_name,email,gender,country,country_code,phone_number,created_at,updated_at,program,school,addressLineOne,addressLineTwo,province,zipCode,dateOfBirth,guardianName,city,grade
-    1,Luke,Wang,zhao@hotmail.com,male,China,+1,4084111317,2016-04-25 04:21:15 UTC,2016-04-25 04:21:15 UTC,b-bay,,,,,12345,1993-01-01,,,
-    2,dshdjksa,hellop,dsaf@hotmail.com,male,China,+1,4084222317,2016-04-25 04:21:15 UTC,2016-04-25 04:21:15 UTC,b-bay-2,,,,,54321,1992-01-01,,,
-    3,Xiaoyi,Cheng,xycheng0106@gmail.com,female,china,+1,4084333317,2016-04-25 04:21:15 UTC,2016-04-25 04:21:15 UTC,xxx,,,,,11234,1991-01-01,,,
-    """
+  Then I should receive a file "manager.csv"

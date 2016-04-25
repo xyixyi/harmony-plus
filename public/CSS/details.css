@@ -86,8 +86,8 @@ p{
 }
 
 .head1, .head2, .head3 {
-    height: 250px;
-    width: 200px;
+    height: 300px;
+    width: 220px;
     background-size: cover;
     background-repeat: no-repeat;
     display: inline-block;
@@ -99,6 +99,8 @@ p{
 
 .head2 {
     background-image: url("../img/details/p2.png");
+    position: relative;
+    top: 0px;
 }
 
 .head3 {
@@ -111,12 +113,12 @@ p{
     display: inline-block;
     position: relative;
     left: 50px;
-    top: -40px;
+    top: -10px;
     margin-right: 10%;
 }
 
 .info, .discription {
-    height: 250px;
+    height: 300px;
 }
 
 .schedule {
