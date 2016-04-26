@@ -6,8 +6,6 @@ body {
 
 h1 {
     /*text-align: center;*/
-    font-size: 30px;
-    margin-left: 10px;
     color: white;
 }
 
@@ -79,16 +77,20 @@ nav.transparent-nav .links a {
 
 .opening{
     margin-top: -110px;
-    background-image: url("/img/homepage/Lighthouse.png");
-    height: 900px;
+    background-image: url("../img/homepage/Lighthouse.png");
+    height: 1200px;
     background-position: center center;
     overflow: hidden;
 }
 
 .opening .container {
   margin-top: 300px;
+<<<<<<< HEAD
   margin-left: 30%;
   font-size: 20px;
+=======
+  margin-left: 35%;
+>>>>>>> 52c66257ba0a3125d267f58a62bb424c9aa6194b
 }
 
 .opening .container p {
@@ -107,6 +109,39 @@ nav.transparent-nav .links a {
     background-color: rgb(83,170,142);
     border-color: transparent;
 }
+
+/*.special_text{*/
+/*    text-align: center;*/
+/*    font-size: 24px;*/
+/*}*/
+
+/*.col-md-6-left{*/
+/*    float: left;*/
+/*    background:url("../img/Campus.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: 300px;*/
+/*    width: 50%;*/
+/*    background-position: center center;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    min-height: 1px;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+/*.col-md-6-right{*/
+/*    float: left;*/
+/*    background:url("../img/World.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: 300px;*/
+/*    width: 50%;*/
+/*    background-position: center center;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    min-height: 1px;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
 
 .col-md-6{
     margin-bottom: 150px;
@@ -136,6 +171,7 @@ nav.transparent-nav .links a {
     font-weight: 550;
 }
 .marquee{
+<<<<<<< HEAD
     margin-left: 135px;
     margin-right: 135px;
     height:250px;
@@ -145,6 +181,12 @@ nav.transparent-nav .links a {
     text-align: center;
     margin-left: 650px;
     
+=======
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: repeat-x;
+    /*animation: marquee 45s linear infinite;*/
+>>>>>>> 52c66257ba0a3125d267f58a62bb424c9aa6194b
 }
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
