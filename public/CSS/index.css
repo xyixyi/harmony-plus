@@ -6,7 +6,6 @@ body {
 
 h1 {
     /*text-align: center;*/
-    font-size: 30px;
     color: white;
 }
 
@@ -78,16 +77,15 @@ nav.transparent-nav .links a {
 
 .opening{
     margin-top: -110px;
-    background-image: url("/img/homepage/Lighthouse.png");
-    height: 900px;
+    background-image: url("../img/homepage/Lighthouse.png");
+    height: 1200px;
     background-position: center center;
     overflow: hidden;
 }
 
 .opening .container {
   margin-top: 300px;
-  margin-left: 40%;
-  font-size: 20px;
+  margin-left: 35%;
 }
 
 .opening .container p {
@@ -106,6 +104,39 @@ nav.transparent-nav .links a {
     background-color: rgb(83,170,142);
     border-color: transparent;
 }
+
+/*.special_text{*/
+/*    text-align: center;*/
+/*    font-size: 24px;*/
+/*}*/
+
+/*.col-md-6-left{*/
+/*    float: left;*/
+/*    background:url("../img/Campus.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: 300px;*/
+/*    width: 50%;*/
+/*    background-position: center center;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    min-height: 1px;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+/*.col-md-6-right{*/
+/*    float: left;*/
+/*    background:url("../img/World.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: 300px;*/
+/*    width: 50%;*/
+/*    background-position: center center;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    min-height: 1px;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
 
 .col-md-6{
     margin-bottom: 150px;
@@ -135,17 +166,12 @@ nav.transparent-nav .links a {
     font-weight: 550;
 }
 .marquee{
-    margin-left: 135px;
-    margin-right: 135px;
-    height:250px;
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: repeat-x;
+    /*animation: marquee 45s linear infinite;*/
 }
-.story_button {
-    position: relative;
-    text-align: center;
-    margin-left: 650px;
-    
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
 }
-/*@keyframes marquee {*/
-/*    0%   { transform: translate(0, 0); }*/
-/*    100% { transform: translate(-100%, 0); }*/
-/*}*/
