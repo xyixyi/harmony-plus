@@ -1,12 +1,13 @@
 body {
     padding-bottom: 120px;
-    /*background-color: #d3d3d3;*/
+    background-color: #d3d3d3;
     background-color: white;
 }
 
 h1 {
     /*text-align: center;*/
     font-size: 30px;
+    margin-left: 10px;
     color: white;
 }
 
@@ -86,7 +87,7 @@ nav.transparent-nav .links a {
 
 .opening .container {
   margin-top: 300px;
-  margin-left: 40%;
+  margin-left: 30%;
   font-size: 20px;
 }
 
@@ -145,7 +146,7 @@ nav.transparent-nav .links a {
     margin-left: 650px;
     
 }
-/*@keyframes marquee {*/
-/*    0%   { transform: translate(0, 0); }*/
-/*    100% { transform: translate(-100%, 0); }*/
-/*}*/
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
