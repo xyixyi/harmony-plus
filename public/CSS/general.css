@@ -1,12 +1,13 @@
-table {
-  border-collapse: collapse;
-  background-color: transparent;
-  overflow: scroll;
-}
-table, td, th {
-  border: 2px solid black;
-}
+/*table {*/
+/*  border-collapse: collapse;*/
+/*  background-color: transparent;*/
+/*  overflow: scroll;*/
+/*}*/
+/*table, td, th {*/
+/*  border: 2px solid black;*/
+/*}*/
 h2 {
+  margin-top: 100px;
   text-align: center;
 }
 .manager_text {
@@ -25,7 +26,12 @@ h2 {
   text-align: center;
   overflow: scroll;
 }
+.edit_form {
+  text-align: center;
+  overflow: scroll;
+}
 body {
+   background-color: white;
    min-height: 400px;
    margin-bottom: 100px;
    clear: both;
@@ -37,4 +43,44 @@ body {
 .nowrap_right {
   white-space: nowrap ;
   text-align: right;
+}
+.alert-warning {
+  text-align: center;
+}
+.alert-info {
+  text-align: center;
+}
+.alert-succuess {
+  text-align: center;
+}
+.thead {
+  background-color: rgb(244,244,244);
+}
+
+.list-group-item {
+  text-align: center;
+}
+.special_location {
+  margin-left: 620px;
+}
+
+nav.transparent-nav {
+  margin-top: -40px;
+  background: transparent;
+  position: fixed;
+  background: -webkit-linear-gradient(rgba(255,255,255,1), transparent);
+   /*For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255,255,255,1), transparent);
+   /*For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255,255,255,1), transparent);
+   /*For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255,255,255,1), transparent);
+   /*Standard syntax (must be last) */
+}
+
+nav.transparent-nav .links a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }

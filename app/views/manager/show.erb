@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <title>Student's Information</title>
-  <head>
+    <head>
     <title><%= @student.first_name %>'s application</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/general.css">
   </head>
-  <h1>Student's Information</h1>
+  <h2>Information of <%= @student.first_name %></h2>
   <body>
-      <ol>
-        <li>First_name: <%= @student.first_name %></li>
-        <li>Last_name: <%= @student.last_name %></li>
-        <li>Gender: <%= @student.gender %></li>
-        <li>Email: <%= @student.email %></li>
-        <li>Country: <%= @student.country %></li>
-        <li>Country Code: <%= @student.country_code %></li>
-        <li>Phone Number: <%= @student.phone_number %></li>
-        <li>Program: <%= @student.program %></li>
-        <li>School: <%= @student.school %></li>
-        <li>AddressLineOne: <%= @student.addressLineOne %></li>
-        <li>AddressLineTwo: <%= @student.addressLineTwo %></li>
-        <li>City: <%= @student.city %></li>
-        <li>Zipcode: <%= @student.zipCode %></li>
-        <li>Date Of Birth: <%= @student.dateOfBirth %></li>
-        <li>GuardianName: <%= @student.guardianName %></li>
-        <li>Grade: <%= @student.grade %></li>
-        <li>Create At: <%= @student.created_at %></li>
-        <li>Update At: <%= @student.updated_at %></li>
-      </ol>
+    <div class = "container">
+      <div class = "list-group">
+        <ol>
+          <li class="list-group-item" >First_name: <%= @student.first_name %></li>
+          <li class="list-group-item" >Last_name: <%= @student.last_name %></li>
+          <li class="list-group-item">Gender: <%= @student.gender %></li>
+          <li class="list-group-item">Email: <%= @student.email %></li>
+          <li class="list-group-item">Country: <%= @student.country %></li>
+          <li class="list-group-item">Country Code: <%= @student.country_code %></li>
+          <li class="list-group-item">Phone Number: <%= @student.phone_number %></li>
+          <li class="list-group-item">Program: <%= @student.program %></li>
+          <li class="list-group-item">School: <%= @student.school %></li>
+          <li class="list-group-item">AddressLineOne: <%= @student.addressLineOne %></li>
+          <li class="list-group-item">AddressLineTwo: <%= @student.addressLineTwo %></li>
+          <li class="list-group-item">City: <%= @student.city %></li>
+          <li class="list-group-item">Zipcode: <%= @student.zipCode %></li>
+          <li class="list-group-item">Date Of Birth: <%= @student.dateOfBirth %></li>
+          <li class="list-group-item">GuardianName: <%= @student.guardianName %></li>
+          <li class="list-group-item">Grade: <%= @student.grade %></li>
+          <li class="list-group-item">Create At: <%= @student.created_at %></li>
+          <li class="list-group-item">Update At: <%= @student.updated_at %></li>
+        </ol>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <%= link_to "edit this application", edit_manager_path(@student), :method => :get, class: "btn btn-primary btn-lg"%>
+        <%= link_to "delete this application", manager_path(@student), :confirm => "Are you sure?", :method => :delete , class: "btn btn-primary btn-lg"%>
+        <%= link_to "Back", manager_index_path, class: "btn btn-primary btn-lg special_location"%>
+      </div>
+    </div>
   </body>
-  <%= button_to "edit this application", edit_manager_path(@student), :method => :get%>
-  <%= button_to "delete this application", manager_path(@student), :confirm => "Are you sure?", :method => :delete%>
   <br><br><br>
   
-  <a class="btn btn-primary btn-lg" href="/about_us" role="button">More Stories</a>
-</html>
+  </html>
