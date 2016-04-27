@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <title>Manager Edit Page</title>
-  <h1>Student's Information</h1>
+  <head>
+    <title>Manager Edit Page</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/general.css">
+  </head>
+  <h2>Edit Student's Information</h2>
   
   <% if flash[:error] %>
-    <div><%= flash[:error] %></div>
+    <div class = "alert alert-danger"><%= flash[:error] %></div>
   <% end %>
   
   <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
+    <div class = "alert alert-succuess"><%= flash[:notice] %></div>
   <% end %>
   
   <body>
@@ -22,29 +25,28 @@
           </ul>
         </div>
       <% end %>
-      <div class='applyform'>
-        <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
-        <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%>
-        <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
-        <%= label :student, :dateOfBirth, 'Date of Birth'%>
-        <%= date_select :student, :dateOfBirth, :start_year=>1900 %>
-        <%= label :student, :gender, 'Gender'%>
-        <%= select(:student, :gender, ['Male', 'Female'])%>
-        <%= label :student, :country, 'Country'%>
-        <%= select(:student, :country, ['U.S.', 'CHINA'])%>
-        <%= label :student, :country_code, 'Country Code'%>
-        <%= select(:student, :country_code, ['+86', '+1'])%>
-        <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%>
-        <%= label :student, :program, 'Program'%>
-        <%= select(:student, :program, ['b-bay', 'ideal'])%>
-        <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
-        <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%>
-        <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
-        <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "Zipcode"})%>
-        <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
-        <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%>
-        <input type="submit" name="submit" class="submit_but" value= 'Submit' />
-      </div>
-<% end %>
+        <div class='edit_form'>
+            <%= text_field(:student, :first_name, {:class => 'applyf', :placeholder => "First Name"})%>
+            <%= text_field(:student, :last_name, {:class => 'applyf', :placeholder => "Last Name"})%><p></p>
+            <%= email_field(:student, :email, {:class => 'applyf', :placeholder => "Email"})%>
+            <%= select(:student, :country_code, ['+86', '+1'])%>
+            <%= telephone_field(:student, :phone_number, {:class => 'applyf', :placeholder => "Phone Number"})%><p></p>
+            <%= label :student, :dateOfBirth, 'Date of Birth'%>
+            <%= date_select :student, :dateOfBirth, :start_year=>1900 %><p></p>
+            <%= label :student, :gender, 'Gender'%>
+            <%= select(:student, :gender, ['Male', 'Female'])%><p></p>
+            <%= label :student, :country, 'Country'%>
+            <%= select(:student, :country, ['U.S.', 'CHINA'])%><p></p>
+            <%= label :student, :program, 'Program'%>
+            <%= select(:student, :program, ['b-bay', 'ideal'])%><p></p>
+            <%= text_field(:student, :addressLineOne, {:class => 'applyf', :placeholder => "Address Line One"})%>
+            <%= text_field(:student, :addressLineTwo, {:class => 'applyf', :placeholder => "Address Line Two"})%><p></p>
+            <%= text_field(:student, :city, {:class => 'applyf', :placeholder => "City"})%>
+            <%= text_field(:student, :zipCode, {:class => 'applyf', :placeholder => "Zipcode"})%><p></p>
+            <%= text_field(:student, :school, {:class => 'applyf', :placeholder => "School"})%>
+            <%= text_field(:student, :grade, {:class => 'applyf', :placeholder => "Grade"})%><p></p>
+          <input type="submit" name="submit" class="submit_but" value= 'Submit' />
+        </div>
+    <% end %>
   </body>
 </html>

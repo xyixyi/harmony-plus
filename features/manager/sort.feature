@@ -17,7 +17,7 @@ Background:
   
 Scenario: able to sort by first name
   When I am logged in as "admin@yahoo.com" with password "password"
-  When I follow "First_Name"
+  When I follow "First Name"
   And I should see "dshdjksa" before "Luke"
   And I should see "Luke" before "Xiaoyi"
   

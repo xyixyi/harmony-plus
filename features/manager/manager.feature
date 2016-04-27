@@ -41,7 +41,7 @@ Scenario: able to delete application
   When I am logged in as "admin@yahoo.com" with password "password"
   And I go to the manager page
   When I follow "Details for Luke"
-  And I press "delete this application"
+  And I follow "delete this application"
   Then I should be on the manager page
   And I should see "Luke Wang's data was successfully deleted."
   And I should not see "Details for Luke"
@@ -50,7 +50,7 @@ Scenario: able to edit application
   When I am logged in as "admin@yahoo.com" with password "password"
   And I go to the manager page
   When I follow "Details for dshdjksa"
-  And I press "edit this application"
+  And I follow "edit this application"
   And I change "First Name" to "Clark"
   And I change "Last Name" to "Kent"
   And I press "Submit"

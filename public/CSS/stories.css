@@ -34,8 +34,12 @@ hr {
 .story-btn-primary {
     color: rgb(83,170,142);
     background-color: transparent;
-    border-color: rgb(83,170,142);
-    padding: 1px 12px;
-    width: 150px;
+    border-color: white;
+    margin-left: 45%;
 }
 
+.story-btn-primary.active, .story-btn-primary.focus, .story-btn-primary:active, .story-btn-primary:focus, .story-btn-primary:hover, .open>.dropdown-toggle.story-btn-primary {
+    color: #fff;
+    background-color: rgb(83,170,142);
+    border-color: transparent;
+}

@@ -167,8 +167,10 @@ nav.transparent-nav .links a {
     font-weight: 550;
 }
 .marquee{
-    width: 100%;
-    margin: 0 auto;
+    /*width: 100%;*/
+    margin-left: 135px;
+    margin-right: 135px;
+    height:250px;
     background-repeat: repeat-x;
     /*animation: marquee 45s linear infinite;*/
 }
