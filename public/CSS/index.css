@@ -1,6 +1,6 @@
 body {
     padding-bottom: 120px;
-    background-color: #d3d3d3;
+    /*background-color: #d3d3d3;*/
     background-color: white;
 }
 
@@ -85,12 +85,8 @@ nav.transparent-nav .links a {
 
 .opening .container {
   margin-top: 300px;
-<<<<<<< HEAD
-  margin-left: 30%;
-  font-size: 20px;
-=======
   margin-left: 35%;
->>>>>>> 52c66257ba0a3125d267f58a62bb424c9aa6194b
+  width: 60%;
 }
 
 .opening .container p {
@@ -171,22 +167,10 @@ nav.transparent-nav .links a {
     font-weight: 550;
 }
 .marquee{
-<<<<<<< HEAD
-    margin-left: 135px;
-    margin-right: 135px;
-    height:250px;
-}
-.story_button {
-    position: relative;
-    text-align: center;
-    margin-left: 650px;
-    
-=======
     width: 100%;
     margin: 0 auto;
     background-repeat: repeat-x;
     /*animation: marquee 45s linear infinite;*/
->>>>>>> 52c66257ba0a3125d267f58a62bb424c9aa6194b
 }
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
