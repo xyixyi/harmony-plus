@@ -42,19 +42,19 @@ p {
   padding-left: 180px;
 }
 
-nav.transparent-nav {
-  margin-top: -40px;
-  background: transparent;
-  position: fixed;
-  background: white;
-}
+/*nav.transparent-nav {*/
+/*  margin-top: -40px;*/
+/*  background: transparent;*/
+/*  position: fixed;*/
+/*  background: white;*/
+/*}*/
 
-nav.transparent-nav .links a {
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+/*nav.transparent-nav .links a {*/
+/*  color: black;*/
+/*  text-align: center;*/
+/*  padding: 14px 16px;*/
+/*  text-decoration: none;*/
+/*}*/
 
 .opening{
     margin-top: 60px;
