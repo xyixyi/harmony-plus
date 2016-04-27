@@ -3,7 +3,6 @@ nav .links {
   position: fixed;
   top: 30px;
   font-size: 110%;
-  font-family: "Trebuchet MS";
 }
 
 nav .links a.selected, nav .links a:hover {
