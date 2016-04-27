@@ -2,6 +2,7 @@ body {
     padding-bottom: 120px;
     /*background-color: #d3d3d3;*/
     background-color: white;
+    font-family: "Microsoft YaHei";
 }
 
 h1 {
@@ -188,10 +189,11 @@ nav.transparent-nav .links a {
 }
 
 .story {
-    width: 60%;
+    width: 70%;
     margin: auto;
     text-align: center;
     color: #808080;
+    font-family: "Microsoft YaHei";
 }
 
 .image {
@@ -199,5 +201,11 @@ nav.transparent-nav .links a {
 }
 
 h4, h5 {
+    font-weight: bold;
     text-align: center;
+    font-family: "Microsoft YaHei";
+}
+
+h5 {
+    font-size: medium;
 }
