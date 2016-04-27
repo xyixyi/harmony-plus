@@ -17,6 +17,7 @@ HarmonyPlus::Application.routes.draw do
   # get 'success_ideal', :to => 'applyb#success', :format => false
   get '/', :to => 'mainframe#index', :format => false
   get 'details', :to => 'mainframe#details', :format => false
+  get 'cn_index', :to => 'mainframe#index_cn', :format => false
 
   root "mainframe#index"
   

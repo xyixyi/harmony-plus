@@ -182,3 +182,22 @@ nav.transparent-nav .links a {
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
 }
+
+.col-md-4 {
+    height: 500px;
+}
+
+.story {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    color: #808080;
+}
+
+.image {
+    text-align: center;
+}
+
+h4, h5 {
+    text-align: center;
+}
