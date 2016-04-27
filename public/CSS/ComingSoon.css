@@ -1,5 +1,5 @@
 body {
-    background-image: url("../img/ComingSoon/ComingSoon.png");
+    background-image: url("../img/ComingSoon/comingsoon.jpg");
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -80,4 +80,8 @@ nav.transparent-nav .links a {
 
 nav.transparent-nav .links a.selected, nav.transparent-nav .links a:hover {
   color: rgb(83,170,142);
+}
+
+.footer {
+    display: none;
 }
