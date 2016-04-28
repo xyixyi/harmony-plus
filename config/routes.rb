@@ -21,11 +21,14 @@ HarmonyPlus::Application.routes.draw do
   
   # chinese pages
   get 'cn_index', :to => 'mainframe#index_cn', :format => false
+  get 'cn_b_bay_apply', :to => 'applyb#b_bay_apply_cn', :format => false
+  get 'cn_ideal_apply', :to => 'applyb#ideal_apply_cn', :format => false
   get 'cn_summer_academy', :to => 'mainframe#summer_academy_cn', :format => false
   get 'cn_contact', :to => 'mainframe#contact_cn', :format => false
   get 'cn_details', :to => 'mainframe#details_cn', :format => false
   get 'cn_about_us', :to => 'mainframe#about_us_cn', :format => false
   get 'cn_future_planning', :to => 'mainframe#future_planning_cn', :format => false
+  get 'cn_details', :to => 'mainframe#details_cn', :format => false
   root "mainframe#index"
   
   devise_scope :user do

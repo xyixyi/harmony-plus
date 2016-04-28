@@ -29,13 +29,13 @@ class Student < ActiveRecord::Base
     
     
     def country_correct
-        if country=="Country"
+        if country=="Country" or country=="国家"
             errors.add(:country, "not selected.")
         end
     end
     
     def gender_correct
-        if gender=='Gender'
+        if gender=='Gender' or gender=="性别"
             errors.add(:gender, "not selected.")
         end
     end
