@@ -85,3 +85,6 @@ button:focus {
 .btn-post{
     display: block;
 }
+.form-signin-heading {
+  margin-top: 100px;
+}

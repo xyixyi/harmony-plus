@@ -125,16 +125,25 @@
 
 <script>
     $(function () {
-        document.getElementById("home").style.color = "#53AA8E";
-        $('#home').text("首页");
+        // document.getElementById("home").style.color = "#53AA8E";
+        // $('#home').text("首页");
         $('#fp').text("未来规划");
-        $('#sa').text("夏季课程");
+        // $('#sa').text("夏季课程");
         $('#story').text("故事分享");
         $('#au').text("关于我们");
         $('#contact').text("联系方式");
-        $('#language').text('English');
-        var home = "<a id='language' href='/'>English</a>"
-        $('#language').html(home);
+        // $('#language').text('English');
+        var english = "<a id='language' href='/'>English</a>";
+        $('#language').html(english);
+        
+        
+        var summer_academy = "<a id='sa' href='/cn_summer_academy'>夏季课程</a>";
+        $('#sa').html(summer_academy);
+        
+        var homepage = "<a id='home' href='/cn_index' style='color:#53AA8E'>首页</a>"
+        $('#home').html(homepage);
+        
+        // document.getElementById("home").style.color = "#53AA8E";
     })
 </script>
 
