@@ -2,6 +2,7 @@ body{
     background-color: white;
     overflow-x: hidden;
     width: 100%;
+    font-family: "Microsoft YaHei";
 }
 
 .container
@@ -54,7 +55,7 @@ body{
     width: 50%;
     float: right;
     position: relative;
-    top: 120px;
+    top: 160px;
     left: 20%;
     /*right: 20px;*/
     height: 450px;
@@ -357,4 +358,11 @@ h11
     border-color: transparent;
 }
 
+.chinese {
+    font-size: 115%;
+    color: gray;
+}
 
+.chineseh9 {
+    font-size: 150%;
+}

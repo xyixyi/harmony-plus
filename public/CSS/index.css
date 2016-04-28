@@ -108,7 +108,11 @@ nav.transparent-nav .links a {
 }
 
 .story_button {
-    margin-left: 46%;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    bottom: 200px;
+    
 }
 
 /*.special_text{*/
@@ -175,7 +179,7 @@ nav.transparent-nav .links a {
     /*width: 100%;*/
     margin-left: 135px;
     margin-right: 135px;
-    height:250px;
+    height:500px;
     background-repeat: repeat-x;
     /*animation: marquee 45s linear infinite;*/
 }
