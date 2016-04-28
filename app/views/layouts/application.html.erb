@@ -34,21 +34,16 @@
         </a>
       </div>
       <div class="links">
-        <a href="/">HOME</a>
-        <a href="/future_planning">FUTURE PLANNING</a>
-        <a href="/summer_academy">SUMMER ACADEMY</a>
-        <a href="/stories">STORIES</a>
-        <a href="/about_us">ABOUT US</a>
-        <a href="/contact">CONTACT</a>
-        <% if user_signed_in? %>
-            <a class="btn btn-primary btn-lg btn-bar" href="/users/sign_out" role="button" id="log_in">Sign Out &raquo;</a>
-        <% else %>
-            <a class="btn btn-primary btn-lg btn-bar" href="/login" role="button" id="log_in">Log In &raquo;</a>
-        <% end %>
+        <a id="home" href="/">HOME</a>
+        <a id="fp" href="/future_planning">FUTURE PLANNING</a>
+        <a id="sa" href="/summer_academy">SUMMER ACADEMY</a>
+        <a id="story" href="/stories">STORIES</a>
+        <a id="au" href="/about_us">ABOUT US</a>
+        <a id="contact" href="/contact">CONTACT</a>
         <a href="/">
           <img border="0" alt="s" src="/img/apply/search.png" width="24" height="24">
         </a>
-        <a href="/">简体中文</a>
+        <a id="language" href="cn_index">简体中文</a>
       </div>
     </nav>
 
@@ -59,6 +54,11 @@
         <p class="text-muted">&copy;2016 Harmony Plus</p>
         <a href="#top" class="home_link">
       <img title="GoHome" alt="go_home" src="/img/Footer/footerLink.png" class="home_icon">
+        <% if user_signed_in? %>
+            <a class="login_link" href="/users/sign_out" id="log_in">Sign Out &raquo;</a>
+        <% else %>
+            <a class="login_link" href="/login" id="log_in">Log In &raquo;</a>
+        <% end %>
       </a>
       </div>
     </footer>

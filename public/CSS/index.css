@@ -2,6 +2,7 @@ body {
     padding-bottom: 120px;
     /*background-color: #d3d3d3;*/
     background-color: white;
+    font-family: "Microsoft YaHei";
 }
 
 h1 {
@@ -106,6 +107,10 @@ nav.transparent-nav .links a {
     border-color: transparent;
 }
 
+.story_button {
+    margin-left: 46%;
+}
+
 /*.special_text{*/
 /*    text-align: center;*/
 /*    font-size: 24px;*/
@@ -167,12 +172,40 @@ nav.transparent-nav .links a {
     font-weight: 550;
 }
 .marquee{
-    width: 100%;
-    margin: 0 auto;
+    /*width: 100%;*/
+    margin-left: 135px;
+    margin-right: 135px;
+    height:250px;
     background-repeat: repeat-x;
     /*animation: marquee 45s linear infinite;*/
 }
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
+}
+
+.col-md-4 {
+    height: 500px;
+}
+
+.story {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    color: #808080;
+    font-family: "Microsoft YaHei";
+}
+
+.image {
+    text-align: center;
+}
+
+h4, h5 {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+}
+
+h5 {
+    font-size: medium;
 }

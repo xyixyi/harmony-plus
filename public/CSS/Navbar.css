@@ -3,7 +3,6 @@ nav .links {
   position: fixed;
   top: 30px;
   font-size: 110%;
-  font-family: "Trebuchet MS";
 }
 
 nav .links a.selected, nav .links a:hover {
@@ -11,13 +10,15 @@ nav .links a.selected, nav .links a:hover {
 }
 
 nav.transparent-nav {
-  background: transparent;/* For browsers that do not support gradients */
+ /* For browsers that do not support gradients */
   width: 100%;
+  top: 0px;
   height: 140px;
   margin:0;
   padding:0;
-  position: relative;
+  position: fixed;
   display: inline-block;
+  background: white;
   z-index:99999;
 }
 
@@ -67,6 +68,13 @@ body {
   display:inline-block;
   overflow: hidden;
 }
+
+.login_link {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+}
+
 .footer_container .text-muted {
   margin: 15px 0;
   color: white;

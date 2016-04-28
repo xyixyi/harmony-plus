@@ -312,26 +312,26 @@ h11
     margin-bottom: 100px;
 }
 
-nav.transparent-nav {
-  margin-top: -40px;
-  background: transparent;
-  position: fixed;
-  background: -webkit-linear-gradient(rgba(255,255,255,1), transparent);
+/*nav.transparent-nav {*/
+/*  margin-top: -40px;*/
+/*  background: transparent;*/
+/*  position: fixed;*/
+/*  background: -webkit-linear-gradient(rgba(255,255,255,1), transparent);*/
    /*For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(255,255,255,1), transparent);
+/*  background: -o-linear-gradient(rgba(255,255,255,1), transparent);*/
    /*For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(255,255,255,1), transparent);
+/*  background: -moz-linear-gradient(rgba(255,255,255,1), transparent);*/
    /*For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(255,255,255,1), transparent);
+/*  background: linear-gradient(rgba(255,255,255,1), transparent);*/
    /*Standard syntax (must be last) */
-}
+/*}*/
 
-nav.transparent-nav .links a {
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+/*nav.transparent-nav .links a {*/
+/*  color: black;*/
+/*  text-align: center;*/
+/*  padding: 14px 16px;*/
+/*  text-decoration: none;*/
+/*}*/
 
 .opening{
     width: 100%;
