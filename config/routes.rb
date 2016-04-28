@@ -22,7 +22,10 @@ HarmonyPlus::Application.routes.draw do
   # chinese pages
   get 'cn_index', :to => 'mainframe#index_cn', :format => false
   get 'cn_summer_academy', :to => 'mainframe#summer_academy_cn', :format => false
-
+  get 'cn_contact', :to => 'mainframe#contact_cn', :format => false
+  get 'cn_details', :to => 'mainframe#details_cn', :format => false
+  get 'cn_about_us', :to => 'mainframe#about_us_cn', :format => false
+  get 'cn_future_planning', :to => 'mainframe#future_planning_cn', :format => false
   root "mainframe#index"
   
   devise_scope :user do
@@ -35,5 +38,6 @@ HarmonyPlus::Application.routes.draw do
   
   #stories
   get 'stories', :to => 'stories#stories', :format => false
+  get 'cn_stories', :to => 'stories#stories_cn', :format => false
   get 'more_stories', :to => 'stories#morestories', :format => false
 end

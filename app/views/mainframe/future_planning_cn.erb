@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/ComingSoon.css">
+    <!--Title of Future Planning page-->
+    <title>Harmony Plus Future Planning</title>
+</head>
+<br />
+<br />
+<br />
+<h1>Future Planning</h1>
+<!--<div background="img/ComingSoon.png">-->
+    <div class="container">
+        <h2 class="heading" align="center">coming soon</h2>
+    </div>
+<!--</div>-->
+
+<script>
+    $(function () {
+        document.getElementById("fp").style.color = "#53AA8E";
+    })
+</script>
+
+<script>
+    $(function () {
+
+        var english = "<a id='language' href='/'>English</a>";
+        $('#language').html(english);
+        
+        var summer_academy = "<a id='sa' href='/cn_summer_academy'>夏季课程</a>";
+        $('#sa').html(summer_academy);
+        
+        var homepage = "<a id='home' href='/cn_index'>首页</a>"
+        $('#home').html(homepage);
+        
+        var au = "<a id='au' href='/cn_about_us'>关于我们</a>";
+        $('#au').html(au)
+        
+        var contact = "<a id='contact' href='/cn_contact'>联系方式</a>";
+        $('#contact').html(contact)
+        
+        var fp = "<a id='fp' href='/cn_future_planning' style='color:#53AA8E'>未来规划</a>";
+        $('#fp').html(fp)
+        
+        var story = "<a id='story' href='/cn_stories'>故事分享</a>";
+        $('#story').html(story)
+        
+    })
+</script>

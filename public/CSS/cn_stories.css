@@ -1,0 +1,50 @@
+body {
+    background-color: white;
+    font-family: "Microsoft YaHei";
+}
+
+h1 {
+    font-size: 220%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 220%;
+    display: inline-block;
+}
+
+.title {
+    height: 500px;
+    text-align: center;
+    top: 200px;
+    position: relative;
+}
+
+hr {
+    width: 5%;
+    border: 3px solid rgb(83,170,142);
+}
+
+.pictures {
+    position: relative;
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+    height: 35%;
+    text-align: center;
+    top:5%;
+    /*display: inline-block;*/
+}
+
+.empty {
+    height: 200px;
+}
+
+.container {
+    height: 700px;
+}
+
+p {
+    color: gray;
+    font-size: 115%;
+}
