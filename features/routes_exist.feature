@@ -7,10 +7,6 @@ Feature: Visiting all of the types of pages to ensure they exist
 Background:
   Given I am on the homepage
 
-Scenario: I can access the BBay Learn More page
-  When I follow "b_bay_details"
-  Then I should be on b-bay apply page
-
 Scenario: I can access the Stories page
   #Stories Page exists
   When I follow "STORIES"

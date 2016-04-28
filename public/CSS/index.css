@@ -56,7 +56,7 @@ hr {
 }
 
 nav.transparent-nav {
-  margin-top: -40px;
+  /*margin-top: -40px;*/
   background: transparent;
   position: fixed;
   background: -webkit-linear-gradient(#202020, transparent);
