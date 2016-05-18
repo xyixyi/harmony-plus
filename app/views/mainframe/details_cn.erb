@@ -109,26 +109,37 @@
 <script>
     $(function () {
 
-        var fp = "<a id='fp' href='/cn_future_planning'>未来规划</a>";
-        $('#fp').html(fp)
+      $('#fp').remove();
+      $('#story').remove();
+      $('#sa').remove();
+      $('#home').remove();
+      $('#contact').remove();
+      $('#language').remove();
+      $('#au').remove();
+      $('#apply').remove();
+      
+      var homepage = "<a id='home' href='/cn_index' style='position: relative;*/margin-right: 25px;'>首页</a>"
+        $('.links').append(homepage);
+      
+      
+        var fp = "<a id='fp' href='/cn_future_planning' style='position: relative;*/margin-right: 30px;'>未来规划</a>";
+        $('.links').append(fp)
         
-        var story = "<a id='story' href='/cn_stories'>故事分享</a>";
-        $('#story').html(story)
+        var summer_academy = "<a id='sa' href='/cn_summer_academy' style='color:#53AA8E; position: relative;*/margin-right: 30px;'>夏季课程</a>";
+        $('.links').append(summer_academy);
 
-        var english = "<a id='language' href='/'>English</a>";
-        $('#language').html(english);
+        var story = "<a id='story' href='/cn_stories' style='position: relative;*/margin-right: 30px;'>故事分享</a>";
+        $('.links').append(story)
         
+        var au = "<a id='au' href='/cn_about_us' style='position: relative;*/margin-right: 30px;'>关于我们</a>";
+        $('.links').append(au)
         
-        var summer_academy = "<a id='sa' href='/cn_summer_academy' style='color:#53AA8E'>夏季课程</a>";
-        $('#sa').html(summer_academy);
+        var contact = "<a id='contact' href='/cn_contact' style='position: relative;*/margin-right: 30px;'>联系方式</a>";
+        $('.links').append(contact)
         
-        var homepage = "<a id='home' href='/cn_index'>首页</a>"
-        $('#home').html(homepage);
-        
-        var contact = "<a id='contact' href='/cn_contact'>联系方式</a>";
-        $('#contact').html(contact)
-        
-        var au = "<a id='au' href='/cn_about_us'>关于我们</a>";
-        $('#au').html(au)
+        var apply = "<a id='contact' href='/cn_b_bay_apply' style='position: relative;*/margin-right: 30px;'>申请</a>";
+        $('.links').append(apply);
+        var english = "<a id='language' href='/' style='position: relative;*/margin-right: 30px;'>English</a>";
+        $('.links').append(english);
     })
 </script>
