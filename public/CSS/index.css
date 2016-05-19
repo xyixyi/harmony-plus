@@ -79,8 +79,11 @@ nav.transparent-nav .links a {
 .opening{
     margin-top: -110px;
     background-image: url("../img/homepage/Lighthouse.png");
-    height: 1000px;
+    height: 800px;
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
     overflow: hidden;
 }
 

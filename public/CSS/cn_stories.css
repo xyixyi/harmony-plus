@@ -3,6 +3,31 @@ body {
     font-family: "Microsoft YaHei";
 }
 
+.img4 {
+    width:30%;
+    position: relative;
+    height: 100%;
+    float: left;
+    left: 4%;
+    margin-left: 5px;
+    /*background: "img/stories/4.png";*/
+    /*background-image: url("../img/stories/4.png");*/
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover; */
+    /*overflow: hidden;*/
+}
+
+.cover {
+    width: 80%;
+    height: 60%;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
 h1 {
     font-size: 220%;
     font-weight: bold;
@@ -48,3 +73,4 @@ p {
     color: gray;
     font-size: 115%;
 }
+

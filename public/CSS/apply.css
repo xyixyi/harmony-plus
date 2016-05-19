@@ -50,7 +50,6 @@ h4 {
 
 p {
     color: white;
-    font-family: "Trebuchet MS";
     text-align: center;
 }
 
@@ -120,7 +119,6 @@ input {
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
-  font-family: Arial;
   color: #ffffff;
   font-size: 20px;
   background: #53AA8E;
@@ -147,7 +145,6 @@ input {
 }
 
 h1 {
-    font-family: "Trebuchet MS";
     display: block;
     font-size: 1.17em;
     -webkit-margin-before: 1em;
@@ -321,6 +318,7 @@ h1 {
 body {
    /*Margin bottom by footer height */
   margin-bottom: 100px;
+  font-family: "Microsoft YaHei";
 }
 
 nav.transparent-nav {
@@ -355,5 +353,5 @@ nav .links {
   position: fixed;
   top: 2.8%;
   font-size: 110%;
-  font-family: "Trebuchet MS";
+
 }
