@@ -149,7 +149,7 @@ ul li ul li {
   display: block; 
 }
 ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: block; opacity: 0.3;
+ul li ul li:hover {background: block;
 }
 
 a {
