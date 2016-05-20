@@ -296,3 +296,8 @@ P {
     height: 2px;
     width: 5px;
 }
+
+ul li ul li:hover {background: white;}
+ul li ul {
+  background-color: white;
+}

@@ -100,5 +100,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     background: transparent;
 }
 
-thead{
+ul li ul li:hover {background: white;}
+ul li ul {
+  background-color: white;
 }

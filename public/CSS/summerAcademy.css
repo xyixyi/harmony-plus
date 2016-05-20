@@ -366,3 +366,8 @@ h11
 .chineseh9 {
     font-size: 150%;
 }
+
+ul li ul li:hover {background: white;}
+ul li ul {
+  background-color: white;
+}

@@ -110,3 +110,6 @@ p {
     font-size: 115%;
 }
 
+ul li ul {
+  background-color: white;
+}

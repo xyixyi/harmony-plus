@@ -46,3 +46,7 @@ hr {
     border-color: transparent;
 }
 
+ul li ul li:hover {background: white;}
+ul li ul {
+  background-color: white;
+}

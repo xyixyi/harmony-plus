@@ -142,3 +142,8 @@ p{
     /*height: 2700px;*/
     
 }
+
+ul li ul li:hover {background: white;}
+ul li ul {
+  background-color: white;
+}
