@@ -322,7 +322,7 @@ body {
 }
 
 nav.transparent-nav {
-  background: white;/* For browsers that do not support gradients */
+  background: white;
   width: 100%;
   position: fixed;
   height: 9.26%;
@@ -348,12 +348,19 @@ nav.transparent-nav .links a {
   text-decoration: none;
 }
 
-nav .links {
-  right: 0;
-  position: fixed;
-  top: 2.8%;
-  font-size: 110%;
+/*nav .links {*/
+/*  right: 0;*/
+/*  position: fixed;*/
+/*  top: 2.8%;*/
+/*  font-size: 110%;*/
 
+/*}*/
+
+nav .links {
+    right: 0;
+    position: fixed;
+    top: 30px;
+    font-size: 110%;
 }
 
 ul li ul li:hover {background: white;}
